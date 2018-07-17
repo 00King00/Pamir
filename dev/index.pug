@@ -76,52 +76,84 @@ html
 						|8800 
 					span
 						|q
-		.footer.wrapper
-			.footer__flex-row
-				.footer__column.footer__column_about-us
-					.footer__title О компании
-					ul
-						li.footer__list.active
-							a(href="#") Контакты
-						li.footer__list
-							a(href="#") Пресса о нас
-						li.footer__list
-							a(href="#") Политика конфиденциальности и оферта
-						li.footer__list
-							a(href="#") Условия обмена и возврата
-				.footer__column
-					.footer__title Сервис
-					ul
-						li.footer__list
-							a(href="#") Личный кабинет
-						li.footer__list
-							a(href="#") Корзина
-						li.footer__list
-							a(href="#") Оформить бесплатную доставку
-						li.footer__list
-							a(href="#") Оплата
-						li.footer__list
-							a(href="#") Доставка
-				.footer__column.show-phablet
-					.footer__title Товары
-					ul
-						li.footer__list
-							a(href="#") Батончики из Шелковицы
-						li.footer__list
-							a(href="#") Топинамбур
-						li.footer__list
-							a(href="#") Суперфулы
-						li.footer__list
-							a(href="#") Урбеч
-						li.footer__list
-							a(href="#") Какао коллекция
-						li.footer__list
-							a(href="#") Шоколадная коллекция
-						li.footer__list
-							a(href="#") Полезные смеси
-						li.footer__list
-							a(href="#") Масло
-				.footer__column.show-tablet
+		.subscribe-line
+			.wrapper
+				.row.clearfix
+					.col-tablet-1-2
+						.subscribe-line__main-text Статьи, рекомендации и новости от марки Дары пальмира, Бесплатные советы экспертов о натуральных продуктах косметике, красоте и здоровье.
+						.subscribe-line__sub-text Мы не рассылаем СПАМ, только важные акции!
+					.col-tablet-1-2
+						form
+							.subscribe-line__container-flex
+								input.email(type="email" placeholder="Ваш e-mail")
+								input(type="submit" value="Подписаться")
+							
+							label.subscribe-line__sub-text
+								input(type="checkbox")
+								| Я согласен с правиласи пользования сервисом
+						
+			
+		
+		.wrapper
+			.footer
+				.footer__flex-row
+					.footer__column.footer__column_about-us
+						.footer__title О компании
+						ul
+							li.footer__list.active
+								a(href="#") Контакты
+							li.footer__list
+								a(href="#") Пресса о нас
+							li.footer__list
+								a(href="#") Политика конфиденциальности и оферта
+							li.footer__list
+								a(href="#") Условия обмена и возврата
+					.footer__column
+						.footer__title Сервис
+						ul
+							li.footer__list
+								a(href="#") Личный кабинет
+							li.footer__list
+								a(href="#") Корзина
+							li.footer__list
+								a(href="#") Оформить бесплатную доставку
+							li.footer__list
+								a(href="#") Оплата
+							li.footer__list
+								a(href="#") Доставка
+					.footer__column.show-phablet
+						.footer__title Товары
+						ul
+							li.footer__list
+								a(href="#") Батончики из Шелковицы
+							li.footer__list
+								a(href="#") Топинамбур
+							li.footer__list
+								a(href="#") Суперфулы
+							li.footer__list
+								a(href="#") Урбеч
+							li.footer__list
+								a(href="#") Какао коллекция
+							li.footer__list
+								a(href="#") Шоколадная коллекция
+							li.footer__list
+								a(href="#") Полезные смеси
+							li.footer__list
+								a(href="#") Масло
+					.footer__column.show-tablet
+						.footer__phone-number +7 (499) 653-67-89
+						.footer__phone-number 8 (800) 800-80-80
+						a.footer__email(href="mailto:info@dary-pamira.ru") info@dary-pamira.ru
+						.footer__text
+							span Работаем с 09:00 до 21:00 без
+							span обеда и выходных
+						.social-icon
+							img(src="images/vk.png")
+						.social-icon
+							img(src="images/fb.png")
+						.social-icon
+							img(src="images/instagram.png")
+				.hide-tablet.center
 					.footer__phone-number +7 (499) 653-67-89
 					.footer__phone-number 8 (800) 800-80-80
 					a.footer__email(href="mailto:info@dary-pamira.ru") info@dary-pamira.ru
@@ -134,19 +166,6 @@ html
 						img(src="images/fb.png")
 					.social-icon
 						img(src="images/instagram.png")
-			.hide-tablet.center
-				.footer__phone-number +7 (499) 653-67-89
-				.footer__phone-number 8 (800) 800-80-80
-				a.footer__email(href="mailto:info@dary-pamira.ru") info@dary-pamira.ru
-				.footer__text
-					span Работаем с 09:00 до 21:00 без
-					span обеда и выходных
-				.social-icon
-					img(src="images/vk.png")
-				.social-icon
-					img(src="images/fb.png")
-				.social-icon
-					img(src="images/instagram.png")
 		hr
 		.wrapper
 			.footer_bottom-line
