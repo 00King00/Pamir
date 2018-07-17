@@ -1,0 +1,78 @@
+html
+	head
+		include ./parts/head.pug
+	body
+		.header-top
+			.wrapper
+				.company-info.show-laptop-inline
+					ul
+						li 
+							a(href="#") О нас
+						li 
+							a(href="#") Оплата
+						li 
+							a(href="#") Доставка
+						li 
+							a(href="#") Контакты
+						li 
+							a(href="#") Вопрос-ответ
+						li 
+							a(href="#") Поставщикам
+				.enter
+					img(src="images/lock.png", alt="lock icon")
+					a(href="#")
+						span.dashed.sign-in Вход
+					span |
+					a(href="#")
+						span.underline Регистрация
+		.header-middle
+			.wrapper
+				.location
+					.city
+						img(src="images/marker.png", alt="marker")
+						a(href="#") Москва
+					.points
+						span 692 пункта
+						br
+						span выдачи заказов
+				.delivery
+					img(src="images/delivery.png", alt="marker")
+					.delivery-time
+						span Доставка в город
+						br
+						span Красноярск за 2-14 дней
+				.telephone
+					a(href) +7 (499) 653-67-89
+					span по Москве
+				.telephone
+					a(href) +7 (499) 653-67-89
+					span бесплатно по России
+				.callback
+					a(href) Обратный звонок
+					span с 8:00 до 20:00 по мск
+		.wrapper
+			.header-bottom
+				.logo
+					img(src="images/logo.png", alt="logo")
+					.text
+						span Продукты
+						br
+						span с пользой для здоровья
+				.search
+					form
+						input(type="search", placeholder="Поиск", name="search")
+						button(type="submit")
+							i.fa.fa-search
+				.favorites
+					.favorites-icon
+						img(src="images/favorites.png")
+						span.favorites-item-count 3
+					span Избранное
+				.shoppingcart
+					img(src="images/cart.png")
+					span.cart-item-count 3
+				.shopping-sum
+					span
+						|8800 
+					span
+						|q
