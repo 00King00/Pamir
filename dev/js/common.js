@@ -20,7 +20,7 @@ $(function(){
 					breakpoint: 900,
 					settings:
 						{
-							item:3,
+							item:2,
 							slideMove:1,
 						}
 				},
@@ -56,7 +56,7 @@ $(function(){
 					breakpoint: 900,
 					settings:
 						{
-							item:3,
+							item:2,
 							slideMove:1,
 						}
 				},
@@ -77,7 +77,7 @@ $(function(){
 		galleryMargin: 25,
 		item: 1,
 		slideMove:1,
-		pager: true,
+		pager: false,
 		controls: true,
 		addClass: '',
 		mode: "slide",
@@ -91,6 +91,25 @@ $(function(){
 		pause: 10000,
 	});
 	
+	//Instagram Slider (promo) setting
+		var promoslider=$('#instaslider').lightSlider({
+		galleryMargin: 25,
+		item: 1,
+		slideMove:1,
+		pager: false,
+		controls: true,
+		addClass: '',
+		mode: "slide",
+		useCSS: true,
+		cssEasing: 'ease', //'cubic-bezier(0.25, 0, 0.25, 1)',//
+		easing: 'linear', //'for jquery animation',////
+		speed: 400, //ms'
+		auto: true,
+		loop: true,
+		slideEndAnimation: true,
+		pause: 10000,
+	});
+
 	function SameHeight() {
 		var browserMinWidth = $(window).width()
 			if (browserMinWidth > 600) {

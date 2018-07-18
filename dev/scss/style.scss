@@ -15,6 +15,10 @@
 		@media (max-width: 37.5em) { @content ; }
 	}
 }
+body{
+	font-family:'roboto';
+}
+
 img{
 	max-width: 100%;
 }
@@ -219,6 +223,9 @@ p{
 				border: none;
 				background: transparent;
 			}
+			i{
+				color: #c2c4ca;
+			}
 		}
 	}
 	.cart-item-count,.favorites-item-count{
@@ -314,7 +321,7 @@ p{
 		}
 	}
 	&__name{
-		display: inline-block;
+		margin: 0 auto;
 		height: 65px;
 		line-height: 1.2;
 		margin-bottom: 20px;
@@ -395,6 +402,23 @@ p{
 			left: 104%;
 		@include breakpoint(phablet){
 			left: 120%;
+		}
+	}
+}
+.block-title{
+	margin-bottom: 35px;
+	span{
+		font-family: 'Roboto';
+		font-size: 29px;
+		position: relative;
+	}
+	a{
+		margin-left: 20px;
+		color: #778d53;
+		font-size: 18px;
+		span{
+			font-family: 'circe';
+			font-size: 18px;
 		}
 	}
 }
@@ -582,4 +606,40 @@ p{
 }
 #promoslider{
 	margin-bottom: 30px;
+}
+.article{
+	position: relative;
+	margin-bottom: 20px;
+
+	&__pic{
+		// position: absolute;
+		float: left;
+		top: 0;
+		left: 0;
+		width: 107px;
+		margin-right: 10px;
+		display: inline-block;
+	}
+	&__pub-date{
+		color: #b7b7b7;
+		font-style: italic;
+		font-size: 12px;
+		font-family:'roboto';
+		margin-bottom: 10px;
+	}
+	&__title{
+		color: #778d53;
+		font-size:18px;
+		margin-bottom: 10px;
+	}
+	&__description{
+		line-height: 1.5;
+		color:#9d9e9f;
+		font-size: 13px;
+	}
+}
+.hits{
+	margin-bottom: 70px;
+	border-bottom: 1px solid #dfdfdf;
+	padding-bottom: 50px;
 }
