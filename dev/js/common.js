@@ -119,4 +119,24 @@ $(function(){
 	$(window).resize(function(){
 		SameHeight();
 	});
+	
+	//for tabs form
+	$(".form__tabs input").click(function(){
+		var select = $(this).prop("id");
+		if(select == 'tab1'){
+			$("#content1").addClass('active');
+			$("#content2").removeClass('active')
+			console.log(select == tab1, 1);
+			
+		}else{
+			$("#content2").addClass('active');
+			$("#content1").removeClass('active')
+			console.log(select == tab1);
+		}
+		console.log(select == tab1);
+	})
+	
+	// input-mask
+	$('input[type="tel"]').inputmask('+7 (999) 999 - 99 - 99');
+	// end input-mask
 });

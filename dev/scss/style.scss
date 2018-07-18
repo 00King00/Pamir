@@ -456,22 +456,50 @@ p{
 .rouble{
 	font-family: 'rouble';
 }
-.tabs-form{
-	padding: 0 30px 20px 30px;
+.form{
+	padding: 60px 30px 20px 30px;
 	background-color: #f6f6f6;
 	@include breakpoint(mobileonly){
-		padding: 0 10px 20px 10px;
+		padding: 60px 10px 20px 10px;
 	}
 	
 	&__tabs{
-//		min-width: 320px;
-//		max-width: 800px;
-		
-		//background-color: #f6f6f6;
 		#tab1, #tab2 {
 			display: none;
 		}
-		input{
+		
+		label {
+			display: block;
+			padding: 20px 10px 20px 0;
+			font-weight: 600;
+			text-align: center;
+			color: #778d53;
+			background-color: white;
+			width: 50%;
+			float: left;
+			&.agred{
+				color: #9d9e9f;
+				font-size: 11px;
+				background-color: transparent;
+			}
+			:hover {
+				cursor: pointer;
+			}
+		}
+		input:checked + label {
+			color: black;
+			background-color: #f6f6f6;
+		}
+
+	}
+	label{
+		&.agred{
+			color: #9d9e9f;
+			font-size: 11px;
+			background-color: transparent;
+		}
+	}
+	input{
 			height: 45px;
 			width: 100%;
 			border: 1px solid #c5c5c6;
@@ -488,60 +516,6 @@ p{
 				
 			}
 		}
-		label {
-			display: inline-block;
-			//margin: 0 0 -1px;
-			padding: 20px 10px 20px 0;
-			font-weight: 600;
-			text-align: center;
-			color: #778d53;
-			background-color: white;
-			&.agred{
-				color: #9d9e9f;
-				font-size: 11px;
-				background-color: transparent;
-			}
-			&.tabs-form{
-				&_question{
-					float: left;
-				}
-				&_callback{
-					display: block;
-					text-align: left;
-					padding-left: 128px;
-					//position: relative;
-//					input:not(checked){
-//						:after{
-//							content: "";
-//							display: inline-block;
-//							position: absolute;
-//							top: 0;
-//							bottom: 0;
-//							width: 10px;
-//							right: 0;
-//							background-color: red;
-//						}
-//					}
-				}
-			}
-			
-			
-			:hover {
-				cursor: pointer;
-			}
-		}
-		input:checked + label {
-			color: black;
-			
-			background-color: #f6f6f6;
-			
-		}
-
-		#tab1:checked ~ #content1,
-		#tab2:checked ~ #content2, {
-		display: block;
-		}
-	}
 	textarea{
 		resize: none;
 		height: 80px;
@@ -553,8 +527,8 @@ p{
 	section {
 		display: none;
 		padding: 20px 0 ;
-		
 		background-color: #f6f6f6;
+		&.active{display: block;}
 	}
 }
 .subscribe-line{
