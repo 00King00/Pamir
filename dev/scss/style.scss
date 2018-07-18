@@ -26,7 +26,14 @@ input{
 a{
 	text-decoration: none;
 }
-
+.center{
+	text-align: center;
+}
+hr{
+	border-color: #d3d3d5;
+	border-bottom: 1px;
+	
+}
 ul{
 	list-style: none;
 }
@@ -424,6 +431,154 @@ p{
 }
 .rouble{
 	font-family: 'rouble';
+}
+.subscribe-line{
+	font-family: 'Circe';
+	padding: 30px 0 40px 0;
+	background-color: #353535;
+	color: white;
+	&__main-text{
+		font-size: 14px;
+		margin-bottom: 25px;
+		
+	}
+	&__sub-text{
+		font-size: 14px;
+		color: #888888;
+		margin-bottom: 25px;
+		
+	}
+	&__container-flex{
+		@include breakpoint(phablet){
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+	}
+	label{
+		position: relative;
+	}
+	input{
+		font-size: 16px;
+		margin-bottom: 25px;
+		border: none;
+		@include breakpoint(mobileonly){
+			width: 100%;
+			text-align: center;
+		}
+		&.email{
+			padding: 18px 55px;
+			flex-grow: 2;
+			@include breakpoint(phablet){
+				margin-right: 15px;
+			}
+			@include breakpoint(tablet){
+				margin-right: 0;
+			}
+			@include breakpoint(laptop){
+				margin-right: 15px;
+			}
+		}
+		&[type="submit"]{
+			padding: 18px 30px;
+			background-color: #778d53;
+			color: white;
+			flex-grow: 1;
+		}
+		&[type="checkbox"]{
+			width: 15px;
+			height: 15px;
+			margin-right: 15px;
+			margin-bottom: 0;
+			float: left;
+		}
+	}
+}
+.footer{
+	font-family: "Roboto";
+	padding-top: 45px;
+	&__flex-row{
+		display: flex;
+		justify-content: space-between;
+		
+	}
+	&__column{
+		max-width: 190px;
+		&_about-us{
+			@include breakpoint(mobileonly){
+				margin-right: 10px;
+			}
+		}
+		&:last-child{
+			text-align: right;
+		}
+	}
+	&__list{
+		a{
+			color: #9d9e9f;
+			line-height: 1.7;
+		}
+		
+		font-size: 14px;
+		margin-bottom: 15px;
+		&.active{
+			a{
+				color: #494949;
+				font-weight: 500;
+			}
+		}
+	}
+	&__title{
+		color: #010101;
+		font-size: 16px;
+		margin-bottom: 18px;
+		font-weight: 500;
+		
+	}
+	&__phone-number{
+		color: #000000;
+		font-size: 21px;
+		margin-bottom: 10px;
+	}
+	&__email{
+		font-size: 14px;
+		color: #9d9e9f;
+		margin-bottom: 20px;
+		margin-top: 13px;
+		display: block;
+	}
+	&__text{
+		font-size: 13px;
+		color: #9d9e9f;
+		margin-bottom: 25px;
+		span{
+			display: block;
+			margin-bottom: 6px;
+		}
+	}
+	.social-icon{
+		display: inline-block;
+		margin-right: 17px;
+		margin-bottom: 25px;
+	}
+	&_bottom-line{
+		color: #9d9e9f;
+		padding: 20px 0 15px 0;
+		&__title{
+			font-size: 14px;
+			color: #9d9e9f;
+			margin-bottom: 10px;
+			&:first-child{
+				margin-right: 10px;
+			}
+		}
+		&__text{
+			font-size: 11px;
+			display: inline-block;
+			
+			
+		}
+	}
 }
 #promoslider{
 	margin-bottom: 30px;
