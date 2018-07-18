@@ -37,6 +37,11 @@ hr{
 ul{
 	list-style: none;
 }
+p{
+	font-size: 14px;
+	line-height: 1.5;
+	color: #9d9e9f;
+}
 .header-top{
 	font-size: 13px;
 	font-family: 'Roboto';
@@ -364,7 +369,7 @@ ul{
 }
 .section-title{
 	overflow: hidden;
-	margin: 70px auto;
+	margin: 40px auto;
 	text-align: center;
 	font-family: 'Roboto';
 	font-size: 29px;
