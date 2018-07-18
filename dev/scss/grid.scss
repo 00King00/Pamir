@@ -263,3 +263,14 @@
 		}
 	}
 }
+.instagram{
+	@include breakpoint(laptop){
+		width: 36%;
+	}
+
+}
+.actions{
+	@include breakpoint(laptop){
+		width: 32%;
+	}
+}
