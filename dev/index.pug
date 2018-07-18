@@ -42,13 +42,13 @@ html
 						br
 						span Красноярск за 2-14 дней
 				.telephone
-					a(href) +7 (499) 653-67-89
+					a(href="tel:74996546789") +7 (499) 653-67-89
 					span по Москве
 				.telephone
-					a(href) +7 (499) 653-67-89
+					a(href="tel:74996546789") +7 (499) 653-67-89
 					span бесплатно по России
 				.callback
-					a(href) Обратный звонок
+					a(href="#") Обратный звонок
 					span с 8:00 до 20:00 по мск
 		.wrapper
 			.header-bottom
@@ -68,14 +68,163 @@ html
 						img(src="images/favorites.png")
 						span.favorites-item-count 3
 					span Избранное
-				.shoppingcart
+				a(href="#").shoppingcart
 					img(src="images/cart.png")
 					span.cart-item-count 3
-				.shopping-sum
+				a(href="#").shopping-sum
 					span
-						|8800 
+						|2199
 					span
 						|q
+		.main-menu
+			.wrapper
+				ul
+					li
+						a(href="#") Акции
+					li
+						a(href="#") Питание
+					li
+						a(href="#") Косметика
+					li
+						a(href="#") Для дома
+					li
+						a(href="#") Бренды
+					li
+						a(href="#") Прочее
+					li
+						a(href="#") Оптовикам
+						img(src="images/opt.png", alt="pic")
+		.wrapper
+			.row.clearfix
+				.col-tablet-2-3
+					ul#promoslider
+						img(src="images/promo_slider.png", alt="promo")
+						img(src="images/promo_slider.png", alt="promo")
+						img(src="images/promo_slider.png", alt="promo")
+						img(src="images/promo_slider.png", alt="promo")
+				.col-tablet-1-3
+					.sale
+						.marker
+							|Cкидка
+						.sale__title
+							|Товар дня
+						.product
+							.product__img.product__img_sale
+								.sale__value
+									|-20%
+								img(src="images/product_sale.png",alt="product")
+							.product__name.product__name_sale
+								|Батончик с миндалем «Шелковица с Памира»
+							.product__price.product__price_sale
+								span 20
+								span.rouble q
+								.product__old-price
+									span 20
+									span.rouble q
+		.wrapper
+			ul#productslider
+				.product
+					.product__img
+						img(src="images/product_01.png",alt="product")
+					.product__name
+						|Батончик с миндалем «Шелковица с Памира»
+					.product__code
+						|ДарыПамира  /  LFG-934
+					.product__price
+						span 20
+						span.rouble q
+						.product__volume
+							|20г.
+				.product
+					.product__img
+						img(src="images/product_02.png",alt="product")
+					.product__name
+						|Батончик с миндалем «Шелковица с Памира»
+					.product__code
+						|ДарыПамира  /  LFG-934
+					.product__price
+						span 20
+						span.rouble q
+						.product__volume
+							|20г.
+				.product
+					.product__img
+						img(src="images/product_03.png",alt="product")
+					.product__name
+						|Крем кокосовый органический, "Econutrena", жирность 68%, 300мл
+					.product__code
+						|ДарыПамира  /  LFG-934
+					.product__price
+						span 20
+						span.rouble q
+						.product__volume
+							|20г.
+				.product
+					.product__img
+						img(src="images/product_04.png",alt="product")
+					.product__name
+						|Батончик с миндалем «Шелковица с Памира»
+					.product__code
+						|ДарыПамира  /  LFG-934
+					.product__price
+						span 20
+						span.rouble q
+						.product__volume
+							|20г.
+		.section-title
+				span Лидеры продаж
+		.wrapper
+			ul#productslider2
+				.product
+					.product__img
+						img(src="images/product_01.png",alt="product")
+					.product__name
+						|Батончик с миндалем «Шелковица с Памира»
+					.product__code
+						|ДарыПамира  /  LFG-934
+					.product__price
+						span 20
+						span.rouble q
+						.product__volume
+							|20г.
+				.product
+					.product__img
+						img(src="images/product_02.png",alt="product")
+					.product__name
+						|Батончик с миндалем «Шелковица с Памира»
+					.product__code
+						|ДарыПамира  /  LFG-934
+					.product__price
+						span 20
+						span.rouble q
+						.product__volume
+							|20г.
+				.product
+					.product__img
+						img(src="images/product_03.png",alt="product")
+					.product__name
+						|Крем кокосовый органический, "Econutrena", жирность 68%, 300мл
+					.product__code
+						|ДарыПамира  /  LFG-934
+					.product__price
+						span 20
+						span.rouble q
+						.product__volume
+							|20г.
+				.product
+					.product__img
+						img(src="images/product_04.png",alt="product")
+					.product__name
+						|Батончик с миндалем «Шелковица с Памира»
+					.product__code
+						|ДарыПамира  /  LFG-934
+					.product__price
+						span 20
+						span.rouble q
+						.product__volume
+							|20г.
+
+
 		.subscribe-line
 			.wrapper
 				.row.clearfix
@@ -174,4 +323,6 @@ html
 					a.footer_bottom-line__title(href="#") Дизайн сайта - Михаил Соловьев
 				.footer_bottom-line__text Использование любых материалов с данного ресурса возможно только после личного согласия администратора проекта.
 
-				
+
+		
+

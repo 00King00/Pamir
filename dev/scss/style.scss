@@ -88,6 +88,7 @@ ul{
 	background: #f0f0f0;
 	padding: 8px 0;
 	color: #7f7f7f;
+	font-size: 12px;
 	font-family: 'Circe';
 	a{
 		font-family: 'Circe';
@@ -98,17 +99,28 @@ ul{
 		margin-right: 60px;
 	}
 	.city{
+		font-size: 14px;
+		position: relative;
+		top: -10px;
 		font-family: 'Circe';
 		margin-right: 20px;
+		display: inline-block;
+		vertical-align: middle;
 		img{
 			margin-right: 3px;
 		}
-		display: inline-block;
+		a{
+			text-decoration: underline;
+			text-decoration-style: dashed;
+		}
+		
 	}
 	.delivery{
 		margin-right: 20px;
 		display: inline-block;
 		img{
+			position: relative;
+			top: -5px;
 			margin-right: 3px;
 		}
 	}
@@ -228,30 +240,191 @@ ul{
 		position: relative;
 	}
 	.favorites{
+		font-family: 'Roboto';
+		margin-right: 20px;
 		span{
-			margin-left: 15px;
+			margin-left: 19px;
 		}
 	}
 	.shopping-sum{
-			position: relative;
-			// top: -5px;
-			margin-left: 5px;
-			font-size: 18px;
-			// font-family: 'gothamproblack';
-		
-			span{
-				margin-left: 15px;
-				font-family: 'Roboto';
-				position: relative;
-				font-weight: bold;
-				// top: -5px;
-				// font-family: 'gothamproblack';
-			}
-			span:nth-child(2){
-				margin-left: 0px;
-				font-family: 'rouble';
-			}
+		a{
+			color:#010101;
 		}
+		position: relative;
+		margin-left: 5px;
+		font-size: 18px;
+		span{
+			color: #010101;
+			margin-left: 15px;
+			font-family: 'Roboto';
+			position: relative;
+			font-weight: bold;
+		}
+		span:nth-child(2){
+			margin-left: 0px;
+			font-family: 'rouble';
+		}
+	}
+}
+.main-menu{
+	font-family: 'Roboto';
+	font-size: 16px;
+	padding: 15px 0; 
+	background: #f0f0f0;
+	margin-bottom: 30px;
+	ul{
+		display: block;
+		list-style: none;
+	}
+	li{
+		margin-right: 75px;
+		display: inline-block;
+		img{
+			margin-left: 10px;
+		}
+	}
+	li:last-child{
+		float: right;
+		margin-right: 0;
+	}
+	a{
+		color: #616161;
+	}
+}
+.product{
+	text-align: center;
+	&__img{
+		margin-bottom: 40px;
+		height: 236px;
+		display: inline-block;
+		line-height: 236px;
+		text-align: center;
+		img{
+			vertical-align: middle;
+		}
+		&_sale{
+			margin-bottom: 10px;
+			position: relative;
+		}
+	}
+	&__name{
+		display: inline-block;
+		height: 65px;
+		line-height: 1.2;
+		margin-bottom: 20px;
+		font-size:18px;
+		max-width: 255px;
+		font-family: 'Circe';
+		color: #778d53;
+		&_sale{
+			max-width: none;
+			height: auto;
+			
+		}
+	}
+	&__code{
+		font-family: 'roboto';
+		font-style: italic;
+		font-size: 13px;
+		margin-bottom: 20px;
+		color: #9d9e9f;
+	}
+	&__price{
+		display: inline-block;
+		position: relative;
+		font-size: 19px;
+		margin-left: -35px;
+		span:first-child{
+			font-family: 'roboto';
+			font-weight: bold;		
+		}
+		&_sale{
+			margin: 0;
+		}
+	}
+	&__old-price{
+		position: absolute;
+		right: 120%;
+		top: 0;
+		color: #da1c19;
+		text-decoration: line-through;
+	}
+	&__volume{
+		position: absolute;
+		left: 130%;
+		border-radius: 30px;
+		padding: 5px 10px;
+		font-size: 13px;
+		font-family: 'roboto';
+		font-weight: 300;
+		top: 0;
+		background: #f2f2f3;
+		color: #707070;
+	}
+}
+.section-title{
+	overflow: hidden;
+	margin: 70px auto;
+	text-align: center;
+	font-family: 'Roboto';
+	font-size: 29px;
+	span{
+		position: relative;
+	}
+	span:before, span:after{
+		content: '';
+		position:absolute;
+		width: 3000px;
+		height: 1px;
+		background: #b8b8b8;
+		top: 50%;
+		transform: translateY(-50%);
+		right: 104%;
+		@include breakpoint(phablet){
+			right: 120%;
+		}
+	}
+	span:after{
+			right: auto;
+			left: 104%;
+		@include breakpoint(phablet){
+			left: 120%;
+		}
+	}
+}
+.sale{
+	position: relative;
+	padding: 30px 10px;
+	text-align: center;
+	&__title{
+		text-transform: uppercase;
+		margin-bottom: 40px;
+	}
+	&__value{
+		display: inline-block;
+		font-size: 42px;
+		color: #da1c19;
+		font-family: 'roboto';
+		font-weight: bold;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	border: 3px solid #778d53;
+	.marker{
+		position: absolute;
+		top: 10px;
+		left: 10px;
+		background: #da1c19;
+		color: #fff;
+		font-family: 'Circe';
+		font-size: 14px;
+		padding: 1px 5px;
+
+	}
+}
+.rouble{
+	font-family: 'rouble';
 }
 .subscribe-line{
 	font-family: 'Circe';
@@ -400,4 +573,8 @@ ul{
 			
 		}
 	}
+}
+#promoslider{
+	margin-bottom: 30px;
+>>>>>>> 4de8db98d3af187dffc7a0b8c07886b2b42cc65f
 }
