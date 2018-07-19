@@ -308,12 +308,12 @@ p{
 	text-align: center;
 	&__img{
 		margin-bottom: 40px;
-		display: inline-block;
 		height: 236px;
-		line-height: 236px;
-		text-align: center;
+		justify-content: center;
+		display: flex;
+		align-items: center;
 		img{
-			vertical-align: middle;
+			//vertical-align: middle;
 		}
 		&_sale{
 			height: auto;
@@ -469,6 +469,12 @@ p{
 		@include breakpoint(laptop){
 			margin-bottom: 10px;
 		}
+	overflow: hidden;
+	&__title{
+		text-transform: uppercase;
+		@include breakpoint(laptop){
+			margin-bottom: 40px;
+		}
 	}
 	&__value{
 		display: inline-block;
@@ -517,12 +523,26 @@ p{
 			background-color: white;
 			width: 50%;
 			float: left;
+			text-align: left;
 			&.agred{
 				color: #9d9e9f;
 				font-size: 11px;
 				background-color: transparent;
 			}
-			:hover {
+			&.question{
+				padding-left: 10px;
+				@include breakpoint(laptop){
+					padding-left: 30px;
+				}
+			}
+			&.callback{
+				padding-left: 10px;
+				@include breakpoint(laptop){
+					padding-left: 20px;
+				}
+				
+			}
+			&:hover {
 				cursor: pointer;
 			}
 		}
@@ -532,12 +552,25 @@ p{
 		}
 
 	}
+	&__text{
+		font-size: 11px;
+		text-align: center;
+		color: #9d9e9f;
+		max-width: 205px;
+		margin: 0 auto;
+	}
 	label{
 		&.agred{
 			color: #9d9e9f;
 			font-size: 11px;
 			background-color: transparent;
+			margin-top: -16px;
+			display: block;
+			padding-left: 20px;
+			margin-bottom: 20px;
+
 		}
+		
 	}
 	input{
 			height: 45px;
@@ -553,6 +586,8 @@ p{
 			&[type="checkbox"]{
 				height: 15px;
 				width: 15px;
+				margin: 0 10px 0 0;
+				
 				
 			}
 		}
@@ -566,7 +601,7 @@ p{
 	}
 	section {
 		display: none;
-		padding: 20px 0 ;
+		padding: 20px  0 0 0 ;
 		background-color: #f6f6f6;
 		&.active{display: block;}
 	}

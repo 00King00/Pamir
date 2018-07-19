@@ -271,7 +271,7 @@ html
 							.article__description
 								|Не пропустите самые свежие новинки от Дары Памира.
 				.col-laptop-1-3.col-phablet-1-2.instagram
-					.block-title 
+					.block-title
 						span Наш инстаграмм
 						a(href="#")
 							span #dary_pamyra
@@ -279,27 +279,30 @@ html
 						img(src="images/insta_pic.png", alt="insta_pic")
 				.col-laptop-1-3.col-phablet-1-2.actions
 					.form__tabs
-							input#tab1(type="radio" name="tabs" checked)
-							label.tabs-form_questio(for="tab1") Задать вопрос
-							input#tab2(type="radio" name="tabs")
-							label.tabs-form_callbac(for="tab2") Перезвонить мне
+						input#tab1(type="radio" name="tabs" checked)
+						label.question(for="tab1") Задать вопрос
+						input#tab2(type="radio" name="tabs")
+						label.callback(for="tab2") Перезвонить мне
 					.form
 						section#content1.active
 							form
 								input(type="text" placeholder="Ваше имя")
 								input(type="tel" placeholder="+7 (___) ___ - __ - __")
 								textarea
+								
+								input#agred(type="checkbox")
+								label.agred(for="agred") Я соглашаюсь с правиласи пользования сервисом и даю согласие на хранение и обработку моих персональных данных
 								input(type="submit" value="Отправить")
-								label.agred
-									input(type="checkbox")
-									| Я соглашаюсь с правиласи пользования сервисом и даю согласие на хранение и обработку моих персональных данных
+								.form__text Мы перезваниваем в рабочеев ремя  в течении 2 часов
 						section#content2
 							form
 								input(type="text" placeholder="Ваше имя")
 								input(type="tel" placeholder="+7 (___) ___ - __ - __")
 								input(type="submit" value="Отправить")
-			.section-title
-				span Коротко о магазине
+								.form__text Мы перезваниваем в рабочеев ремя  в течении 2 часов
+		.section-title
+			span Коротко о магазине
+		.wrapper
 			p Компания «Дары Памира» - это сплоченная команда увлеченных идеей здорового питания людей. Мы специализируемся на производстве и дистрибуции продуктов здорового питания. Основная идея нашего проекта - распространение и популяризация философии потребления вкусных и полезных для здоровья продуктов питания. Стратегические планы компании ориентированы на развитии собственных и партнерских производств, работе с перспективными производителями готовой продукции и сырья, исследовательской и научной деятельности по разработке новых интересных продуктов совместно исследовательскими пищевыми учреждениями (ФГБНУ ВНИИТЕК и др.), а также инвестиционных проектах – поддержке и финансировании фермерских хозяйств, производителей, поставщиков сырья. Важный актив компании – выстроенная сбытовая сеть партнерских торговых точек и дистрибуторов России и ближнего зарубежья, которая активно растет. Мы очень благодарны нашим партнерам за доверие и причастность к нашему общему делу.
 		.subscribe-line
 			.wrapper
