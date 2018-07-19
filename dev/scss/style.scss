@@ -46,6 +46,11 @@ p{
 	line-height: 1.5;
 	color: #9d9e9f;
 }
+.flex{
+	//display: flex;
+	//flex-wrap: wrap;
+	
+}
 .header-top{
 	font-size: 13px;
 	font-family: 'Roboto';
@@ -477,10 +482,24 @@ p{
 			background-color: white;
 			width: 50%;
 			float: left;
+			text-align: left;
 			&.agred{
 				color: #9d9e9f;
 				font-size: 11px;
 				background-color: transparent;
+			}
+			&.question{
+				padding-left: 10px;
+				@include breakpoint(laptop){
+					padding-left: 30px;
+				}
+			}
+			&.callback{
+				padding-left: 10px;
+				@include breakpoint(laptop){
+					padding-left: 20px;
+				}
+				
 			}
 			:hover {
 				cursor: pointer;
@@ -492,12 +511,25 @@ p{
 		}
 
 	}
+	&__text{
+		font-size: 11px;
+		text-align: center;
+		color: #9d9e9f;
+		max-width: 205px;
+		margin: 0 auto;
+	}
 	label{
 		&.agred{
 			color: #9d9e9f;
 			font-size: 11px;
 			background-color: transparent;
+			margin-top: -16px;
+			display: block;
+			padding-left: 20px;
+			margin-bottom: 20px;
+
 		}
+		
 	}
 	input{
 			height: 45px;
@@ -513,6 +545,8 @@ p{
 			&[type="checkbox"]{
 				height: 15px;
 				width: 15px;
+				margin: 0 10px 0 0;
+				
 				
 			}
 		}
@@ -526,7 +560,7 @@ p{
 	}
 	section {
 		display: none;
-		padding: 20px 0 ;
+		padding: 20px  0 0 0 ;
 		background-color: #f6f6f6;
 		&.active{display: block;}
 	}
