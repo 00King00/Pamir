@@ -112,7 +112,7 @@ $(function(){
 
 	function SameHeight() {
 		var browserMinWidth = $(window).width()
-			if (browserMinWidth > 600) {
+			if (browserMinWidth > 800) {
 				$('.sale').css('height', $('#promoslider').height());
 			}
 	}
