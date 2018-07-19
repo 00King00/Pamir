@@ -45,10 +45,11 @@ p{
 	font-size: 14px;
 	line-height: 1.5;
 	color: #9d9e9f;
+	margin-bottom: 20px;
 }
 .flex{
-	//display: flex;
-	//flex-wrap: wrap;
+//	display: flex;
+//	flex-wrap: wrap;
 	
 }
 .header-top{
@@ -313,11 +314,14 @@ p{
 	&__img{
 		margin-bottom: 40px;
 		height: 236px;
-		display: inline-block;
-		line-height: 236px;
-		text-align: center;
+//		display: inline-block;
+//		line-height: 236px;
+		//text-align: center;
+		justify-content: center;
+		display: flex;
+		align-items: center;
 		img{
-			vertical-align: middle;
+			//vertical-align: middle;
 		}
 		&_sale{
 			margin-bottom: 10px;
@@ -431,9 +435,13 @@ p{
 	position: relative;
 	padding: 30px 10px;
 	text-align: center;
+	overflow: hidden;
 	&__title{
 		text-transform: uppercase;
-		margin-bottom: 40px;
+		@include breakpoint(laptop){
+			margin-bottom: 40px;
+		}
+		
 	}
 	&__value{
 		display: inline-block;
@@ -501,7 +509,7 @@ p{
 				}
 				
 			}
-			:hover {
+			&:hover {
 				cursor: pointer;
 			}
 		}
