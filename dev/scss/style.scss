@@ -45,12 +45,7 @@ p{
 	font-size: 14px;
 	line-height: 1.5;
 	color: #9d9e9f;
-	margin-bottom: 20px;
-}
-.flex{
-//	display: flex;
-//	flex-wrap: wrap;
-	
+	margin-bottom: 30px;
 }
 .header-top{
 	font-size: 13px;
@@ -314,9 +309,6 @@ p{
 	&__img{
 		margin-bottom: 40px;
 		height: 236px;
-//		display: inline-block;
-//		line-height: 236px;
-		//text-align: center;
 		justify-content: center;
 		display: flex;
 		align-items: center;
@@ -324,9 +316,25 @@ p{
 			//vertical-align: middle;
 		}
 		&_sale{
+			height: auto;
 			margin-bottom: 10px;
 			position: relative;
 			line-height: initial;
+			@include breakpoint(desktop){
+				margin-bottom: 40px;
+			}
+			img{
+				@include breakpoint(tablet){
+					height: 182px;
+				}
+				@include breakpoint(laptop){
+					height: 220px;
+				}
+				@include breakpoint(desktop){
+					height: auto;
+				}
+
+			}
 		}
 	}
 	&__name{
@@ -430,18 +438,43 @@ p{
 			font-size: 18px;
 		}
 	}
+	svg{
+		height: 10px;
+		margin-left: 10px;
+		.cls-1{
+			fill: #778d53;
+		}
+	}
 }
 .sale{
 	position: relative;
 	padding: 30px 10px;
 	text-align: center;
+	margin-bottom: 55px;
+	@include breakpoint(tablet){
+		padding: 10px 10px;
+	}
+	@include breakpoint(laptop){
+		padding: 10px 10px;
+	}
+	@media(min-width: 900px){
+		padding: 30px 10px;
+	}
+	&__title{
+		text-transform: uppercase;
+		margin-bottom: 40px;
+		@include breakpoint(tablet){
+			margin-bottom: 10px;
+		}
+		@include breakpoint(laptop){
+			margin-bottom: 10px;
+		}
 	overflow: hidden;
 	&__title{
 		text-transform: uppercase;
 		@include breakpoint(laptop){
 			margin-bottom: 40px;
 		}
-		
 	}
 	&__value{
 		display: inline-block;
@@ -722,7 +755,7 @@ p{
 	}
 }
 #promoslider{
-	margin-bottom: 30px;
+	margin-bottom: 55px;
 }
 .article{
 	position: relative;
@@ -759,4 +792,39 @@ p{
 	margin-bottom: 70px;
 	border-bottom: 1px solid #dfdfdf;
 	padding-bottom: 50px;
+}
+.sorter{
+	display: inline-block;
+	margin-bottom: 60px;
+	span{
+		color: #898989;
+		margin-right: 20px;
+		font-size: 26px;
+	}
+	span.recomend{
+		font-size:29px;
+		color: #778d53;
+		text-decoration: underline;
+		text-decoration-style: dashed;
+		text-decoration-color: #898989;
+	}
+}
+.btn{
+	display: inline-block;
+	&_products{
+		float: right;
+		position: relative;
+		background: #f6f6f6;
+		border-radius: 30px;
+		font-family: 'Circe';
+		font-size: 16px;
+		color: #778d53;
+		padding: 3px 45px 3px 20px;
+		svg{
+			height: 10px;
+			position: absolute;
+			right: 10px;
+			top: 10px;
+		}
+	}
 }

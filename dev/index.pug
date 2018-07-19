@@ -122,6 +122,14 @@ html
 									span 20
 									span.rouble q
 		.wrapper
+			.sorter
+				a(href="#")
+					span Новинки
+				a(href="#")
+					span.recomend Рекомендуемые
+			.btn.btn_products
+				|Все новинки
+				include ./images/arrow_right.svg
 			ul#productslider
 				.product
 					.product__img
@@ -223,7 +231,7 @@ html
 							span 20
 							span.rouble q
 							.product__volume
-								|20г.
+								|20г.	
 		.wrapper
 			.row.clearfix
 				.col-laptop-1-3.actions
@@ -231,6 +239,7 @@ html
 						span Акции
 						a(href="#")
 							span Все акции
+							include ./images/arrow_right.svg
 					.article.clearfix
 						.article__pic
 							img(src="images/article_01.png", alt="article photo")
