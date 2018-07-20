@@ -89,6 +89,16 @@ $(function(){
 		loop: true,
 		slideEndAnimation: true,
 		pause: 10000,
+		responsive:[
+				{
+					breakpoint: 600,
+					settings:
+						{
+							controls: false,
+						}
+				},
+				
+			],
 	});
 	
 	//Instagram Slider (promo) setting
@@ -139,7 +149,7 @@ $(function(){
 	// input-mask
 	$('input[type="tel"]').inputmask('+7 (999) 999 - 99 - 99');
 	// end input-mask
-	
+		SameHeight()
 	//show/hide mobile footer list
 	$(".footer__title").click(function(){
 		$(this).siblings("ul").toggleClass("active");

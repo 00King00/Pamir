@@ -51,9 +51,9 @@ p{
 .header-top{
 	font-size: 13px;
 	font-family: 'Roboto';
-	background: #2a2a2a;
+	background: #39393a;
 	color: #fff;
-	padding: 10px 0;
+	padding: 10px;
 }
 .company-info{
 	color: #b7b7b7;
@@ -96,35 +96,18 @@ p{
 		}
 }
 .header-middle{
+	display: none;
 	background: #f0f0f0;
 	padding: 8px 0;
 	color: #7f7f7f;
 	font-size: 12px;
 	font-family: 'Circe';
+	@include breakpoint(laptop){
+		display: block;
+	}
 	a{
 		font-family: 'Circe';
 		color: #7f7f7f;
-	}
-	.location{
-		display: inline-block;
-		margin-right: 60px;
-	}
-	.city{
-		font-size: 14px;
-		position: relative;
-		top: -10px;
-		font-family: 'Circe';
-		margin-right: 20px;
-		display: inline-block;
-		vertical-align: middle;
-		img{
-			margin-right: 3px;
-		}
-		a{
-			text-decoration: underline;
-			text-decoration-style: dashed;
-		}
-		
 	}
 	.delivery{
 		margin-right: 20px;
@@ -141,17 +124,6 @@ p{
 	.delivery-time{
 		display: inline-block;
 	}
-	.telephone{
-		margin-right: 40px;
-		text-align: right;
-		display: inline-block;
-		a{
-			display: block;
-			font-family: 'Roboto';
-			font-size: 19px;
-			color: #010101;
-		}
-	}
 	.callback{
 		display: inline-block;
 		a{
@@ -163,8 +135,63 @@ p{
 		}
 	}
 }
+.location{
+		display: inline-block;
+		margin-right: 60px;
+	}
+.city{
+	font-size: 14px;
+	position: relative;
+	top: -10px;
+	font-family: 'Circe';
+	margin-right: 20px;
+	display: inline-block;
+	vertical-align: middle;
+	img{
+		margin-right: 3px;
+	}
+	a{
+		text-decoration: underline;
+		text-decoration-style: dashed;
+	}
+	&_top-line{
+		top: 0;
+		a{
+			color: #b2b2b2;
+		}
+		@include breakpoint(laptop){
+			display: none;
+		}
+	}
+}
+.telephone{
+	margin-right: 40px;
+	text-align: right;
+	display: inline-block;
+	a{
+		display: block;
+		font-family: 'Roboto';
+		font-size: 19px;
+		color: #010101;
+	}
+	&_top-line{
+		display: inline-block;
+		position: absolute;
+		right: 0px;
+		vertical-align: top;
+		font-size: 16px;
+		margin-right: 0px;
+		color: #fff;
+		@include breakpoint(tablet){
+			display: none;
+		}
+		a{
+			color: #fff;
+		}
+	}
+}
 .header-bottom{
-	padding: 10px 0;
+	padding: 10px;
 	display:flex;
 	align-content: center;
 	align-items: center;
@@ -172,11 +199,16 @@ p{
 		// width: 25%;
 		// flex-grow: 1;
 		vertical-align: middle;
-		margin-right: 40px;
+		@include breakpoint(tablet){
+			margin-right: 40px;
+		}
 		.text{
-			display: inline-block;
+			display: none;
 			max-width: 93px;
 			vertical-align: middle;
+		@include breakpoint(tablet){
+				display: inline-block;
+			}
 		}
 		img{
 			margin-right: 15px;
@@ -257,7 +289,11 @@ p{
 		font-family: 'Roboto';
 		margin-right: 20px;
 		span{
+			display: none;
 			margin-left: 19px;
+			@include breakpoint(phablet){
+				display: inline-block;
+			}
 		}
 	}
 	.shopping-sum{
@@ -268,11 +304,15 @@ p{
 		margin-left: 5px;
 		font-size: 18px;
 		span{
+			display: none;
 			color: #010101;
 			margin-left: 15px;
 			font-family: 'Roboto';
 			position: relative;
 			font-weight: bold;
+			@include breakpoint(phablet){
+				display: inline-block;
+			}
 		}
 		span:nth-child(2){
 			margin-left: 0px;
@@ -280,18 +320,73 @@ p{
 		}
 	}
 }
+.bars{
+	margin-right: 15px;
+	display: inline-block;
+	position: relative;
+	width: 30px;
+	@include breakpoint(tablet){
+		display: none;
+	}
+}
+.search-mobile{
+	display: inline-block;
+	margin: 0 20px;
+	@include breakpoint(tablet){
+		display: none;
+	}
+}
+
+.bar{
+	height:2px;
+	background:#39393a;
+	margin:8px 0;
+}
+
+.active .bar:nth-child(2){
+	opacity:0;
+
+}
+
+.active .bar:nth-child(1){
+	transform: rotate(45deg) translateY(9px) translateX(5px);
+	transition: all 1s ease;
+	background: #5e5e5e;
+}
+
+.active .bar:nth-child(3){
+	transform: rotate(-45deg) translateY(-8px) translateX(5px);
+	transition: all 1s ease;
+	background: #5e5e5e;
+}
+
+.bar:nth-child(2){
+	opacity:1;
+	transition: all 1s ease;
+}
+
+.bar{
+	transition: all 1s ease;
+}
 .main-menu{
 	font-family: 'Roboto';
 	font-size: 16px;
-	padding: 15px 0; 
+	padding: 15px 10px; 
 	background: #f0f0f0;
 	margin-bottom: 30px;
+	display: none;
+	@include breakpoint(tablet){
+		display: block;
+	}
 	ul{
 		display: block;
 		list-style: none;
 	}
 	li{
-		margin-right: 75px;
+			margin-right: 35px;
+		@include breakpoint(laptop){
+			margin-right: 75px;
+		}
 		display: inline-block;
 		img{
 			margin-left: 10px;
@@ -317,6 +412,14 @@ p{
 		margin: 0;
 		height: auto;
 	}
+	&_sale{
+		text-align: left;
+		border: none;
+		height: auto;
+		@include breakpoint(tablet){
+			text-align: center;
+		}
+	}
 	&__img{
 		margin-bottom: 20px;
 		height: 236px;
@@ -331,10 +434,15 @@ p{
 			height: 110px;
 		}
 		&_sale{
+			float: left;
+			display: inline-block;
 			height: auto;
 			margin-bottom: 10px;
 			position: relative;
 			line-height: initial;
+			@include breakpoint(tablet){
+				float: none;
+			}
 			@include breakpoint(desktop){
 				margin-bottom: 40px;
 			}
@@ -366,9 +474,12 @@ p{
 			font-size:18px;
 		}
 		&_sale{
+			display: block;
 			max-width: none;
 			height: auto;
-			
+			@include breakpoint(tablet){
+				display: inline-block;
+			}	
 		}
 	}
 	&__code{
@@ -392,6 +503,10 @@ p{
 		}
 		&_sale{
 			margin: 0;
+			left: 40px;
+			@include breakpoint(tablet){
+				left: 0px;
+			}
 		}
 	}
 	&__old-price{
@@ -490,7 +605,7 @@ p{
 	}
 	&__title{
 		text-transform: uppercase;
-		margin-bottom: 40px;
+		margin-bottom: 10px;
 		@include breakpoint(tablet){
 			margin-bottom: 10px;
 		}
@@ -499,14 +614,18 @@ p{
 		}
 	}
 	&__value{
-		display: inline-block;
-		font-size: 42px;
+		display: block;
+		font-size: 24px;
 		color: #da1c19;
 		font-family: 'roboto';
 		font-weight: bold;
-		position: absolute;
-		top: 0;
-		left: 0;
+		@include breakpoint(tablet){
+			font-size: 42px;
+			display: inline-block;
+			position: absolute;
+		    top: 70px;
+   			left: 49px;
+		}
 	}
 	border: 3px solid #778d53;
 	.marker{
@@ -892,6 +1011,7 @@ p{
 	display: inline-block;
 	margin-bottom: 20px;
 	font-size: 18px;
+	padding: 0 10px;
 	@include breakpoint(tablet){
 		margin-bottom: 60px;
 	}
