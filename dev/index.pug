@@ -352,7 +352,7 @@ html
 							span 20
 							span.rouble q
 							.product__volume
-								|20г.	
+								|20г
 		.wrapper
 			.clearfix
 				.col-laptop-1-3.actions
@@ -398,7 +398,7 @@ html
 							span #dary_pamyra
 					ul#instaslider
 						img(src="images/insta_pic.png", alt="insta_pic")
-				.col-laptop-1-3.col-phablet-1-2.actions
+				.col-laptop-1-3.col-phablet-1-2.actions.padding-off
 					.form__tabs
 						input#tab1(type="radio" name="tabs" checked)
 						label.question(for="tab1") Задать вопрос
@@ -421,9 +421,9 @@ html
 								input(type="tel" placeholder="+7 (___) ___ - __ - __")
 								input(type="submit" value="Отправить")
 								.form__text Мы перезваниваем в рабочеев ремя  в течении 2 часов
-		.section-title
+		.section-title.show-tablet
 			span Коротко о магазине
-		.wrapper
+		.wrapper.show-tablet
 			p Компания «Дары Памира» - это сплоченная команда увлеченных идеей здорового питания людей. Мы специализируемся на производстве и дистрибуции продуктов здорового питания. Основная идея нашего проекта - распространение и популяризация философии потребления вкусных и полезных для здоровья продуктов питания. Стратегические планы компании ориентированы на развитии собственных и партнерских производств, работе с перспективными производителями готовой продукции и сырья, исследовательской и научной деятельности по разработке новых интересных продуктов совместно исследовательскими пищевыми учреждениями (ФГБНУ ВНИИТЕК и др.), а также инвестиционных проектах – поддержке и финансировании фермерских хозяйств, производителей, поставщиков сырья. Важный актив компании – выстроенная сбытовая сеть партнерских торговых точек и дистрибуторов России и ближнего зарубежья, которая активно растет. Мы очень благодарны нашим партнерам за доверие и причастность к нашему общему делу.
 			.about-company
 				a(href="#").btn.btn_details
@@ -431,7 +431,7 @@ html
 					img(src="images/button_arrow_circle.png", alt="arrow")
 		.subscribe-line
 			.wrapper
-				.clearfix
+				.row.clearfix
 					.col-tablet-1-2
 						.subscribe-line__main-text Статьи, рекомендации и новости от марки Дары пальмира, Бесплатные советы экспертов о натуральных продуктах косметике, красоте и здоровье.
 						.subscribe-line__sub-text Мы не рассылаем СПАМ, только важные акции!
@@ -450,7 +450,8 @@ html
 				.footer__flex-row
 					.footer__column.footer__column_about-us
 						.footer__title О компании
-						ul
+							i.fa.fa-chevron-down
+						ul.active
 							li.footer__list.active
 								a(href="#") Контакты
 							li.footer__list
@@ -461,6 +462,7 @@ html
 								a(href="#") Условия обмена и возврата
 					.footer__column
 						.footer__title Сервис
+							i.fa.fa-chevron-down
 						ul
 							li.footer__list
 								a(href="#") Личный кабинет
@@ -472,8 +474,9 @@ html
 								a(href="#") Оплата
 							li.footer__list
 								a(href="#") Доставка
-					.footer__column.show-phablet
+					.footer__column
 						.footer__title Товары
+							i.fa.fa-chevron-down
 						ul
 							li.footer__list
 								a(href="#") Батончики из Шелковицы
@@ -498,30 +501,31 @@ html
 						.footer__text
 							span Работаем с 09:00 до 21:00 без
 							span обеда и выходных
-						.social-icon
+						.footer__social-icon
 							img(src="images/vk.png")
-						.social-icon
+						.footer__social-icon
 							img(src="images/fb.png")
-						.social-icon
+						.footer__social-icon
 							img(src="images/instagram.png")
-				.hide-tablet.center
-					.footer__phone-number +7 (499) 653-67-89
-					.footer__phone-number 8 (800) 800-80-80
-					a.footer__email(href="mailto:info@dary-pamira.ru") info@dary-pamira.ru
-					.footer__text
-						span Работаем с 09:00 до 21:00 без
-						span обеда и выходных
-					.social-icon
-						img(src="images/vk.png")
-					.social-icon
-						img(src="images/fb.png")
-					.social-icon
-						img(src="images/instagram.png")
-		hr
+			hr.footer__hr.hide-phablet
+			.hide-tablet.center
+				.footer__phone-number +7 (499) 653-67-89
+				.footer__phone-number 8 (800) 800-80-80
+				a.footer__email(href="mailto:info@dary-pamira.ru") info@dary-pamira.ru
+				.footer__text
+					span Работаем с 09:00 до 21:00 без
+					span обеда и выходных
+				.footer__social-icon
+					img(src="images/vk.png")
+				.footer__social-icon
+					img(src="images/fb.png")
+				.footer__social-icon
+					img(src="images/instagram.png")
+		hr.show-phablet
 		.wrapper
 			.footer_bottom-line
 				.footer__flex-row
 					.footer_bottom-line__title Дары Памира 2013-2017
-					a.footer_bottom-line__title(href="#") Дизайн сайта - Михаил Соловьев
+					a.footer_bottom-line__title.show-phablet(href="#") Дизайн сайта - Михаил Соловьев
 				.footer_bottom-line__text Использование любых материалов с данного ресурса возможно только после личного согласия администратора проекта.
 

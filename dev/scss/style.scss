@@ -36,7 +36,7 @@ a{
 hr{
 	border-color: #d3d3d5;
 	border-bottom: 1px;
-	
+	opacity: 0.5;
 }
 ul{
 	list-style: none;
@@ -47,6 +47,7 @@ p{
 	color: #9d9e9f;
 	margin-bottom: 30px;
 }
+
 .header-top{
 	font-size: 13px;
 	font-family: 'Roboto';
@@ -459,6 +460,7 @@ p{
 		margin-left: 20px;
 		color: #778d53;
 		font-size: 18px;
+		
 		span{
 			font-family: 'circe';
 			font-size: 18px;
@@ -526,7 +528,7 @@ p{
 	padding: 60px 30px 20px 30px;
 	background-color: #f6f6f6;
 	@include breakpoint(mobileonly){
-		padding: 60px 10px 20px 10px;
+		padding: 60px 20px 20px 20px;
 	}
 	
 	&__tabs{
@@ -536,7 +538,6 @@ p{
 		
 		label {
 			display: block;
-			padding: 20px 10px 20px 0;
 			font-weight: 600;
 			text-align: center;
 			color: #778d53;
@@ -544,18 +545,28 @@ p{
 			width: 50%;
 			float: left;
 			text-align: left;
+			@include breakpoint(phablet){
+				padding: 20px 10px 20px 0;
+			}
 			&.agred{
 				color: #9d9e9f;
 				font-size: 11px;
 				background-color: transparent;
 			}
 			&.question{
+				padding: 20px 0 20px 0;
 				padding-left: 10px;
+				
+				@include breakpoint(mobileonly){
+					padding-left: 20px;
+					
+				}
 				@include breakpoint(laptop){
 					padding-left: 30px;
 				}
 			}
 			&.callback{
+				padding: 20px 0 20px 0;
 				padding-left: 10px;
 				@include breakpoint(laptop){
 					padding-left: 20px;
@@ -628,7 +639,7 @@ p{
 }
 .inputwrap{
 	position: relative;
-	display: inline-block;
+	
 	img{
 		position: absolute;
 		top: 18px;
@@ -637,7 +648,7 @@ p{
 }
 .subscribe-line{
 	font-family: 'Circe';
-	padding: 30px 0 40px 0;
+	padding: 30px 20px 40px 20px;
 	background-color: #353535;
 	color: white;
 	&__main-text{
@@ -661,6 +672,18 @@ p{
 	label{
 		position: relative;
 	}
+	.inputwrap{
+		flex-grow: 2;
+		@include breakpoint(phablet){
+			margin-right: 15px;
+		}
+		@include breakpoint(tablet){
+			margin-right: 0;
+		}
+		@include breakpoint(laptop){
+			margin-right: 15px;
+		}
+	}
 	input{
 		font-size: 16px;
 		margin-bottom: 25px;
@@ -671,16 +694,8 @@ p{
 		}
 		&.email{
 			padding: 18px 55px;
-			flex-grow: 2;
-			@include breakpoint(phablet){
-				margin-right: 15px;
-			}
-			@include breakpoint(tablet){
-				margin-right: 0;
-			}
-			@include breakpoint(laptop){
-				margin-right: 15px;
-			}
+			width: 100%;
+			
 		}
 		&[type="submit"]{
 			padding: 18px 30px;
@@ -697,16 +712,43 @@ p{
 		}
 	}
 }
+
 .footer{
 	font-family: "Roboto";
-	padding-top: 45px;
+	padding: 45px 20px 0 20px;
+	@include breakpoint(mobileonly){
+		padding-top: 20px;
+	}
+	&__hr{
+		@include breakpoint(mobileonly){
+			margin:7px 0 25px 0;
+		}
+	}
 	&__flex-row{
 		display: flex;
 		justify-content: space-between;
+		@include breakpoint(mobileonly){
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+	}
+	ul.active{
+		display: block;
+	}
+	ul{
+		@include breakpoint(mobileonly){
+			display: none;
+		}
 		
 	}
 	&__column{
-		max-width: 190px;
+		
+		@include breakpoint(mobileonly){
+			width: 100%;
+		}
+		@include breakpoint(phablet){
+			max-width: 190px;
+		}
 		&_about-us{
 			@include breakpoint(mobileonly){
 				margin-right: 10px;
@@ -722,8 +764,15 @@ p{
 			line-height: 1.7;
 		}
 		
+		
 		font-size: 14px;
 		margin-bottom: 15px;
+		@include breakpoint(mobileonly){
+			margin-bottom: 0;
+			&:last-child{
+				margin-bottom: 20px;
+			}
+		}
 		&.active{
 			a{
 				color: #494949;
@@ -736,6 +785,7 @@ p{
 		font-size: 16px;
 		margin-bottom: 18px;
 		font-weight: 500;
+		
 		
 	}
 	&__phone-number{
@@ -754,19 +804,23 @@ p{
 		font-size: 13px;
 		color: #9d9e9f;
 		margin-bottom: 25px;
+		
 		span{
 			display: block;
 			margin-bottom: 6px;
 		}
 	}
-	.social-icon{
-		display: inline-block;
-		margin-right: 17px;
-		margin-bottom: 25px;
+	i{
+		color: #6e665e;
+		position: absolute;
+		right: 20px;
 	}
 	&_bottom-line{
 		color: #9d9e9f;
-		padding: 20px 0 15px 0;
+		padding: 20px 20px 15px 20px;
+		@include breakpoint(mobileonly){
+			padding-bottom: 35px;
+		}
 		&__title{
 			font-size: 14px;
 			color: #9d9e9f;
@@ -778,10 +832,22 @@ p{
 		&__text{
 			font-size: 11px;
 			display: inline-block;
+			@include breakpoint(mobileonly){
+				text-align: center;
+			}
 			
 			
 		}
 	}
+	&__social-icon{
+		display: inline-block;
+		margin-right: 17px;
+		margin-bottom: 25px;
+		@include breakpoint(mobileonly){
+			margin-bottom: 0;
+		}
+	}
+	
 }
 #promoslider{
 	margin-bottom: 55px;
