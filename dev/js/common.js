@@ -20,7 +20,7 @@ $(function(){
 					breakpoint: 900,
 					settings:
 						{
-							item:2,
+							item:3,
 							slideMove:1,
 						}
 				},
@@ -56,7 +56,7 @@ $(function(){
 					breakpoint: 900,
 					settings:
 						{
-							item:2,
+							item:3,
 							slideMove:1,
 						}
 				},
