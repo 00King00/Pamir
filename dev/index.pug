@@ -25,6 +25,11 @@ html
 					span |
 					a(href="#")
 						span.underline Регистрация
+				.city.city_top-line
+					img(src="images/marker.png", alt="marker")
+					a(href="#") Москва
+				.telephone.telephone_top-line
+					a(href="tel:74996546789") +7 (499) 653-67-89
 		.header-middle
 			.wrapper
 				.location
@@ -52,6 +57,12 @@ html
 					span с 8:00 до 20:00 по мск
 		.wrapper
 			.header-bottom
+				.bars
+					.bar
+					.bar
+					.bar
+				.search-mobile
+					img(src="images/magnifying_glass.png", alt="search")
 				.logo
 					img(src="images/logo.png", alt="logo")
 					.text
@@ -108,11 +119,11 @@ html
 							|Cкидка
 						.sale__title
 							|Товар дня
-						.product
+						.product.product_sale
 							.product__img.product__img_sale
-								.sale__value
-									|-20%
 								img(src="images/product_sale.png",alt="product")
+							.sale__value
+								|-20%
 							.product__name.product__name_sale
 								|Батончик с миндалем «Шелковица с Памира»
 							.product__price.product__price_sale
@@ -121,6 +132,8 @@ html
 								.product__old-price
 									span 20
 									span.rouble q
+								.product__volume
+									|20г.
 		.wrapper
 			.clearfix
 				.sorter
