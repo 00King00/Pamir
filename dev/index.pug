@@ -95,7 +95,7 @@ html
 						a(href="#") Оптовикам
 						img(src="images/opt.png", alt="pic")
 		.wrapper
-			.row.clearfix
+			.clearfix
 				.col-tablet-2-3
 					ul#promoslider
 						img(src="images/promo_slider.png", alt="promo")
@@ -122,19 +122,91 @@ html
 									span 20
 									span.rouble q
 		.wrapper
-			.sorter
-				a(href="#")
-					span Новинки
-				a(href="#")
-					span.recomend Рекомендуемые
-			.btn.btn_products
-				|Все новинки
-				include ./images/arrow_right.svg
-			ul#productslider
+			.clearfix
+				.sorter
+					a(href="#")
+						span Новинки
+					a(href="#")
+						span.recomend Рекомендуемые
+				.btn.btn_products.show-tablet
+					|Все новинки
+					include ./images/arrow_right.svg
+			.clearfix.hide-tablet
+				.col-mobileonly-1-2.col-phablet-1-2.col-mobileonly-1-2_padding-none.col-phablet-1-2_padding-none
+					.product
+						.product__img
+							a(href="#")
+								img(src="images/product_01.png",alt="product")
+						a(href="#").product__name
+							|Батончик с миндалем «Шелковица с Памира»
+						.product__code
+							|ДарыПамира  /  LFG-934
+						.product__price
+							span 20
+							span.rouble q
+							.product__volume
+								|20г.
+				.col-mobileonly-1-2.col-phablet-1-2.col-mobileonly-1-2_padding-none.col-phablet-1-2_padding-none
+					.product.border-righ-none
+						.product__img
+							a(href="#")
+								img(src="images/product_02.png",alt="product")
+						a(href="#").product__name
+							|Батончик с миндалем «Шелковица с Памира»
+						.product__code
+							|ДарыПамира  /  LFG-934
+						.product__price
+							span 20
+							span.rouble q
+							.product__volume
+								|20г.
+				.col-mobileonly-1-2.col-phablet-1-2.col-mobileonly-1-2_padding-none.col-phablet-1-2_padding-none
+					.product
+						.product__img
+							a(href="#")
+								img(src="images/product_03.png",alt="product")
+						a(href="#").product__name
+							|Батончик с миндалем «Шелковица с Памира»
+						.product__code
+							|ДарыПамира  /  LFG-934
+						.product__price
+							span 20
+							span.rouble q
+							.product__volume
+								|20г.
+				.col-mobileonly-1-2.col-phablet-1-2.col-mobileonly-1-2_padding-none.col-phablet-1-2_padding-none
+					.product.border-righ-none
+						.product__img
+							a(href="#")
+								img(src="images/product_04.png",alt="product")
+						a(href="#").product__name
+							|Батончик с миндалем «Шелковица с Памира»
+						.product__code
+							|ДарыПамира  /  LFG-934
+						.product__price
+							span 20
+							span.rouble q
+							.product__volume
+								|20г.
+			ul#productslider.show-tablet
 				.product
 					.product__img
-						img(src="images/product_01.png",alt="product")
-					.product__name
+						a(href="#")
+							img(src="images/product_01.png",alt="product")
+					a(href="#").product__name
+						|Батончик с миндалем «Шелковица с Памира»
+					.product__code
+						|ДарыПамира  /  LFG-934
+					.product__price
+						span 20
+						span.rouble q
+						.product__volume
+							|20г.
+				.product.border-righ-none
+					.product__img
+						a(href="#")
+							img(src="images/product_02.png",alt="product")
+					a(href="#").product__name
 						|Батончик с миндалем «Шелковица с Памира»
 					.product__code
 						|ДарыПамира  /  LFG-934
@@ -145,20 +217,9 @@ html
 							|20г.
 				.product
 					.product__img
-						img(src="images/product_02.png",alt="product")
-					.product__name
-						|Батончик с миндалем «Шелковица с Памира»
-					.product__code
-						|ДарыПамира  /  LFG-934
-					.product__price
-						span 20
-						span.rouble q
-						.product__volume
-							|20г.
-				.product
-					.product__img
-						img(src="images/product_03.png",alt="product")
-					.product__name
+						a(href="#")
+							img(src="images/product_03.png",alt="product")
+					a(href="#").product__name
 						|Крем кокосовый органический, "Econutrena", жирность 68%, 300мл
 					.product__code
 						|ДарыПамира  /  LFG-934
@@ -169,8 +230,9 @@ html
 							|20г.
 				.product
 					.product__img
-						img(src="images/product_04.png",alt="product")
-					.product__name
+						a(href="#")
+							img(src="images/product_04.png",alt="product")
+					a(href="#").product__name
 						|Батончик с миндалем «Шелковица с Памира»
 					.product__code
 						|ДарыПамира  /  LFG-934
@@ -182,12 +244,69 @@ html
 		.hits
 			.section-title
 					span Лидеры продаж
+			.clearfix.hide-tablet
+				.col-mobileonly-1-2.col-phablet-1-2.col-mobileonly-1-2_padding-none.col-phablet-1-2_padding-none
+					.product
+						.product__img
+							a(href="#")
+								img(src="images/product_01.png",alt="product")
+						a(href="#").product__name
+							|Батончик с миндалем «Шелковица с Памира»
+						.product__code
+							|ДарыПамира  /  LFG-934
+						.product__price
+							span 20
+							span.rouble q
+							.product__volume
+								|20г.
+				.col-mobileonly-1-2.col-phablet-1-2.col-mobileonly-1-2_padding-none.col-phablet-1-2_padding-none
+					.product.border-righ-none
+						.product__img
+							a(href="#")
+								img(src="images/product_02.png",alt="product")
+						a(href="#").product__name
+							|Батончик с миндалем «Шелковица с Памира»
+						.product__code
+							|ДарыПамира  /  LFG-934
+						.product__price
+							span 20
+							span.rouble q
+							.product__volume
+								|20г.
+				.col-mobileonly-1-2.col-phablet-1-2.col-mobileonly-1-2_padding-none.col-phablet-1-2_padding-none
+					.product
+						.product__img
+							a(href="#")
+								img(src="images/product_03.png",alt="product")
+						a(href="#").product__name
+							|Батончик с миндалем «Шелковица с Памира»
+						.product__code
+							|ДарыПамира  /  LFG-934
+						.product__price
+							span 20
+							span.rouble q
+							.product__volume
+								|20г.
+				.col-mobileonly-1-2.col-phablet-1-2.col-mobileonly-1-2_padding-none.col-phablet-1-2_padding-none
+					.product.border-righ-none
+						.product__img
+							a(href="#")
+								img(src="images/product_04.png",alt="product")
+						a(href="#").product__name
+							|Батончик с миндалем «Шелковица с Памира»
+						.product__code
+							|ДарыПамира  /  LFG-934
+						.product__price
+							span 20
+							span.rouble q
+							.product__volume
+								|20г.
 			.wrapper
-				ul#productslider2
+				ul#productslider2.show-tablet
 					.product
 						.product__img
 							img(src="images/product_04.png",alt="product")
-						.product__name
+						a(href="#").product__name
 							|Батончик с миндалем «Шелковица с Памира»
 						.product__code
 							|ДарыПамира  /  LFG-934
@@ -199,7 +318,7 @@ html
 					.product
 						.product__img
 							img(src="images/product_05.png",alt="product")
-						.product__name
+						a(href="#").product__name
 							|Батончик с миндалем «Шелковица с Памира»
 						.product__code
 							|ДарыПамира  /  LFG-934
@@ -210,8 +329,9 @@ html
 								|20г.
 					.product
 						.product__img
-							img(src="images/product_06.png",alt="product")
-						.product__name
+							a(href="#")
+								img(src="images/product_06.png",alt="product")
+						a(href="#").product__name
 							|Крем кокосовый органический, "Econutrena", жирность 68%, 300мл
 						.product__code
 							|ДарыПамира  /  LFG-934
@@ -222,8 +342,9 @@ html
 								|20г.
 					.product
 						.product__img
-							img(src="images/product_07.png",alt="product")
-						.product__name
+							a(href="#")
+								img(src="images/product_07.png",alt="product")
+						a(href="#").product__name
 							|Батончик с миндалем «Шелковица с Памира»
 						.product__code
 							|ДарыПамира  /  LFG-934
@@ -233,7 +354,7 @@ html
 							.product__volume
 								|20г.	
 		.wrapper
-			.row.clearfix
+			.clearfix
 				.col-laptop-1-3.actions
 					.block-title
 						span Акции
@@ -304,16 +425,22 @@ html
 			span Коротко о магазине
 		.wrapper
 			p Компания «Дары Памира» - это сплоченная команда увлеченных идеей здорового питания людей. Мы специализируемся на производстве и дистрибуции продуктов здорового питания. Основная идея нашего проекта - распространение и популяризация философии потребления вкусных и полезных для здоровья продуктов питания. Стратегические планы компании ориентированы на развитии собственных и партнерских производств, работе с перспективными производителями готовой продукции и сырья, исследовательской и научной деятельности по разработке новых интересных продуктов совместно исследовательскими пищевыми учреждениями (ФГБНУ ВНИИТЕК и др.), а также инвестиционных проектах – поддержке и финансировании фермерских хозяйств, производителей, поставщиков сырья. Важный актив компании – выстроенная сбытовая сеть партнерских торговых точек и дистрибуторов России и ближнего зарубежья, которая активно растет. Мы очень благодарны нашим партнерам за доверие и причастность к нашему общему делу.
+			.about-company
+				a(href="#").btn.btn_details
+					|Подробнее
+					img(src="images/button_arrow_circle.png", alt="arrow")
 		.subscribe-line
 			.wrapper
-				.row.clearfix
+				.clearfix
 					.col-tablet-1-2
 						.subscribe-line__main-text Статьи, рекомендации и новости от марки Дары пальмира, Бесплатные советы экспертов о натуральных продуктах косметике, красоте и здоровье.
 						.subscribe-line__sub-text Мы не рассылаем СПАМ, только важные акции!
 					.col-tablet-1-2
 						form
 							.subscribe-line__container-flex
-								input.email(type="email" placeholder="Ваш e-mail")
+								.inputwrap
+									input.email(type="email" placeholder="Ваш e-mail")
+									img(src="images/mail.png", alt="mail")
 								input(type="submit" value="Подписаться")
 							label.subscribe-line__sub-text
 								input(type="checkbox")

@@ -157,7 +157,7 @@ p{
 			display: block;
 			font-family: 'Roboto';
 			text-decoration: underline;
-			text-decoration-style: dotted; 
+			text-decoration-style:dotted; 
 			color: #778d53;
 		}
 	}
@@ -305,15 +305,29 @@ p{
 	}
 }
 .product{
+	padding: 10px;
+	margin-left: -1px;
+	margin-top: -1px;
+	border: 1px solid #dfdfdf;
 	text-align: center;
+	height: 300px;
+	@include breakpoint(tablet){
+		border: none;
+		margin: 0;
+		height: auto;
+	}
 	&__img{
-		margin-bottom: 40px;
+		margin-bottom: 20px;
 		height: 236px;
+		height: 110px;
 		justify-content: center;
 		display: flex;
 		align-items: center;
+		@include breakpoint(tablet){
+			margin-bottom: 40px;
+		}
 		img{
-			//vertical-align: middle;
+			height: 110px;
 		}
 		&_sale{
 			height: auto;
@@ -340,12 +354,16 @@ p{
 	&__name{
 		margin: 0 auto;
 		height: 65px;
+		display: inline-block;
 		line-height: 1.2;
 		margin-bottom: 20px;
-		font-size:18px;
+		font-size:14px;
 		max-width: 255px;
 		font-family: 'Circe';
 		color: #778d53;
+		@include breakpoint(tablet){
+			font-size:18px;
+		}
 		&_sale{
 			max-width: none;
 			height: auto;
@@ -355,9 +373,12 @@ p{
 	&__code{
 		font-family: 'roboto';
 		font-style: italic;
-		font-size: 13px;
+		font-size: 11px;
 		margin-bottom: 20px;
 		color: #9d9e9f;
+		@include breakpoint(tablet){
+			font-size:13px;
+		}
 	}
 	&__price{
 		display: inline-block;
@@ -392,6 +413,9 @@ p{
 		color: #707070;
 	}
 }
+.border-righ-none{
+	border-right: none;
+}
 .section-title{
 	overflow: hidden;
 	margin: 40px auto;
@@ -402,6 +426,7 @@ p{
 		position: relative;
 	}
 	span:before, span:after{
+		display: none;
 		content: '';
 		position:absolute;
 		width: 3000px;
@@ -410,14 +435,15 @@ p{
 		top: 50%;
 		transform: translateY(-50%);
 		right: 104%;
-		@include breakpoint(phablet){
+		@include breakpoint(tablet){
+			display: block;
 			right: 120%;
 		}
 	}
 	span:after{
 			right: auto;
 			left: 104%;
-		@include breakpoint(phablet){
+		@include breakpoint(tablet){
 			left: 120%;
 		}
 	}
@@ -468,12 +494,6 @@ p{
 		}
 		@include breakpoint(laptop){
 			margin-bottom: 10px;
-		}
-	overflow: hidden;
-	&__title{
-		text-transform: uppercase;
-		@include breakpoint(laptop){
-			margin-bottom: 40px;
 		}
 	}
 	&__value{
@@ -604,6 +624,15 @@ p{
 		padding: 20px  0 0 0 ;
 		background-color: #f6f6f6;
 		&.active{display: block;}
+	}
+}
+.inputwrap{
+	position: relative;
+	display: inline-block;
+	img{
+		position: absolute;
+		top: 18px;
+		left: 20px;
 	}
 }
 .subscribe-line{
@@ -795,18 +824,33 @@ p{
 }
 .sorter{
 	display: inline-block;
-	margin-bottom: 60px;
+	margin-bottom: 20px;
+	font-size: 18px;
+	@include breakpoint(tablet){
+		margin-bottom: 60px;
+	}
 	span{
 		color: #898989;
 		margin-right: 20px;
-		font-size: 26px;
+		font-size: 18px;
+		@include breakpoint(tablet){
+			font-size:29px;
+		}	
 	}
 	span.recomend{
-		font-size:29px;
 		color: #778d53;
-		text-decoration: underline;
-		text-decoration-style: dashed;
-		text-decoration-color: #898989;
+		@include breakpoint(tablet){
+			font-size:29px;
+	}
+	// 	text-decoration: underline;
+	// 	text-decoration-style: dashed;
+	// 	text-decoration-color: #898989;
+	}
+	.recomend{
+		display: inline;
+		background-image: url(../images/dots.png);
+		background-repeat: repeat-x;
+		background-position: bottom;
 	}
 }
 .btn{
@@ -827,4 +871,23 @@ p{
 			top: 10px;
 		}
 	}
+	&_details{
+		display: inline-block;
+		position: relative;
+		background: #f6f6f6;
+		color: #9d9e9f;
+		padding: 7px 45px 6px 20px;
+		margin-bottom: 40px;
+		border-radius: 30px;
+		font-family: 'Circe';
+		font-size: 13px;
+		img{
+			position: absolute;
+			right: 3px;
+			top: 3px;
+		}
+	}
+}
+.about-company{
+	text-align: center;
 }
