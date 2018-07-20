@@ -139,4 +139,9 @@ $(function(){
 	// input-mask
 	$('input[type="tel"]').inputmask('+7 (999) 999 - 99 - 99');
 	// end input-mask
+	
+	//show/hide mobile footer list
+	$(".footer__title").click(function(){
+		$(this).siblings("ul").toggleClass("active");
+	});
 });

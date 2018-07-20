@@ -104,6 +104,9 @@
 [class*='col-']{
 	padding: 0 10px;
 	min-height: 1px;
+	&.padding-off{
+		padding: 0;
+	}
 }
 .col-{
 	&mobileonly-{
@@ -267,10 +270,12 @@
 	@include breakpoint(laptop){
 		width: 36%;
 	}
+	padding: 0 20px;
 
 }
 .actions{
 	@include breakpoint(laptop){
 		width: 32%;
 	}
+	padding: 0 20px;
 }
