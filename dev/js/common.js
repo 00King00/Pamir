@@ -133,7 +133,9 @@ $(function(){
 	$(window).resize(function(){
 		SameHeight();
 	});
-	
+	window.onload = function() {
+  		SameHeight();
+	};
 	//for tabs form
 	$(".form__tabs input").click(function(){
 		var select = $(this).prop("id");
