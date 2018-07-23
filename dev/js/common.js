@@ -120,14 +120,16 @@ $(function(){
 	});
 
 	function SameHeight() {
+		
 		var browserMinWidth = $(window).width()
-			if (browserMinWidth > 800) {
+					if (browserMinWidth > 800) {
 				$('.sale').css('height', $('#promoslider').height());
 			}
 			else{
 				$('.sale').css('height', 'auto');
 			}
 	}
+	
 	$(window).resize(function(){
 		SameHeight();
 	});
@@ -151,7 +153,6 @@ $(function(){
 	// input-mask
 	$('input[type="tel"]').inputmask('+7 (999) 999 - 99 - 99');
 	// end input-mask
-		SameHeight()
 	//show/hide mobile footer list
 	$(".footer__title").click(function(){
 		$(this).siblings("ul").toggleClass("active");
