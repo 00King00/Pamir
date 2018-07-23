@@ -260,13 +260,12 @@
 }
 .no-padding{
 	padding: 0;
-	&_tablet{
-		@include breakpoint(tablet){
-			padding: 0 15px;
-		}
+	@include breakpoint(tablet){
+		padding: 0 15px;
 	}
 }
 .instagram{
+	margin-bottom: 40px;
 	@include breakpoint(laptop){
 		width: 36%;
 	}

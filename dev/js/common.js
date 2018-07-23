@@ -74,7 +74,6 @@ $(function(){
 
 	//Main Slider (promo) setting
 		var promoslider=$('#promoslider').lightSlider({
-		galleryMargin: 25,
 		item: 1,
 		slideMove:1,
 		pager: false,
@@ -124,6 +123,9 @@ $(function(){
 		var browserMinWidth = $(window).width()
 			if (browserMinWidth > 800) {
 				$('.sale').css('height', $('#promoslider').height());
+			}
+			else{
+				$('.sale').css('height', 'auto');
 			}
 	}
 	$(window).resize(function(){
