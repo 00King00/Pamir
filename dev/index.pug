@@ -107,13 +107,13 @@ html
 						img(src="images/opt.png", alt="pic")
 		.wrapper
 			.clearfix
-				.col-tablet-2-3
+				.col-tablet-2-3.no-padding
 					ul#promoslider
 						img(src="images/promo_slider.png", alt="promo")
 						img(src="images/promo_slider.png", alt="promo")
 						img(src="images/promo_slider.png", alt="promo")
 						img(src="images/promo_slider.png", alt="promo")
-				.col-tablet-1-3
+				.col-tablet-1-3.no-padding
 					.sale
 						.marker
 							|Cкидка
@@ -454,7 +454,9 @@ html
 								.inputwrap
 									input.email(type="email" placeholder="Ваш e-mail")
 									img(src="images/mail.png", alt="mail")
-								input(type="submit" value="Подписаться")
+								.inputwrap
+									input(type="submit" value="Подписаться")
+									include ./images/arrow_right.svg
 							label.subscribe-line__sub-text
 								input(type="checkbox")
 								| Я согласен с правиласи пользования сервисом

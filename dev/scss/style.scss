@@ -193,7 +193,7 @@ p{
 .header-bottom{
 	padding: 10px;
 	display:flex;
-	align-content: center;
+	justify-content: space-between;
 	align-items: center;
 	.logo{
 		// width: 25%;
@@ -321,7 +321,6 @@ p{
 	}
 }
 .bars{
-	margin-right: 15px;
 	display: inline-block;
 	position: relative;
 	width: 30px;
@@ -724,7 +723,7 @@ p{
 			background-color: transparent;
 			margin-top: -16px;
 			display: block;
-			padding-left: 20px;
+			padding-left: 30px;
 			margin-bottom: 20px;
 
 		}
@@ -771,6 +770,15 @@ p{
 		position: absolute;
 		top: 18px;
 		left: 20px;
+	}
+	svg{
+		position: absolute;
+		top: 20px;
+		right: 15px;
+		height: 15px;
+		.cls-1{
+			fill: #fff;
+		}
 	}
 }
 .subscribe-line{
@@ -825,10 +833,12 @@ p{
 			
 		}
 		&[type="submit"]{
+			width: 100%;
 			padding: 18px 30px;
 			background-color: #778d53;
 			color: white;
 			flex-grow: 1;
+			padding-right: 55px;
 		}
 		&[type="checkbox"]{
 			width: 15px;
@@ -987,7 +997,9 @@ p{
 	
 }
 #promoslider{
-	margin-bottom: 55px;
+	@include breakpoint(tablet){
+		margin-bottom: 55px;
+	}
 }
 .article{
 	position: relative;
@@ -1021,9 +1033,12 @@ p{
 	}
 }
 .hits{
-	margin-bottom: 70px;
-	border-bottom: 1px solid #dfdfdf;
 	padding-bottom: 50px;
+	@include breakpoint(tablet){
+		margin-bottom: 70px;
+		border-bottom: 1px solid #dfdfdf;
+	}
+
 }
 .sorter{
 	display: inline-block;
