@@ -570,11 +570,21 @@ p{
 		font-family: 'Roboto';
 		font-size: 29px;
 		position: relative;
+		display: block;
+//		text-align: center;
+//		@inlude breakpoint(tablet){
+//			text-align: left;
+//		}
 	}
 	a{
 		margin-left: 20px;
 		color: #778d53;
 		font-size: 18px;
+		display: block;
+		text-align: center;
+		@inlude breakpoint(tablet){
+			display: inline-block;
+		}
 		
 		span{
 			font-family: 'circe';

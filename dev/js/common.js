@@ -1,5 +1,5 @@
 $(function(){
-	//products Slider 
+	//products Slider
 		var productslider=$('#productslider').lightSlider({
 		galleryMargin: 25,
 		item: 4,
