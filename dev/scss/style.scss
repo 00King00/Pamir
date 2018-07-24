@@ -61,7 +61,10 @@ p{
 	a{
 			color: #b7b7b7;
 			text-decoration: underline;
+		&:hover{
+			color: #fff;
 		}
+	}
 	ul{
 		list-style: none;
 	}
@@ -123,6 +126,15 @@ p{
 	}
 	.delivery-time{
 		display: inline-block;
+		a{
+			display: inline;
+			background-image: url(../images/dots.png);
+			background-repeat: repeat-x;
+			background-position: bottom;
+			&:hover{
+				color: #39393a;
+			}
+		}
 	}
 	.callback{
 		display: inline-block;
@@ -151,8 +163,13 @@ p{
 		margin-right: 3px;
 	}
 	a{
-		text-decoration: underline;
-		text-decoration-style: dashed;
+		display: inline;
+		background-image: url(../images/dots.png);
+		background-repeat: repeat-x;
+		background-position: bottom;
+		&:hover{
+			color: #39393a;
+		}
 	}
 	&_top-line{
 		top: 0;
@@ -229,6 +246,11 @@ p{
 	}
 	.search{
 		display:none;
+		&:hover{
+			i{
+				color: #536a30;
+			}
+		}
 		@include breakpoint(tablet){
 			flex-grow:2;
 			// width: 60%;
@@ -259,6 +281,9 @@ p{
 			}
 			i{
 				color: #c2c4ca;
+				&:hover{
+					color: #536a30;
+				}
 			}
 		}
 	}
@@ -288,7 +313,13 @@ p{
 	.favorites{
 		font-family: 'Roboto';
 		margin-right: 20px;
+		.favorites-icon{
+			span{
+				color: #fff;
+			}
+		}
 		span{
+			color:#010101;
 			display: none;
 			margin-left: 19px;
 			@include breakpoint(phablet){
@@ -400,12 +431,15 @@ p{
 	}
 }
 .product{
-	padding: 10px;
+	padding: 15px 10px;
 	margin-left: -1px;
 	margin-top: -1px;
 	border: 1px solid #dfdfdf;
 	text-align: center;
-	height: 300px;
+	height: 280px;
+	@include breakpoint(phablet){
+		height: 260px;
+	}
 	@include breakpoint(tablet){
 		border: none;
 		margin: 0;
@@ -414,6 +448,8 @@ p{
 	&_sale{
 		text-align: left;
 		border: none;
+		position: relative;
+		padding: 0;
 		height: auto;
 		@include breakpoint(tablet){
 			text-align: center;
@@ -430,12 +466,16 @@ p{
 			margin-bottom: 40px;
 		}
 		img{
-			height: 110px;
+			height: 114px;
+			@include breakpoint(phablet){
+				height: 110px;
+			}
 		}
 		&_sale{
 			float: left;
 			display: inline-block;
 			height: auto;
+			margin-right: 17px;
 			margin-bottom: 10px;
 			position: relative;
 			line-height: initial;
@@ -443,17 +483,17 @@ p{
 				float: none;
 			}
 			@include breakpoint(desktop){
-				margin-bottom: 40px;
+				margin-bottom: 30px;
 			}
 			img{
 				@include breakpoint(tablet){
-					height: 182px;
+					height: 142px;
 				}
 				@include breakpoint(laptop){
-					height: 220px;
+					height: 210px;
 				}
 				@include breakpoint(desktop){
-					height: auto;
+					height: 210px;
 				}
 
 			}
@@ -461,23 +501,29 @@ p{
 	}
 	&__name{
 		margin: 0 auto;
-		height: 65px;
+		// height: 65px;
 		display: inline-block;
 		line-height: 1.2;
-		margin-bottom: 20px;
+		margin-bottom: 15px;
 		font-size:14px;
 		max-width: 255px;
 		font-family: 'Circe';
 		color: #778d53;
+		&:hover{
+			color: #536a30;
+		}
 		@include breakpoint(tablet){
 			font-size:18px;
+			margin-bottom: 20px;
 		}
 		&_sale{
 			display: block;
 			max-width: none;
+			margin-bottom: 10px;
 			height: auto;
 			@include breakpoint(tablet){
 				display: inline-block;
+				margin-bottom: 30px;
 			}	
 		}
 	}
@@ -485,10 +531,11 @@ p{
 		font-family: 'roboto';
 		font-style: italic;
 		font-size: 11px;
-		margin-bottom: 20px;
+		margin-bottom: 15px;
 		color: #9d9e9f;
 		@include breakpoint(tablet){
 			font-size:13px;
+			margin-bottom: 20px;
 		}
 	}
 	&__price{
@@ -502,6 +549,7 @@ p{
 		}
 		&_sale{
 			margin: 0;
+			font-size: 24px;
 			left: 40px;
 			@include breakpoint(tablet){
 				left: 0px;
@@ -511,7 +559,9 @@ p{
 	&__old-price{
 		position: absolute;
 		right: 120%;
+		font-size: 19px;
 		top: 0;
+		top: 4px;
 		color: #da1c19;
 		text-decoration: line-through;
 	}
@@ -533,10 +583,13 @@ p{
 }
 .section-title{
 	overflow: hidden;
-	margin: 40px auto;
+	margin: 25px auto 20px;
 	text-align: center;
 	font-family: 'Roboto';
 	font-size: 29px;
+	@include breakpoint(tablet){
+	margin: 40px auto;
+	}
 	span{
 		position: relative;
 	}
@@ -564,22 +617,24 @@ p{
 	}
 }
 .block-title{
-	margin-bottom: 35px;
+	margin-bottom: 25px;
 	text-align: center;
 	@include breakpoint(tablet){
 		text-align: left;
+		margin-bottom: 35px;
 	}
 	span{
 		font-family: 'Roboto';
 		font-size: 29px;
 		position: relative;
 		display: block;
+		display:inline-block;
 		@include breakpoint(tablet){
 			display:inline-block;
 		}
 	}
 	a{
-		margin-left: 20px;
+		margin-left: 8px;
 		color: #778d53;
 		font-size: 18px;
 		
@@ -587,22 +642,33 @@ p{
 			font-family: 'circe';
 			font-size: 18px;
 		}
-	}
-	svg{
-		height: 10px;
-		margin-left: 10px;
-		.cls-1{
-			fill: #778d53;
+		svg{
+			height: 10px;
+			margin-left: 10px;
+			.cls-1{
+				fill: #778d53;
+			}
+		}
+		&:hover{
+			color: #4d622a;
+			svg{
+				.cls-1{
+					fill: #4d622a;
+				}
+			}
 		}
 	}
+	
 }
 .sale{
 	position: relative;
 	padding: 30px 10px;
 	text-align: center;
-	margin-bottom: 55px;
+	margin-bottom: 15px;
+	
 	@include breakpoint(tablet){
 		padding: 10px 10px;
+		margin-bottom: 55px;
 	}
 	@include breakpoint(laptop){
 		padding: 10px 10px;
@@ -612,12 +678,12 @@ p{
 	}
 	&__title{
 		text-transform: uppercase;
-		margin-bottom: 10px;
+		margin: 10px 0;
 		@include breakpoint(tablet){
 			margin-bottom: 10px;
 		}
 		@include breakpoint(laptop){
-			margin-bottom: 10px;
+			margin-bottom: 30px;
 		}
 	}
 	&__value{
@@ -626,24 +692,34 @@ p{
 		color: #da1c19;
 		font-family: 'roboto';
 		font-weight: bold;
+		margin-bottom: 5px;
 		@include breakpoint(tablet){
 			font-size: 42px;
+			margin: 0;
 			display: inline-block;
 			position: absolute;
-		    top: 70px;
-   			left: 49px;
+		    top: 0px;
+   			left: 5%;
+		}
+		@include breakpoint(laptop){
+			left: 10%;
 		}
 	}
 	border: 3px solid #778d53;
 	.marker{
 		position: absolute;
-		top: 10px;
-		left: 10px;
+		top: 58px;
+		left: 15px;
+		z-index: 3;
 		background: #da1c19;
 		color: #fff;
 		font-family: 'Circe';
 		font-size: 14px;
 		padding: 1px 5px;
+		@include breakpoint(tablet){
+			top: 10px;
+			left: 10px;
+		}
 
 	}
 }
@@ -680,23 +756,12 @@ p{
 				background-color: transparent;
 			}
 			&.question{
-				padding: 20px 0 20px 0;
-				padding-left: 10px;
-				
-				@include breakpoint(mobileonly){
-					padding-left: 20px;
-					
-				}
-				@include breakpoint(laptop){
-					padding-left: 30px;
-				}
+				padding: 20px 0;
+				text-align: center;
 			}
-			&.callback{
-				padding: 20px 0 20px 0;
-				padding-left: 10px;
-				@include breakpoint(laptop){
-					padding-left: 20px;
-				}
+			&.callbacktab{
+				padding: 20px 0;
+				text-align: center;
 				
 			}
 			&:hover {
@@ -737,8 +802,13 @@ p{
 			margin-bottom: 15px;
 			&[type="submit"]{
 				height: 40px;
+				font-size: 19px;
+				font-family:'Circe';
 				background-color: #778d53;
 				color: white;
+				&:hover{
+					background-color: #4d622a;
+				}
 			}
 			&[type="checkbox"]{
 				height: 15px;
@@ -783,7 +853,7 @@ p{
 }
 .subscribe-line{
 	font-family: 'Circe';
-	padding: 30px 20px 40px 20px;
+	padding: 30px 20px 20px 20px;
 	background-color: #353535;
 	color: white;
 	&__main-text{
@@ -834,11 +904,17 @@ p{
 		}
 		&[type="submit"]{
 			width: 100%;
-			padding: 18px 30px;
+			font-family: 'Circe';
+			font-size: 19px;
+			padding: 13px 30px;
 			background-color: #778d53;
+			height: 54px;
 			color: white;
 			flex-grow: 1;
 			padding-right: 55px;
+			&:hover{
+					background-color: #4d622a;
+				}
 		}
 		&[type="checkbox"]{
 			width: 15px;
@@ -898,7 +974,10 @@ p{
 	&__list{
 		a{
 			color: #9d9e9f;
-			line-height: 1.7;
+			line-height: 1.4;
+			&:hover{
+				color: #39393a;
+			}
 		}
 		
 		
@@ -996,10 +1075,8 @@ p{
 	}
 	
 }
-#promoslider{
-	@include breakpoint(tablet){
-		margin-bottom: 55px;
-	}
+#productslider, #productslider2 {
+	height: auto !important;
 }
 .article{
 	position: relative;
@@ -1011,7 +1088,7 @@ p{
 		top: 0;
 		left: 0;
 		width: 107px;
-		margin-right: 10px;
+		margin-right: 15px;
 		display: inline-block;
 	}
 	&__pub-date{
@@ -1025,6 +1102,10 @@ p{
 		color: #778d53;
 		font-size:18px;
 		margin-bottom: 10px;
+		&:hover{
+			text-decoration: underline;
+			color: #4d622a;
+		}
 	}
 	&__description{
 		line-height: 1.5;
@@ -1033,7 +1114,7 @@ p{
 	}
 }
 .hits{
-	padding-bottom: 50px;
+	padding-bottom: 20px;
 	@include breakpoint(tablet){
 		margin-bottom: 70px;
 		border-bottom: 1px solid #dfdfdf;
@@ -1041,12 +1122,15 @@ p{
 
 }
 .sorter{
-	display: inline-block;
+	display: block;
 	margin-bottom: 20px;
+	text-align: center;
 	font-size: 18px;
 	padding: 0 10px;
 	@include breakpoint(tablet){
 		margin-bottom: 60px;
+		display: inline-block;
+		text-align: left;
 	}
 	span{
 		color: #898989;
@@ -1054,23 +1138,28 @@ p{
 		font-size: 18px;
 		@include breakpoint(tablet){
 			font-size:29px;
-		}	
+		}
+		&:hover{
+			color: #536a30;
+		}
 	}
-	span.recomend{
-		color: #778d53;
-		@include breakpoint(tablet){
-			font-size:29px;
+	a{
+		&.active{
+			span{
+				color: #778d53;
+				display: inline;
+				background-image: url(../images/dots.png);
+				background-repeat: repeat-x;
+				background-position: bottom;
+				@include breakpoint(tablet){
+					font-size:29px;
+				}
+			}	
+		}
 	}
 	// 	text-decoration: underline;
 	// 	text-decoration-style: dashed;
 	// 	text-decoration-color: #898989;
-	}
-	.recomend{
-		display: inline;
-		background-image: url(../images/dots.png);
-		background-repeat: repeat-x;
-		background-position: bottom;
-	}
 }
 .btn{
 	display: inline-block;
@@ -1089,6 +1178,22 @@ p{
 			right: 10px;
 			top: 10px;
 		}
+		&:hover{
+			background: #778d53;
+			color: #fff;
+			svg{
+				.cls-1{
+					fill:#fff;
+				}
+			}
+		}
+	}
+	&_callback{
+		text-transform: uppercase;
+		font-size: 11px;
+		background: #778d53;
+		margin-right:45px;
+		padding:12px 16px;
 	}
 	&_details{
 		display: inline-block;
@@ -1105,8 +1210,147 @@ p{
 			right: 3px;
 			top: 3px;
 		}
+		&:hover{
+			background: #778d53;
+			color: #fff;
+		}
 	}
 }
 .about-company{
 	text-align: center;
+}
+
+//
+.fixed-overlay {
+	position: fixed;
+	overflow: auto;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(70,70,70,0.7);
+	z-index: 100;
+	display: none;
+	&.callback.active{display: block;}
+	&.sing-in.active{display: block;}
+	
+	&__modal{
+		text-align: center;
+		white-space: nowrap;
+		&::after {
+			display: inline-block;
+			vertical-align: middle;
+			width: 0;
+			height: 100%;
+			content: '';
+		}
+	}
+}
+
+.modal{
+	display: inline-block;
+	vertical-align: middle;
+	opacity: 1;
+	&__title{
+		font-family: 'gothamproblack', sans-serif;
+		font-size: 24px;
+		text-align: center;
+		margin-bottom: 50px;
+	}
+	&_container {
+		
+		padding: 30px 90px 40px 90px;
+		text-align: center;
+		white-space: normal;
+		background-color: white;
+		max-width: 410px;
+		position: relative;
+		@include breakpoint(mobileonly){
+			padding: 30px 50px 40px 50px;
+		}
+	
+	}
+	input{
+		display: inline-block;
+		width: 100%;
+		font-size: 14px;
+		height: 34px;
+		outline: none;
+		border: 1px solid #c8c8c8;
+		border-radius: 3px;
+		padding: 0 15px;
+		color: #a0a0a0;
+		
+		&[type="submit"]{
+			color: white;
+			border: 1px solid #778d53;
+			text-transform: none;
+			background: #778d53;
+			margin-top: 25px;
+			&:hover{
+				background: #4d622a;
+			}
+		}
+		
+			
+	}
+	.wrap-input {
+		position: relative;
+		display: block;
+		margin-top: 45px;
+		@include breakpoint(phablet){
+			width: 222px;
+		}
+		
+		span{
+			position: absolute;
+			left: 0;
+			top: -25px;
+			color: #292929;
+			font-size: 14px;
+		}
+	}
+	a.forgot-password{
+		color: #778d53;
+		font-size: 14px;
+		display: block;
+		text-align: left;
+		margin-top: 20px;
+		text-decoration: underline;
+		&:hover{
+			color: #b04b11;
+		}
+	}
+	span.icon.icon_remove-item{
+		position: absolute;
+		right: 11px;
+		top: 11px;
+	}
+}
+.icon{
+	display: inline-block;
+	&_remove-item{
+		background:url(../images/remove_item.png);
+		height: 12px;
+		width: 13px;
+		&:hover{
+			background:url(../images/remove_item_hover.png);
+		}
+	}
+	&_favorites{
+		background:url(../images/favorites.png);
+		height: 20px;
+		width: 25px;
+		&:hover{
+			background:url(../images/favorites_hover.png);
+		}
+	}
+	&_cart{
+		background:url(../images/cart.png);
+		height: 28px;
+		width: 38px;
+		&:hover{
+			background:url(../images/cart_hover.png);
+		}
+	}
 }
