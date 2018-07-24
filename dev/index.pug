@@ -2,6 +2,34 @@ html
 	head
 		include ./parts/head.pug
 	body
+		.page.disable-scrolling
+			.fixed-overlay.fixed-overlay__modal.callback
+				.modal
+					.modal_container
+						span.icon.icon_remove-item
+						form
+							.modal__title Перезвоните мне
+							.wrap-input
+								span Представтесь
+								input
+							.wrap-input
+								span Номер телефона
+								input(type="tel" placeholder="+7 (___) ___ - __ - __ ")
+							input.btn.btn_callback(type="submit" value="Перезвоните мне")
+			.fixed-overlay.fixed-overlay__modal.sing-in
+				.modal
+					.modal_container
+						span.icon.icon_remove-item
+						form
+							.modal__title Войти
+							.wrap-input
+								span Логин
+								input
+							.wrap-input
+								span Пароль
+								input(type="password")
+							input.btn.btn_callback(type="submit" value="Войти")
+							a.forgot-password(href="#") Забыли пароль?
 		.header-top
 			.wrapper
 				.company-info.show-laptop-inline
@@ -45,7 +73,8 @@ html
 					.delivery-time
 						span Доставка в город
 						br
-						span Красноярск за 2-14 дней
+						a(href='#')
+							span Красноярск за 2-14 дней
 				.telephone
 					a(href="tel:74996546789") +7 (499) 653-67-89
 					span по Москве
@@ -74,19 +103,19 @@ html
 						input(type="search", placeholder="Поиск", name="search")
 						button(type="submit")
 							i.fa.fa-search
-				.favorites
+				a(href="#").favorites
 					.favorites-icon
-						img(src="images/favorites.png")
+						span.icon.icon_favorites
 						span.favorites-item-count 3
 					span Избранное
 				a(href="#").shoppingcart
-					img(src="images/cart.png")
+					span.icon.icon_cart
 					span.cart-item-count 3
-				a(href="#").shopping-sum
-					span
-						|2199
-					span
-						|q
+					a(href="#").shopping-sum
+						span
+							|2199
+						span
+							|q
 		.main-menu
 			.wrapper
 				ul
@@ -104,28 +133,33 @@ html
 						a(href="#") Прочее
 					li
 						a(href="#") Оптовикам
-						img(src="images/opt.png", alt="pic")
+							img(src="images/opt.png", alt="pic")
 		.wrapper
 			.clearfix
-				.col-tablet-2-3.no-padding
-					ul#promoslider
+				.col-tablet-2-3.no-padding.null
+					ul#promoslider-mobile.hide-tablet
+						img(src="images/promo_slider_mobile.png", alt="promo")
+						img(src="images/promo_slider_mobile.png", alt="promo")
+						img(src="images/promo_slider_mobile.png", alt="promo")
+						img(src="images/promo_slider_mobile.png", alt="promo")
+					ul#promoslider.show-tablet
 						img(src="images/promo_slider.png", alt="promo")
 						img(src="images/promo_slider.png", alt="promo")
 						img(src="images/promo_slider.png", alt="promo")
 						img(src="images/promo_slider.png", alt="promo")
-				.col-tablet-1-3.no-padding
-					.sale
+				.col-tablet-1-3.no-padding.sale-block
+					.sale.clearfix
 						.marker
 							|Cкидка
 						.sale__title
 							|Товар дня
 						.product.product_sale
-							.product__img.product__img_sale
+							.product__img.product__img_sale.clearfix
 								img(src="images/product_sale.png",alt="product")
 							.sale__value
 								|-20%
-							.product__name.product__name_sale
-								|Батончик с миндалем «Шелковица с Памира»
+							a(href="#").product__name.product__name_sale
+								|Кедровое масло холодного отжима "Золотая крепость", 100мл
 							.product__price.product__price_sale
 								span 20
 								span.rouble q
@@ -137,11 +171,11 @@ html
 		.wrapper
 			.clearfix
 				.sorter
-					a(href="#")
+					a.active(href="#")
 						span Новинки
 					a(href="#")
-						span.recomend Рекомендуемые
-				.btn.btn_products.show-tablet
+						span Рекомендуемые
+				a(href="#").btn.btn_products.show-tablet
 					|Все новинки
 					include ./images/arrow_right.svg
 			.clearfix.hide-tablet
@@ -380,7 +414,7 @@ html
 						.article__text
 							.article__pub-date
 								|22.07.2018
-							.article__title
+							a(href="#").article__title
 								|Поступление новых брендов
 							.article__description
 								|Не пропустите самые свежие новинки от Дары Памира.
@@ -390,7 +424,7 @@ html
 						.article__text
 							.article__pub-date
 								|22.07.2018
-							.article__title
+							a(href="#").article__title
 								|Поступление новых брендов
 							.article__description
 								|Не пропустите самые свежие новинки от Дары Памира.
@@ -400,7 +434,7 @@ html
 						.article__text
 							.article__pub-date
 								|22.07.2018
-							.article__title
+							a(href="#").article__title
 								|Поступление новых брендов
 							.article__description
 								|Не пропустите самые свежие новинки от Дары Памира.
@@ -416,7 +450,7 @@ html
 						input#tab1(type="radio" name="tabs" checked)
 						label.question(for="tab1") Задать вопрос
 						input#tab2(type="radio" name="tabs")
-						label.callback(for="tab2") Перезвонить мне
+						label.callbacktab(for="tab2") Перезвонить мне
 					.form
 						section#content1.active
 							form

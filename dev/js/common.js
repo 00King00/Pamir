@@ -1,7 +1,11 @@
 $(function(){
 	//products Slider
+
+	var top = $('.main-menu').offset().top;
+
+	//products Slider 
+
 		var productslider=$('#productslider').lightSlider({
-		galleryMargin: 25,
 		item: 4,
 		slideMove:1,
 		pager: false,
@@ -36,8 +40,7 @@ $(function(){
 			],
 	});
 		//products Slider2
-		var productslider=$('#productslider2').lightSlider({
-		galleryMargin: 25,
+		var productslider2=$('#productslider2').lightSlider({
 		item: 4,
 		slideMove:1,
 		pager: false,
@@ -100,9 +103,36 @@ $(function(){
 			],
 	});
 	
+	//Main Slider (promo) setting
+		var promoslider_mobile=$('#promoslider-mobile').lightSlider({
+		item: 1,
+		slideMove:1,
+		pager: false,
+		controls: true,
+		addClass: '',
+		mode: "slide",
+		useCSS: true,
+		cssEasing: 'ease', //'cubic-bezier(0.25, 0, 0.25, 1)',//
+		easing: 'linear', //'for jquery animation',////
+		speed: 400, //ms'
+		auto: true,
+		loop: true,
+		slideEndAnimation: true,
+		pause: 10000,
+		responsive:[
+				{
+					breakpoint: 600,
+					settings:
+						{
+							controls: false,
+						}
+				},
+				
+			],
+	});
+
 	//Instagram Slider (promo) setting
-		var promoslider=$('#instaslider').lightSlider({
-		galleryMargin: 25,
+		var instaslider=$('#instaslider').lightSlider({
 		item: 1,
 		slideMove:1,
 		pager: false,
@@ -130,16 +160,15 @@ $(function(){
 			}
 	}
 	$("#promoslider img").on('load', function(){
-		setTimeout(SameHeight, 1000);
-		;
-		
-	});
+
+  		setTimeout(SameHeight, 1000);
+
+ 	});
+
 	$(window).resize(function(){
-		SameHeight();
+		setTimeout(SameHeight, 500);
 	});
-//	window.onload = function() {
-//  		SameHeight();
-//	};
+
 	//for tabs form
 	$(".form__tabs input").click(function(){
 		var select = $(this).prop("id");
@@ -159,8 +188,66 @@ $(function(){
 	// input-mask
 	$('input[type="tel"]').inputmask('+7 (999) 999 - 99 - 99');
 	// end input-mask
+
+
 	//show/hide mobile footer list
 	$(".footer__title").click(function(){
 		$(this).siblings("ul").toggleClass("active");
 	});
+	$('.sorter a').click(function(event){
+		event.preventDefault();
+		$(this).toggleClass('active');
+		$(this).siblings().toggleClass('active');
+		console.log(1);
+
+		})
+	// hide  moodal when click at another place
+	$(document).mouseup(function (e){
+		var div = $(".modal"); 
+		if (!div.is(e.target) 
+		    && div.has(e.target).length === 0) { 
+			if($('.fixed-overlay').hasClass('active')){
+				$('.fixed-overlay').removeClass('active')
+			}
+		}
+	});
+
+	//open modal window
+	$(".callback").click(function(){
+		$(".fixed-overlay.callback").addClass('active');
+		
+	});
+	$(".sign-in").click(function(){
+		$(".fixed-overlay.sing-in").addClass('active');
+		
+	});
+
+	//close modal window
+	$(".fixed-overlay__modal .icon_remove-item").click(function(){
+		$(".fixed-overlay").removeClass('active');
+	});
+	$(".fixed-overlay__modal input[type='submit']").click(function(){
+		$(".fixed-overlay").removeClass('active');
+	});
+
+	// Set menu position:fixed
+	function fixMenuBar(){
+		var scrolTop = $(window).scrollTop();
+		var width = $(window).width();
+		console.log(scrolTop);
+		console.log(top);
+			if(scrolTop>=top){
+				$(".main-menu").addClass("fixed");
+				$('body').addClass("scroll_padding-top")
+			} else {
+				$(".main-menu").removeClass("fixed");
+				$('body').removeClass("scroll_padding-top")
+
+			}
+		}
+	$(window).scroll(function(){
+		fixMenuBar();
+	});
+	
+
 });
