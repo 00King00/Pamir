@@ -37,7 +37,7 @@ $(function(){
 			],
 	});
 		//products Slider2
-		var productslider=$('#productslider2').lightSlider({
+		var productslider2=$('#productslider2').lightSlider({
 		item: 4,
 		slideMove:1,
 		pager: false,
@@ -101,7 +101,7 @@ $(function(){
 	});
 	
 	//Main Slider (promo) setting
-		var promoslider=$('#promoslider-mobile').lightSlider({
+		var promoslider_mobile=$('#promoslider-mobile').lightSlider({
 		item: 1,
 		slideMove:1,
 		pager: false,
@@ -129,7 +129,7 @@ $(function(){
 	});
 
 	//Instagram Slider (promo) setting
-		var promoslider=$('#instaslider').lightSlider({
+		var instaslider=$('#instaslider').lightSlider({
 		item: 1,
 		slideMove:1,
 		pager: false,
@@ -161,7 +161,7 @@ $(function(){
   
  	});
 	$(window).resize(function(){
-		SameHeight();
+		setTimeout(SameHeight, 500);
 	});
 	//for tabs form
 	$(".form__tabs input").click(function(){
