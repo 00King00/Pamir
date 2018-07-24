@@ -224,7 +224,8 @@ $(function(){
 
 	//close modal window
 	$(".fixed-overlay__modal .icon_remove-item").click(function(){
-		$(".fixed-overlay").removeClass('active');
+		$(this).parent().parent().parent().removeClass('active');
+		console.log($(this).parent().parent().parent())
 	});
 	$(".fixed-overlay__modal input[type='submit']").click(function(){
 		$(".fixed-overlay").removeClass('active');

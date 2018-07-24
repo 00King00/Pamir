@@ -1260,6 +1260,7 @@ p{
 	display: none;
 	&.callback.active{display: block;}
 	&.sing-in.active{display: block;}
+	&.region-city.active{display: block;}
 	
 	&__modal{
 		text-align: center;
@@ -1271,6 +1272,7 @@ p{
 			height: 100%;
 			content: '';
 		}
+		
 	}
 }
 
@@ -1295,7 +1297,12 @@ p{
 		@include breakpoint(mobileonly){
 			padding: 30px 50px 40px 50px;
 		}
-	
+		&_region-city{
+			max-width: 960px;
+			padding: 30px 15px 40px 8px;
+			text-align: left;
+			position: relative;
+		}
 	}
 	input{
 		display: inline-block;
@@ -1353,6 +1360,20 @@ p{
 		right: 11px;
 		top: 11px;
 	}
+}
+.region-city{
+	&__side-bar{
+		display: inline-block;
+		width: 235px;
+		position: absolute;
+	}
+	&__content-bar{
+		float: left;
+		width:69%;
+		margin-left: 235px;
+		
+	}
+	
 }
 .icon{
 	display: inline-block;
