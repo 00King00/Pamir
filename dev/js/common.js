@@ -1,4 +1,6 @@
 $(function(){
+	var top = $('.main-menu').offset().top;
+	
 	//products Slider 
 		var productslider=$('#productslider').lightSlider({
 		item: 4,
@@ -222,25 +224,24 @@ $(function(){
 		$(".fixed-overlay").removeClass('active');
 	});
 
-	//Set menu position:fixed
-	// function fixMenuBar(){
-	// 	var scrolTop = $(window).scrollTop();
-	// 	var width = $(window).width();
+	// Set menu position:fixed
+	function fixMenuBar(){
+		var scrolTop = $(window).scrollTop();
+		var width = $(window).width();
+		console.log(scrolTop);
+		console.log(top);
+			if(scrolTop>=top){
+				$(".main-menu").addClass("fixed");
+				$('body').addClass("scroll_padding-top")
+			} else {
+				$(".main-menu").removeClass("fixed");
+				$('body').removeClass("scroll_padding-top")
 
-	// 		if(scrolTop>=41){
-	// 			$(".main-menu").addClass("fixed");
-	// 			$('body').addClass("scroll_padding-top")
-	// 		} else {
-	// 			$(".main-menu").removeClass("fixed");
-	// 			$('body').removeClass("scroll_padding-top")
-
-	// 		}
-			
-	// 	}
-	// $(window).scroll(function(){
-	// 	fixMenuBar();
-	// 	fixcardNav()
-	// });
-	//
+			}
+		}
+	$(window).scroll(function(){
+		fixMenuBar();
+	});
+	
 
 });

@@ -311,10 +311,19 @@ p{
 		position: relative;
 	}
 	.favorites{
+		&:hover{
+			.icon_favorites{
+				background:url(../images/favorites_hover.png);
+			}
+			// span{
+			// 	color: #536a30;
+			// }
+		}
 		font-family: 'Roboto';
 		margin-right: 20px;
 		.favorites-icon{
 			span{
+				display: inline-block;
 				color: #fff;
 			}
 		}
@@ -328,6 +337,11 @@ p{
 		}
 	}
 	.shopping-sum{
+		&:hover{
+			.icon_cart{
+				background:url(../images/cart_hover.png);
+			}
+		}
 		a{
 			color:#010101;
 		}
@@ -405,6 +419,13 @@ p{
 	background: #f0f0f0;
 	margin-bottom: 30px;
 	display: none;
+	&.fixed{
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 5;
+	}
 	@include breakpoint(tablet){
 		display: block;
 	}
@@ -415,7 +436,7 @@ p{
 	li{
 			margin-right: 35px;
 		@include breakpoint(laptop){
-			margin-right: 75px;
+			margin-right: 65px;
 		}
 		display: inline-block;
 		img{
@@ -789,17 +810,17 @@ p{
 			margin-top: -16px;
 			display: block;
 			padding-left: 30px;
-			margin-bottom: 20px;
+			margin-bottom: 13px;
 
 		}
 		
 	}
 	input{
-			height: 45px;
+			height: 40px;
 			width: 100%;
 			border: 1px solid #c5c5c6;
 			padding: 0 15px;
-			margin-bottom: 15px;
+			margin-bottom: 14px;
 			&[type="submit"]{
 				height: 40px;
 				font-size: 19px;
@@ -820,7 +841,7 @@ p{
 		}
 	textarea{
 		resize: none;
-		height: 80px;
+		height: 75px;
 		width: 100%;
 		border: 1px solid #c5c5c6;
 		outline: none;
@@ -928,7 +949,7 @@ p{
 
 .footer{
 	font-family: "Roboto";
-	padding: 45px 20px 0 20px;
+	padding: 45px 0px 0 0px;
 	@include breakpoint(mobileonly){
 		padding-top: 20px;
 	}
@@ -1125,6 +1146,7 @@ p{
 	display: block;
 	margin-bottom: 20px;
 	text-align: center;
+	font-family: 'roboto';
 	font-size: 18px;
 	padding: 0 10px;
 	@include breakpoint(tablet){
@@ -1352,5 +1374,10 @@ p{
 		&:hover{
 			background:url(../images/cart_hover.png);
 		}
+	}
+}
+.scroll{
+	&_padding-top{
+		padding-top: 79px;
 	}
 }
