@@ -37,6 +37,7 @@
 .lightSlider {
     overflow: hidden;
     margin: 0;
+    height: auto;
 }
 .lSSlideWrapper {
     max-width: 100%;
@@ -51,6 +52,7 @@
     -ms-transform: translate(0px, 0px);
     transform: translate(0px, 0px);
     -webkit-transition: all 1s;
+    height: auto;
     -webkit-transition-property: -webkit-transform,height;
     -moz-transition-property: -moz-transform,height;
     transition-property: transform,height;
