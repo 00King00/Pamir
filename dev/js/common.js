@@ -1,4 +1,6 @@
 $(function(){
+	var top = $('.main-menu').offset().top;
+	
 	//products Slider 
 		var productslider=$('#productslider').lightSlider({
 		item: 4,
@@ -35,7 +37,7 @@ $(function(){
 			],
 	});
 		//products Slider2
-		var productslider=$('#productslider2').lightSlider({
+		var productslider2=$('#productslider2').lightSlider({
 		item: 4,
 		slideMove:1,
 		pager: false,
@@ -99,7 +101,7 @@ $(function(){
 	});
 	
 	//Main Slider (promo) setting
-		var promoslider=$('#promoslider-mobile').lightSlider({
+		var promoslider_mobile=$('#promoslider-mobile').lightSlider({
 		item: 1,
 		slideMove:1,
 		pager: false,
@@ -127,7 +129,7 @@ $(function(){
 	});
 
 	//Instagram Slider (promo) setting
-		var promoslider=$('#instaslider').lightSlider({
+		var instaslider=$('#instaslider').lightSlider({
 		item: 1,
 		slideMove:1,
 		pager: false,
@@ -159,7 +161,7 @@ $(function(){
   
  	});
 	$(window).resize(function(){
-		SameHeight();
+		setTimeout(SameHeight, 500);
 	});
 	//for tabs form
 	$(".form__tabs input").click(function(){
@@ -222,25 +224,24 @@ $(function(){
 		$(".fixed-overlay").removeClass('active');
 	});
 
-	//Set menu position:fixed
-	// function fixMenuBar(){
-	// 	var scrolTop = $(window).scrollTop();
-	// 	var width = $(window).width();
+	// Set menu position:fixed
+	function fixMenuBar(){
+		var scrolTop = $(window).scrollTop();
+		var width = $(window).width();
+		console.log(scrolTop);
+		console.log(top);
+			if(scrolTop>=top){
+				$(".main-menu").addClass("fixed");
+				$('body').addClass("scroll_padding-top")
+			} else {
+				$(".main-menu").removeClass("fixed");
+				$('body').removeClass("scroll_padding-top")
 
-	// 		if(scrolTop>=41){
-	// 			$(".main-menu").addClass("fixed");
-	// 			$('body').addClass("scroll_padding-top")
-	// 		} else {
-	// 			$(".main-menu").removeClass("fixed");
-	// 			$('body').removeClass("scroll_padding-top")
-
-	// 		}
-			
-	// 	}
-	// $(window).scroll(function(){
-	// 	fixMenuBar();
-	// 	fixcardNav()
-	// });
-	//
+			}
+		}
+	$(window).scroll(function(){
+		fixMenuBar();
+	});
+	
 
 });
