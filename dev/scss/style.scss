@@ -472,7 +472,7 @@ p{
 .main-menu{
 	font-family: 'Roboto';
 	font-size: 16px;
-	padding: 15px 10px; 
+	padding: 0 10px; 
 	background: #f0f0f0;
 	margin-bottom: 30px;
 	display: none;
@@ -491,13 +491,13 @@ p{
 		list-style: none;
 	}
 	li{
-			margin-right: 35px;
-		@include breakpoint(laptop){
-			margin-right: 65px;
-		}
+		padding: 15px 13px;
 		display: inline-block;
 		img{
 			margin-left: 10px;
+		}
+		&.active{
+			background: #fff;
 		}
 	}
 	li:last-child{
