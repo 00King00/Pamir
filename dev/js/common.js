@@ -159,7 +159,7 @@ $(function(){
 				$('.sale').css('height', 'auto');
 			}
 	}
-	$("#promoslider img").on('load', function(){
+	$("#promoslider img")[0].on('load', function(){
 
   		setTimeout(SameHeight, 1000);
 
