@@ -1556,6 +1556,14 @@ p{
 	&__list{
 		color: #778d53;
 		line-height: 1.85;
+		cursor: pointer;
+		a{
+			color: inherit;
+			&:hover{
+				text-decoration: underline;
+			}
+			
+		}
 	}
 	ul{
 		margin-bottom: 35px;
