@@ -3,7 +3,7 @@ $(function(){
 
 	var top = $('.main-menu').offset().top;
 
-	//products Slider 
+	//products Slider
 
 		var productslider=$('#productslider').lightSlider({
 		item: 4,
@@ -249,6 +249,9 @@ $(function(){
 	$(window).scroll(function(){
 		fixMenuBar();
 	});
+	
+	//Set style scrol Bar
+	//$('#scrollme').leftScrollbar();
 	
 
 });
