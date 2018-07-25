@@ -3,7 +3,7 @@ html
 		include ./parts/head.pug
 	body
 		.page.disable-scrolling
-			.fixed-overlay.fixed-overlay__modal.callback
+			.fixed-overlay.fixed-overlay__modal.callback.active
 				.modal
 					.modal_container
 						span.icon.icon_remove-item
@@ -30,6 +30,92 @@ html
 								input(type="password")
 							input.btn.btn_callback(type="submit" value="Войти")
 							a.forgot-password(href="#") Забыли пароль?
+			.fixed-overlay.fixed-overlay__modal.region-city
+				.modal
+					.modal_container.modal_container_region-city
+						span.icon.icon_remove-item.icon_remove-item_region-city
+						.region-city__side-bar
+							.region-city__title Россия
+							.region-city__sub-title Регион
+							ul
+								li.region-city__list Москва
+								li.region-city__list Московская область
+								li.region-city__list.active Санкт-Петербург
+								li.region-city__list Севастополь
+								li.region-city__list Байконур
+								li.region-city__list Алтайский край
+								li.region-city__list Амурская область
+								li.region-city__list Архангельская область
+								li.region-city__list Астраханская область
+								li.region-city__list Белгородская область
+								li.region-city__list Брянская область
+								li.region-city__list Владимирская область
+								li.region-city__list Волгоградская область
+								li.region-city__list Байконур
+								li.region-city__list Алтайский край
+								li.region-city__list Амурская область
+								li.region-city__list Архангельская область
+								li.region-city__list Астраханская область
+								li.region-city__list Белгородская область
+								li.region-city__list Брянская область
+								li.region-city__list Владимирская область
+								li.region-city__list Волгоградская область
+						.region-city__content-bar
+							.region-city__sub-title Населенный пункт
+							.region-city__wrap-content-box
+								.region-city__content-box
+									ul
+										span А
+										li.region-city__list Астрахань
+									ul
+										span Б
+										li.region-city__list Байконур
+										li.region-city__list Барнаул
+									ul
+										span В
+										li.region-city__list Владивосток
+										li.region-city__list Волгоград
+										li.region-city__list Воронеж
+									ul
+										span E
+										li.region-city__list Екатеринбург
+									ul
+										span И
+										li.region-city__list Ижевск
+										li.region-city__list Иркутск
+									ul
+										span К
+										li.region-city__list Казань
+										li.region-city__list Кемерово
+										li.region-city__list Краснодар
+										li.region-city__list Красноярск
+									ul
+										span М
+										li.region-city__list Махачкала
+										li.region-city__list Москва
+									ul
+										span Н
+										li.region-city__list Набережные Челны
+										li.region-city__list Нижний Новгород
+										li.region-city__list Новокузнецк
+										li.region-city__list Новосибирск
+									ul
+										span О
+										li.region-city__list Омск
+										li.region-city__list Оренбург
+									ul
+										span П
+										li.region-city__list Пермь
+									ul
+										span Р
+										li.region-city__list Ростов-на-Дону
+										li.region-city__list Рязань
+									ul
+										span С
+										li.region-city__list Самара
+										li.region-city__list Санкт-Петербург
+										li.region-city__list Саратов
+										li.region-city__list Севастополь
 		.wrapper
 			.main-menu-mobile
 				.close-btn

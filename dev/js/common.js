@@ -1,7 +1,10 @@
 $(function(){
+	//products Slider
+
 	var top = $('.main-menu').offset().top;
-	
-	//products Slider 
+
+	//products Slider
+
 		var productslider=$('#productslider').lightSlider({
 		item: 4,
 		slideMove:1,
@@ -147,8 +150,9 @@ $(function(){
 	});
 
 	function SameHeight() {
+		
 		var browserMinWidth = $(window).width()
-			if (browserMinWidth > 800) {
+					if (browserMinWidth > 800) {
 				$('.sale').css('height', $('#promoslider').height());
 			}
 			else{
@@ -156,13 +160,15 @@ $(function(){
 			}
 	}
 	$("#promoslider img").on('load', function(){
+
   		setTimeout(SameHeight, 1000);
-  		;
-  
+
  	});
+
 	$(window).resize(function(){
 		setTimeout(SameHeight, 500);
 	});
+
 	//for tabs form
 	$(".form__tabs input").click(function(){
 		var select = $(this).prop("id");
@@ -192,22 +198,21 @@ $(function(){
 		event.preventDefault();
 		$(this).toggleClass('active');
 		$(this).siblings().toggleClass('active');
-		console.log(1);
 
 		})
 	// hide  moodal when click at another place
 	$(document).mouseup(function (e){
-		var div = $(".modal"); 
-		if (!div.is(e.target) 
-		    && div.has(e.target).length === 0) { 
+		var div = $(".modal");
+		if (!div.is(e.target) && div.has(e.target).length === 0) {
 			if($('.fixed-overlay').hasClass('active')){
 				$('.fixed-overlay').removeClass('active')
 			}
 		}
+	
 	});
 
 	//open modal window
-	$(".callback").click(function(){
+	$(".header-middle .callback").click(function(){
 		$(".fixed-overlay.callback").addClass('active');
 		
 	});
@@ -215,13 +220,22 @@ $(function(){
 		$(".fixed-overlay.sing-in").addClass('active');
 		
 	});
+	$(".city").click(function(){
+		$(".fixed-overlay.region-city").addClass('active');
+		
+	});
+
 
 	//close modal window
-	$(".fixed-overlay__modal .icon_remove-item").click(function(){
-		$(".fixed-overlay").removeClass('active');
+
+	$(".fixed-overlay__modal .icon_remove-item").click(function(e){
+		$(this).parent().parent().parent().removeClass('active');
+		e.stopPropagation();
+		
 	});
-	$(".fixed-overlay__modal input[type='submit']").click(function(){
+	$(".fixed-overlay__modal input[type='submit']").click(function(e){
 		$(".fixed-overlay").removeClass('active');
+		e.stopPropagation();
 	});
 	//Search-form on mobile device
 	$('.search-mobile').click(function(event){
@@ -267,6 +281,9 @@ $(function(){
 		
 		fixMenuBar();
 	});
+	
+	//Set style scrol Bar
+	//$('#scrollme').leftScrollbar();
 	
 
 });
