@@ -30,6 +30,55 @@ html
 								input(type="password")
 							input.btn.btn_callback(type="submit" value="Войти")
 							a.forgot-password(href="#") Забыли пароль?
+		.wrapper
+			.main-menu-mobile
+				.close-btn
+					img(src="images/remove_item.png", alt="Спрятать фильтр")
+				.enter.enter_mobile
+					img(src="images/lock_mobile.png", alt="lock icon")
+					a(href="#")
+						span.dashed.sign-in Вход
+					span |
+					a(href="#")
+						span.underline Зарегистрироваться
+				.catalog
+					ul
+						li 
+							span Акции
+							i.fa.fa-angle-right
+						li 
+							span Питание
+							i.fa.fa-angle-right
+						li 
+							span Косметика
+							i.fa.fa-angle-right
+						li 
+							span Для дома
+							i.fa.fa-angle-right
+						li 
+							span Бренды
+							i.fa.fa-angle-right
+						li 
+							span Прочее
+							i.fa.fa-angle-right
+				.wholesalers
+					a(href="#") Оптовикам
+						img(src="images/opt.png", alt="pic")
+				.company-info.company-info_mobile
+					ul
+						li
+							a(href="#") О нас
+						li
+							a(href="#") Оплата
+						li
+							a(href="#") Доставка
+						li
+							a(href="#") Контакты
+						li
+							a(href="#") Вопрос-ответ
+						li
+							a(href="#") Поставщикам
+
 		.header-top
 			.wrapper
 				.company-info.show-laptop-inline
@@ -52,7 +101,7 @@ html
 						span.dashed.sign-in Вход
 					span |
 					a(href="#")
-						span.underline Регистрация
+						span.underline Зарегистрироваться
 				.city.city_top-line
 					img(src="images/marker.png", alt="marker")
 					a(href="#") Москва
@@ -86,6 +135,10 @@ html
 					span с 8:00 до 20:00 по мск
 		.wrapper
 			.header-bottom
+				.search-form
+					form
+						input(type="search", placeholder="Поиск", name="search")
+						button(type="submit") Найти
 				.bars
 					.bar
 					.bar
