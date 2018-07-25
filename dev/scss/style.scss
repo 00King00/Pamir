@@ -897,7 +897,25 @@ p{
 				height: 15px;
 				width: 15px;
 				margin: 0 10px 0 0;
-				
+				visibility: collapse;
+				&:checked + label{
+					&:before{
+						background-image: url(../images/checkbox_checked.png);
+					}
+				}
+				&+ label{
+					position: relative;
+					&:before{
+						content: "";
+						display: inline-block;
+						width: 17px;
+						height: 17px;
+						position: absolute;
+						background-image: url(../images/checkbox_unchecked.png);
+						left: 0;
+						background-repeat: no-repeat;
+					}
+				}
 				
 			}
 		}
@@ -1005,6 +1023,25 @@ p{
 			margin-right: 15px;
 			margin-bottom: 0;
 			float: left;
+			visibility: collapse;
+			&:checked + label{
+				&:before{
+					background-image: url(../images/checkbox_checked.png);
+				}
+			}
+			&+ label{
+				position: relative;
+				&:before{
+					content: "";
+					width: 17px;
+					height: 17px;
+					display: inline-block;
+					position: absolute;
+					background-image: url(../images/checkbox_unchecked.png);
+					left: -27px;
+					background-repeat: no-repeat;
+				}
+			}
 		}
 	}
 }
