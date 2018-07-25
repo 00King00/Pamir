@@ -129,22 +129,22 @@ html
 						span.underline Зарегистрироваться
 				.catalog
 					ul
-						li 
+						li
 							span Акции
 							i.fa.fa-angle-right
-						li 
+						li
 							span Питание
 							i.fa.fa-angle-right
 						li
 							span Косметика
 							i.fa.fa-angle-right
-						li 
+						li
 							span Для дома
 							i.fa.fa-angle-right
-						li 
+						li
 							span Бренды
 							i.fa.fa-angle-right
-						li 
+						li
 							span Прочее
 							i.fa.fa-angle-right
 				.wholesalers
@@ -642,9 +642,10 @@ html
 								.inputwrap
 									input(type="submit" value="Подписаться")
 									include ./images/arrow_right.svg
-							label.subscribe-line__sub-text
-								input(type="checkbox")
-								| Я согласен с правиласи пользования сервисом
+							input#subscribe-line(type="checkbox")
+								
+							label.subscribe-line__sub-text(for="subscribe-line") Я согласен с правиласи пользования сервисом
+								
 		.wrapper
 			.footer
 				.footer__flex-row
