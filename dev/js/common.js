@@ -198,14 +198,12 @@ $(function(){
 		event.preventDefault();
 		$(this).toggleClass('active');
 		$(this).siblings().toggleClass('active');
-		console.log(1);
 
 		})
 	// hide  moodal when click at another place
 	$(document).mouseup(function (e){
-		var div = $(".modal"); 
-		if (!div.is(e.target) 
-		    && div.has(e.target).length === 0) {
+		var div = $(".modal");
+		if (!div.is(e.target) && div.has(e.target).length === 0) {
 			if($('.fixed-overlay').hasClass('active')){
 				$('.fixed-overlay').removeClass('active')
 			}
@@ -214,7 +212,7 @@ $(function(){
 	});
 
 	//open modal window
-	$(".callback").click(function(){
+	$(".header-middle .callback").click(function(){
 		$(".fixed-overlay.callback").addClass('active');
 		
 	});
