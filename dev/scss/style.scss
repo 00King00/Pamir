@@ -1385,9 +1385,14 @@ p{
 		right: 11px;
 		top: 11px;
 	}
+	span.icon.icon_remove-item.icon_remove-item_region-city{
+		position: absolute;
+		right: 20px;
+		top: 20px;
+	}
 }
 .region-city{
-	::-webkit-scrollbar-track{
+		::-webkit-scrollbar-track{
 		background-color: #F5F5F5;
 	}
 
@@ -1416,6 +1421,7 @@ p{
 			overflow-y: auto;
 			max-height: 380px;
 			direction: rtl;
+			padding-left: 20px;
 			.active {
 				color: black;
 				background-color: #F5F5F5;
@@ -1455,7 +1461,7 @@ p{
 	}
 	&__list{
 		color: #778d53;
-		line-height: 1.7;
+		line-height: 1.85;
 	}
 	ul{
 		margin-bottom: 35px;

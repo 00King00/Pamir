@@ -205,11 +205,12 @@ $(function(){
 	$(document).mouseup(function (e){
 		var div = $(".modal"); 
 		if (!div.is(e.target) 
-		    && div.has(e.target).length === 0) { 
+		    && div.has(e.target).length === 0) {
 			if($('.fixed-overlay').hasClass('active')){
 				$('.fixed-overlay').removeClass('active')
 			}
 		}
+	
 	});
 
 	//open modal window
@@ -221,14 +222,22 @@ $(function(){
 		$(".fixed-overlay.sing-in").addClass('active');
 		
 	});
+	$(".city").click(function(){
+		$(".fixed-overlay.region-city").addClass('active');
+		
+	});
+
 
 	//close modal window
-	$(".fixed-overlay__modal .icon_remove-item").click(function(){
+
+	$(".fixed-overlay__modal .icon_remove-item").click(function(e){
 		$(this).parent().parent().parent().removeClass('active');
-		console.log($(this).parent().parent().parent())
+		e.stopPropagation();
+		
 	});
-	$(".fixed-overlay__modal input[type='submit']").click(function(){
+	$(".fixed-overlay__modal input[type='submit']").click(function(e){
 		$(".fixed-overlay").removeClass('active');
+		e.stopPropagation();
 	});
 
 	// Set menu position:fixed
