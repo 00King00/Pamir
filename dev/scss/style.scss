@@ -907,12 +907,13 @@ p{
 					position: relative;
 					&:before{
 						content: "";
-						width: 15px;
-						height: 15px;
 						display: inline-block;
+						width: 17px;
+						height: 17px;
 						position: absolute;
 						background-image: url(../images/checkbox_unchecked.png);
 						left: 0;
+						background-repeat: no-repeat;
 					}
 				}
 				
@@ -1032,12 +1033,13 @@ p{
 				position: relative;
 				&:before{
 					content: "";
-					width: 15px;
-					height: 15px;
+					width: 17px;
+					height: 17px;
 					display: inline-block;
 					position: absolute;
 					background-image: url(../images/checkbox_unchecked.png);
 					left: -27px;
+					background-repeat: no-repeat;
 				}
 			}
 		}
