@@ -491,13 +491,40 @@ p{
 		list-style: none;
 	}
 	li{
-		padding: 15px 13px;
+		position: relative;
+		padding: 15px 29px;
 		display: inline-block;
 		img{
 			margin-left: 10px;
 		}
 		&.active{
 			background: #fff;
+		}
+		ul{
+			display: none;
+			padding: 25px;
+			position: absolute;
+			top: 100%;
+			left: 0;
+			z-index: 10;
+			width: 220px;
+			background: #fff;
+			.title{
+				display: block;
+				font-size: 16px;
+				font-family: 'roboto';
+				font-weight: 500;
+				color: #616161;
+				margin-bottom: 25px;
+			}
+			li{
+				padding: 3px 0;
+				color: #778d53;
+				font-size: 14px;
+				&:last-child{
+					float: none;
+				}
+			}
 		}
 	}
 	li:last-child{
@@ -1572,7 +1599,7 @@ p{
 	position: absolute;
 	top: 100%;
 	left: 0;
-	width: 100vw;
+	width: 100%;
 	padding: 10px;
 	background: #fff;
 	form{
@@ -1657,8 +1684,8 @@ p{
 	font-family: 'Roboto';
 	font-weight: 500;
 	font-size: 16px;
-	margin: 7px 0;
-	padding: 10px 0;
+	margin: 10px 0;
+	padding: 15px 0;
 	border-top: 1px solid #d9d9de;
 	border-bottom: 1px solid #d9d9de;
 	a{
