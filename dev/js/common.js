@@ -2,6 +2,42 @@ $(function(){
 	//products Slider
 
 	var top = $('.main-menu').offset().top;
+	//products Slider
+
+		var productslider=$('#recently').lightSlider({
+		item: 4,
+		slideMove:1,
+		pager: false,
+		addClass: '',
+		mode: "slide",
+		useCSS: true,
+		cssEasing: 'ease', //'cubic-bezier(0.25, 0, 0.25, 1)',//
+		easing: 'linear', //'for jquery animation',////
+		speed: 400, //ms'
+		auto: true,
+		loop: true,
+		slideEndAnimation: true,
+		pause: 10000,
+		responsive:[
+				{
+					breakpoint: 900,
+					settings:
+						{
+							item:3,
+							slideMove:1,
+						}
+				},
+				{
+					breakpoint: 500,
+					settings:
+						{
+							item:1.5,
+							slideMove:1,
+						}
+				}
+				
+			],
+	});
 
 	//products Slider
 

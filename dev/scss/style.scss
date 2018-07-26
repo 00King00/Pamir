@@ -533,6 +533,9 @@ p{
 		margin: 0;
 		height: auto;
 	}
+	&_slider{
+		border: none;
+	}
 	&_sale{
 		text-align: left;
 		border: none;
@@ -2052,5 +2055,8 @@ p{
 	}
 }
 .about-delivery{
+	margin-bottom: 50px;
+}
+#recently{
 	margin-bottom: 50px;
 }
