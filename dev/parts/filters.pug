@@ -1,0 +1,47 @@
+.filters
+	form
+		.section__title.hide-tablet
+			|Фильтр
+		.filters__close-btn.hide-laptop
+			img(src="images/remove_item.png", alt="Спрятать фильтр")
+		.filter__block.filter__block_top
+			.filter__block__name  Разделы:
+			.filter__block__item
+				a(href="#")
+					|Сиропы
+			.filter__block__item
+				a(href="#")
+					|Цукаты
+			.filter__block__item
+				a.active(href="#")
+					|Джемы
+			.filter__block__item
+				a(href="#")
+					|Порошки
+		.filter__block
+			.filter__block__name  Бренды:
+			.filter__block__item
+				input(type="checkbox", name="s1", id="chkbox1")
+				label(for="chkbox1")
+					span Дары Памира
+			.filter__block__item
+				input(type="checkbox" name="s2", id="chkbox2")
+				label(for="chkbox2")
+					span Bell
+			.filter__block__item
+				input(type="checkbox" name="s3", id="chkbox3")
+				label(for="chkbox3")
+					span Food Good
+			.filter__block__item
+				input(type="checkbox" name="s4", id="chkbox4")
+				label(for="chkbox4")
+					span Hand Made
+			.filter__block__item
+				input(type="checkbox" name="s5", id="chkbox5")
+				label(for="chkbox5")
+					span Econutrena
+		.filter__block
+			.filter__block__name Цена, руб.
+			input(type="text" class="sliderValue" data-index="0" value="0")
+			input.sliderValue.sliderValue_right(type="text" data-index="1" value="30000")
+			input(type="hidden" class="range-slider" value="5000" name="price")
