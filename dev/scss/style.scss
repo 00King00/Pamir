@@ -499,31 +499,8 @@ p{
 		}
 		&.active{
 			background: #fff;
-		}
-		ul{
-			display: none;
-			padding: 25px;
-			position: absolute;
-			top: 100%;
-			left: 0;
-			z-index: 10;
-			width: 220px;
-			background: #fff;
-			.title{
+			.submenu-block{
 				display: block;
-				font-size: 16px;
-				font-family: 'roboto';
-				font-weight: 500;
-				color: #616161;
-				margin-bottom: 25px;
-			}
-			li{
-				padding: 3px 0;
-				color: #778d53;
-				font-size: 14px;
-				&:last-child{
-					float: none;
-				}
 			}
 		}
 	}
@@ -744,7 +721,7 @@ p{
 		font-size: 18px;
 		display: block;
 		text-align: center;
-		@inlude breakpoint(tablet){
+		@include breakpoint(tablet){
 			display: inline-block;
 		}
 		
@@ -1760,6 +1737,117 @@ p{
 			text-decoration: none;
 			&:hover{
 				color: #536a30;
+			}
+		}
+	}
+}
+.submenu-block {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    top: 100%;
+    width: 800px;
+    background: #fff;
+    z-index: 50;
+    color: #443c3d;
+    line-height: 18px;
+    height: 350px;
+    color: #778d53;
+    font-size: 14px;
+    font-family: "Roboto";
+	.selection{
+		height: 350px;
+		background: #f9f9f5;
+		float: left;
+		width: 235px;
+		ul{
+			padding: 25px 20px;
+			li{
+				padding: 0;
+				position: relative;
+				display: block;
+				margin-bottom: 20px;
+				&:last-child{
+						float: none;
+				}
+				&:hover{
+					color: #34362f;
+				}
+				&.active{
+					background: none;
+					&:before{
+						content: '';
+					    position: absolute;
+					    transform: rotate(135deg);
+					    background: #f9f9f5;
+					    right: -28px;
+					    top: 5px;
+					    content: '';
+					    width: 15px;
+					    height: 15px;
+					}
+				}
+			}
+		}
+
+	}
+	.categories,.brands{
+		float: left;
+		padding: 25px;
+		.title{
+				display: block;
+				font-size: 16px;
+				font-family: 'roboto';
+				font-weight: 500;
+				color: #616161;
+				margin-bottom: 25px;
+		}
+		ul{
+			max-height: 260px;
+			overflow-y: scroll;
+			z-index: 10;
+			width: 220px;
+			background: #fff;
+			li{
+				display: block;
+				padding: 3px 0;
+				color: #778d53;
+				font-size: 14px;
+				&:last-child{
+					float: none;
+				}
+				&.active{
+					color: #506332
+				}
+			}
+		}
+	}
+	.brands{
+		float: left;
+		padding: 25px;
+		.title{
+				display: block;
+				font-size: 16px;
+				font-family: 'roboto';
+				font-weight: 500;
+				color: #616161;
+				margin-bottom: 25px;
+		}
+		ul{
+			max-height: 260px;
+			overflow-y: scroll;
+			z-index: 10;
+			width: 220px;
+			background: #fff;
+			li{
+				display: block;
+				padding: 3px 0;
+				color: #828284;
+				font-size: 14px;
+				&:last-child{
+					float: none;
+				}
 			}
 		}
 	}

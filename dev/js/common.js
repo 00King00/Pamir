@@ -284,6 +284,13 @@ $(function(){
 	
 	//Set style scrol Bar
 	//$('#scrollme').leftScrollbar();
+		$('.main-menu li').click(function(event){
+		var moveleft=$(this).offset().left - $('.main-menu li:first-child').offset().left
+		event.preventDefault();
+		console.log(moveleft)
+		$(this).toggleClass('active');
+		$('.submenu-block').css("left", -moveleft)
+		})
 	
 
 });
