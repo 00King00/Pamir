@@ -1,0 +1,109 @@
+html
+	head
+		include ./parts/head.pug
+	body
+		include ./parts/header.pug
+		.wrapper
+			ul.breadcrumbs.show-laptop
+					li
+						a(href="index.html") Главная
+					li
+						a(href="#") Доставка
+			.block-title.block-title_delivery
+				span Доставка
+			p Здесь Вы всегда можете приобрести качественные натуральные продукты, а наряду с этим и уверенность в правильности выбранного пути здорового образа жизни и его важной составляющей - натурального и полезного питания.Мы предлагаем эко-продукцию, которая производится в экологически чистых регионах разных стран и ориентированы на предоставление потребителю исключительного качества различных продуктов на рынке здорового питания. Наш выбор – 100% натуральные и полезные продукты питания, в составе которых нет вредных для здоровья пищевых добавок, красителей и консервантов, ГМО и т.п. химии. 
+			.block-title.block-title_slider
+				span  Способы доставки
+			.delivery-service
+				.delivery-service__logo
+					img(src="images/delivery-service.png", alt="post")
+				.delivery-service__name
+					|Доставка Почтой России
+				.delivery-service__description
+					|Здесь Вы всегда можете приобрести качественные натуральные продукты, а наряду с этим и уверенность в правильности выбранного пути здорового образа жизни и его важной составляющей - натурального и полезного питания.Мы предлагаем эко-продукцию, которая производится в экологически чистых регионах разных стран. 
+				.delivery-service__sum
+					|Минимальная сумма заказа: 900 руб.
+				a(href="#").btn.btn_about-delivery
+					|Подробнее
+			.delivery-service
+				.delivery-service__logo
+					img(src="images/delivery-service.png", alt="post")
+				.delivery-service__name
+					|Доставка Почтой России
+				.delivery-service__description
+					|Здесь Вы всегда можете приобрести качественные натуральные продукты, а наряду с этим и уверенность в правильности выбранного пути здорового образа жизни и его важной составляющей - натурального и полезного питания.Мы предлагаем эко-продукцию, которая производится в экологически чистых регионах разных стран. 
+				.delivery-service__sum
+					|Минимальная сумма заказа: 900 руб.
+				a(href="#").btn.btn_about-delivery
+					|Подробнее
+			.delivery-service.delivery-service_last
+				.delivery-service__logo
+					img(src="images/delivery-service.png", alt="post")
+				.delivery-service__name
+					|Доставка Почтой России
+				.delivery-service__description
+					|Здесь Вы всегда можете приобрести качественные натуральные продукты, а наряду с этим и уверенность в правильности выбранного пути здорового образа жизни и его важной составляющей - натурального и полезного питания.Мы предлагаем эко-продукцию, которая производится в экологически чистых регионах разных стран. 
+				.delivery-service__sum
+					|Минимальная сумма заказа: 900 руб.
+				a(href="#").btn.btn_about-delivery
+					|Подробнее
+			.block-title.block-title_slider
+				span Вы смотрели
+				a(href="#")
+					span Все товары
+					include ./images/arrow_right.svg
+			ul#productslider
+				.product
+					.product__img
+						a(href="#")
+							img(src="images/product_01.png",alt="product")
+					a(href="#").product__name
+						|Батончик с миндалем «Шелковица с Памира»
+					.product__code
+						|ДарыПамира  /  LFG-934
+					.product__price
+						span 20
+						span.rouble q
+						.product__volume
+							|20г.
+				.product.border-righ-none
+					.product__img
+						a(href="#")
+							img(src="images/product_02.png",alt="product")
+					a(href="#").product__name
+						|Батончик с миндалем «Шелковица с Памира»
+					.product__code
+						|ДарыПамира  /  LFG-934
+					.product__price
+						span 20
+						span.rouble q
+						.product__volume
+							|20г.
+				.product
+					.product__img
+						a(href="#")
+							img(src="images/product_03.png",alt="product")
+					a(href="#").product__name
+						|Крем кокосовый органический, "Econutrena", жирность 68%, 300мл
+					.product__code
+						|ДарыПамира  /  LFG-934
+					.product__price
+						span 20
+						span.rouble q
+						.product__volume
+							|20г.
+				.product
+					.product__img
+						a(href="#")
+							img(src="images/product_04.png",alt="product")
+					a(href="#").product__name
+						|Батончик с миндалем «Шелковица с Памира»
+					.product__code
+						|ДарыПамира  /  LFG-934
+					.product__price
+						span 20
+						span.rouble q
+						.product__volume
+							|20г.	
+		include ./parts/subscribe-form.pug
+		include ./parts/footer.pug
