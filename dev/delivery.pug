@@ -12,7 +12,47 @@ html
 			.block-title.block-title_delivery
 				span Доставка
 			p Здесь Вы всегда можете приобрести качественные натуральные продукты, а наряду с этим и уверенность в правильности выбранного пути здорового образа жизни и его важной составляющей - натурального и полезного питания.Мы предлагаем эко-продукцию, которая производится в экологически чистых регионах разных стран и ориентированы на предоставление потребителю исключительного качества различных продуктов на рынке здорового питания. Наш выбор – 100% натуральные и полезные продукты питания, в составе которых нет вредных для здоровья пищевых добавок, красителей и консервантов, ГМО и т.п. химии. 
-			.block-title.block-title_slider
+			.block-title.block-title_delivery-opt
+				span  Расчет доставки
+			.delivery-calc
+				.delivery-info.clearfix
+					.col-tablet-1-2
+						.input-wrapper
+							span Страна
+							input(type="text", name="country")
+						.input-wrapper
+							span Регион
+							input(type="text", name="country")
+						.input-wrapper
+							span Город
+							input(type="text", name="country")
+						.input-wrapper
+							span Вес заказа
+							input(type="text", name="country")
+					.col-tablet-1-2
+						.input-wrapper
+							span Сумма заказа
+							input(type="text", name="country")
+						.remark
+							span Примечание: 
+							span по умолчанию значение веса и суммы заказа рассчитаны для Вашей корзины.
+						.input-wrapper
+							span Способ доставки
+							input(type="text", name="country")
+						.delivery-summ
+							|Стоимость: от 348 руб.
+				.delivery-service.delivery-service_form
+					.delivery-service__logo.delivery-service__logo_pickpoint
+						img(src="images/delivery-service_01.png", alt="post")
+					.delivery-service__name
+						|Постаматы PickPoint
+					.delivery-service__description
+						|Автоматизированные терминалы - постаматы и пункты выдачи заказов.
+						a(href="#") Условия беслпатной доставки.
+					a(href="#").btn.btn_delivery-cart
+						|Добавить в корзину
+				button(type='submit') Оформить доставку
+			.block-title.block-title_delivery-opt
 				span  Способы доставки
 			.delivery-service
 				.delivery-service__logo
