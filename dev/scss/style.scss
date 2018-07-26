@@ -177,11 +177,53 @@ p{
 	}
 	.callback{
 		display: inline-block;
+		position: relative;
+		&__pointer{
+			position: absolute;
+			display: inline-block;
+			height: 20px;
+			width: 20px;
+			background-color: white;
+			transform: rotate(45deg);
+			top: -10px;
+			left: 46%;
+				
+			
+		}
+		&__modal-window{
+			display: none;
+			position: absolute;
+			width: 315px;
+			top: 150%;
+			left: -120px;
+			z-index: 100;
+			box-shadow: 0px 0px 34px 0px rgba(0, 0, 0, 0.2);
+			&.active{
+				display: block;
+			}
+			.form{
+				background-color: white;
+				section{
+					background-color: white;
+				}
+				
+			}
+			
+			.form__tabs{
+				font-size: 16px;
+				input:checked + label{
+					border-bottom: 1px solid #778d53;
+					background-color: white;
+				}
+				
+			}
+			
+		}
 		a{
 			display: block;
 			font-family: 'Roboto';
 			text-decoration: underline;
-			text-decoration-style:dotted; 
+			text-decoration-style:dotted;
 			color: #778d53;
 		}
 	}
@@ -817,7 +859,7 @@ p{
 	}
 	
 	&__tabs{
-		#tab1, #tab2 {
+		#tab1, #tab2, #tab_1, #tab_2  {
 			display: none;
 		}
 		

@@ -159,7 +159,7 @@ $(function(){
 				$('.sale').css('height', 'auto');
 			}
 	}
-	$("#promoslider img")[0].on('load', function(){
+	$("#promoslider img").first().on('load', function(){
 
   		setTimeout(SameHeight, 1000);
 
@@ -175,14 +175,20 @@ $(function(){
 		if(select == 'tab1'){
 			$("#content1").addClass('active');
 			$("#content2").removeClass('active')
-			console.log(select == tab1, 1);
-			
 		}else{
 			$("#content2").addClass('active');
 			$("#content1").removeClass('active')
-			console.log(select == tab1);
 		}
-		console.log(select == tab1);
+	})
+	$(".callback__modal-window .form__tabs input").click(function(){
+		var select = $(this).prop("id");
+		if(select == 'tab_1'){
+			$("#content_1").addClass('active');
+			$("#content_2").removeClass('active')
+		}else{
+			$("#content_2").addClass('active');
+			$("#content_1").removeClass('active')
+		}
 	})
 	
 	// input-mask
@@ -208,12 +214,22 @@ $(function(){
 				$('.fixed-overlay').removeClass('active')
 			}
 		}
+
 	
 	});
+		$('body').mouseup(function (e){
+			var div_1 = $(".callback__modal-window");
+			if (!div_1.is(e.target) && div_1.has(e.target).length === 0){
+				if($('.callback__modal-window').hasClass('active')){
+					$('.callback__modal-window').removeClass('active')
+				}
+			}
+		});
 
 	//open modal window
 	$(".header-middle .callback").click(function(){
-		$(".fixed-overlay.callback").addClass('active');
+		$(".callback__modal-window").addClass('active');
+		//e.stopPropagation();
 		
 	});
 	$(".sign-in").click(function(){
@@ -237,6 +253,11 @@ $(function(){
 		$(".fixed-overlay").removeClass('active');
 		e.stopPropagation();
 	});
+	$(".callback__modal-window input[type='submit']").click(function(e){
+		$(".callback__modal-window").removeClass('active');
+		e.stopPropagation();
+	});
+	
 	//Search-form on mobile device
 	$('.search-mobile').click(function(event){
 		event.preventDefault();
@@ -264,8 +285,6 @@ $(function(){
 	function fixMenuBar(){
 		var scrolTop = $(window).scrollTop();
 		var width = $(window).width();
-		console.log(scrolTop);
-		console.log(top);
 			if(width>800){
 				if(scrolTop>=top){
 					$(".main-menu").addClass("fixed");
@@ -283,7 +302,7 @@ $(function(){
 	});
 	
 	//Set style scrol Bar
-	//$('#scrollme').leftScrollbar();
+	
 	
 
 });
