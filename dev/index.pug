@@ -2,7 +2,62 @@ html
 	head
 		include ./parts/head.pug
 	body
+		.wrapper
+			.header-bottom
+				.search-form
+					form
+						input(type="search", placeholder="Поиск", name="search")
+						button(type="submit") Найти
+				.bars
+					.bar
+					.bar
+					.bar
+				.search-mobile
+					img(src="images/magnifying_glass.png", alt="search")
+				.logo
+					img(src="images/logo.png", alt="logo")
+					.text
+						span Продукты
+						br
+						span с пользой для здоровья
+				.search
+					form
+						input(type="search", placeholder="Поиск", name="search")
+						button(type="submit")
+							i.fa.fa-search
+				a(href="#").favorites
+					.favorites-icon
+						span.icon.icon_favorites
+						span.favorites-item-count 3
+					span Избранное
+				a(href="#").shoppingcart
+					span.icon.icon_cart
+					span.cart-item-count 3
+					a(href="#").shopping-sum
+						span
+							|2199
+						span
+							|q
+		.main-menu
+			.wrapper
+				ul
+					li
+						a(href="#") Акции
+					li
+						a(href="#") Питание
+					li.active
+						a(href="#") Косметика
+					li
+						a(href="#") Для дома
+					li
+						a(href="#") Бренды
+					li
+						a(href="#") Прочее
+					li
+						a(href="#") Оптовикам
+							img(src="images/opt.png", alt="pic")
 		include ./parts/header.pug
+
 		.wrapper
 			.clearfix
 				.col-tablet-2-3.no-padding.null
@@ -326,7 +381,6 @@ html
 								input(type="text" placeholder="Ваше имя")
 								input(type="tel" placeholder="+7 (___) ___ - __ - __")
 								textarea
-								
 								input#agred(type="checkbox")
 								label.agred(for="agred") Я соглашаюсь с правиласи пользования сервисом и даю согласие на хранение и обработку моих персональных данных
 								input(type="submit" value="Отправить")
