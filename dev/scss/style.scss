@@ -727,6 +727,11 @@ p{
 			display:inline-block;
 		}
 	}
+	&_delivery-opt{
+		span{
+			font-size: 24px;
+		}
+	}
 	a{
 		margin-left: 8px;
 		color: #778d53;
@@ -1305,6 +1310,25 @@ p{
 		font-size: 15px;
 		color: #778d53;
 		border: 1px solid #778d53;
+		&:hover{
+			background:#4d622a;
+			color: #fff; 
+		}
+	}
+	&_delivery-cart{
+		padding: 7px 25px;
+		font-size: 15px;
+		color: #778d53;
+		border: 1px solid #778d53;
+		&:hover{
+			background:#4d622a;
+			color: #fff; 
+		}
+		@include breakpoint(laptop){
+			position: absolute;
+			right: 0;
+			bottom: 35px;
+		}
 	}
 	&_products{
 		float: right;
@@ -1773,6 +1797,7 @@ p{
     height: 350px;
     color: #778d53;
     font-size: 14px;
+  	box-shadow: 0px 7px 18px -6px rgba(148,148,148,1);
     font-family: "Roboto";
 	.selection{
 		height: 350px;
@@ -1794,6 +1819,7 @@ p{
 					color: #34362f;
 				}
 				&.active{
+					color: #34362f;
 					background: none;
 					&:before{
 						content: '';
@@ -1907,10 +1933,16 @@ p{
 .delivery-service{
 	border-top: 1px solid #cbc6be;
 	border-bottom: 1px solid #cbc6be;
-	padding: 25px 0;
+	padding: 25px 10px;
 	margin-top: -1px;
-	padding-left: 230px;
 	position: relative;
+	&_form{
+		margin-top: 10px;
+	}
+	@include breakpoint(phablet){
+		padding: 25px 0px;
+		padding-left: 230px;
+	}
 	&_last{
 		margin-bottom: 45px;
 	}
@@ -1924,17 +1956,98 @@ p{
 		line-height: 1.5;
 		font-size: 14px;
 		margin-bottom: 20px;
+		a{
+			display: block;
+			color: #778d53;
+			text-decoration: underline;
+		}
 	}
 	&__logo{
-		position: absolute;
-		top: 30px;
-		left: 0;
-		margin-right: 30px; 
+		margin-bottom: 20px;
+		@include breakpoint(phablet){
+			margin-right: 30px;
+			margin: 0;
+			position: absolute;
+			top: 30px;
+			left: 0;
+		}
+		&_pickpoint{
+			margin-bottom: 20px;
+			@include breakpoint(phablet){
+				margin-right: 30px;
+				margin-right: 30px;
+				margin: 0;
+				position: absolute;
+				left: 0;
+				top: 50px;
+			}
+		}
 	}
 	&__sum{
 		font-size: 14px;
 		font-style: italic;
 		font-weight: 500;
 		margin-bottom: 20px;
+	}
+}
+.delivery-calc{
+	background: #f8f5f0;
+	padding: 25px 50px 30px;
+	margin-bottom: 44px;
+	button{
+		margin-top: 20px;
+		text-align: center;
+		width:100%;
+		font-size: 18px;
+		color: #fff;
+		background: #778d53;
+		padding:8px 0;
+		&:hover{
+			background: #4d622a;
+		}
+	}
+}
+.input-wrapper{
+	margin-bottom: 20px;
+	span{
+		display: inline-block;
+		font-size: 16px;
+		margin-bottom: 5px;
+		@include breakpoint(tablet){
+			width: 135px;
+		}
+	}
+	input{
+		border: 1px solid #c5c5c6;
+		height: 45px;
+		padding: 0 10px;
+		border-radius: 0;
+		width: 100%;
+		@include breakpoint(desktop){
+			width: 330px;
+		}
+	}
+}
+.remark{
+	font-size: 14px;
+	margin-bottom: 20px;
+	@include breakpoint(tablet){
+		height: 69px;
+	}
+	@media(min-width:1077px){
+		height: 45px;
+	}
+	span:first-child{
+		color: #353535;
+		font-weight: 500;
+	}
+	span{
+		color: #6c6c6c;
+	}
+}
+.delivery-summ{
+	font-size: 29px;
+	@include breakpoint(tablet){
+		float: right;
 	}
 }
