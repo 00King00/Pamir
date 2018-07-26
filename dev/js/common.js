@@ -162,7 +162,6 @@ $(function(){
 	$("#promoslider img").first().on('load', function(){
 
   		setTimeout(SameHeight, 1000);
-
  	});
 
 	$(window).resize(function(){
@@ -302,7 +301,15 @@ $(function(){
 	});
 	
 	//Set style scrol Bar
-	
+
+	//$('#scrollme').leftScrollbar();
+		$('.main-menu>.wrapper>ul>li').mouseover(function(event){
+		var moveleft=$(this).offset().left - $('.main-menu li:first-child').offset().left
+		event.preventDefault();
+		console.log(moveleft)
+		$(this).toggleClass('active');
+		$('.submenu-block').css("left", -moveleft)
+		})
 	
 
 });
