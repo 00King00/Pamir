@@ -159,7 +159,7 @@ $(function(){
 				$('.sale').css('height', 'auto');
 			}
 	}
-	$("#promoslider img").on('load', function(){
+	$("#promoslider img").first().on('load', function(){
 
   		setTimeout(SameHeight, 1000);
 
@@ -284,7 +284,7 @@ $(function(){
 	
 	//Set style scrol Bar
 	//$('#scrollme').leftScrollbar();
-		$('.main-menu li').click(function(event){
+		$('.main-menu>.wrapper>ul>li').mouseover(function(event){
 		var moveleft=$(this).offset().left - $('.main-menu li:first-child').offset().left
 		event.preventDefault();
 		console.log(moveleft)

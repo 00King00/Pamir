@@ -497,7 +497,13 @@ p{
 		img{
 			margin-left: 10px;
 		}
-		&.active{
+		// &.active{
+		// 	background: #fff;
+		// 	.submenu-block{
+		// 		display: block;
+		// 	}
+		// }
+		&:hover{
 			background: #fff;
 			.submenu-block{
 				display: block;
@@ -704,6 +710,12 @@ p{
 	@include breakpoint(tablet){
 		text-align: left;
 		margin-bottom: 35px;
+	}
+	&_delivery{
+		margin-bottom: 30px;
+	}
+	&_slider{
+		font-size: 24px;
 	}
 	span{
 		font-family: 'Roboto';
@@ -1288,6 +1300,12 @@ p{
 }
 .btn{
 	display: inline-block;
+	&_about-delivery{
+		padding: 7px 25px;
+		font-size: 15px;
+		color: #778d53;
+		border: 1px solid #778d53;
+	}
 	&_products{
 		float: right;
 		position: relative;
@@ -1772,6 +1790,7 @@ p{
 						float: none;
 				}
 				&:hover{
+					background: transparent;
 					color: #34362f;
 				}
 				&.active{
@@ -1786,7 +1805,7 @@ p{
 					    content: '';
 					    width: 15px;
 					    height: 15px;
-					}
+					}		
 				}
 			}
 		}
@@ -1850,5 +1869,72 @@ p{
 				}
 			}
 		}
+	}
+}
+.breadcrumbs{
+	font-size: 12px;
+	font-family: 'Roboto';
+	list-style: none;
+	margin-bottom: 15px;
+	color: #6c6c6c;
+	display: inline-block;
+	li{
+		display: inline-block;
+		margin-right: 10px;
+		position: relative;
+		&:not(:last-child):after{
+			content: "/";
+			display: inline-block;
+			position: absolute;
+			right: -11px;
+			font-size: 13px;
+			top: 0px;
+		}
+		&:not(:last-child){
+			text-decoration: underline;
+		}
+	}
+	a{
+		color: #6c6c6c;
+		&:hover{
+			color: #778d53;
+		}
+	}
+	&_no-margin{
+		margin: 0;
+	}
+}
+.delivery-service{
+	border-top: 1px solid #cbc6be;
+	border-bottom: 1px solid #cbc6be;
+	padding: 25px 0;
+	margin-top: -1px;
+	padding-left: 230px;
+	position: relative;
+	&_last{
+		margin-bottom: 45px;
+	}
+	&__name{
+		font-weight: 500;
+		font-size: 18px;
+		margin-bottom: 20px;
+	}
+	&__description{
+		color: #6c6c6c;
+		line-height: 1.5;
+		font-size: 14px;
+		margin-bottom: 20px;
+	}
+	&__logo{
+		position: absolute;
+		top: 30px;
+		left: 0;
+		margin-right: 30px; 
+	}
+	&__sum{
+		font-size: 14px;
+		font-style: italic;
+		font-weight: 500;
+		margin-bottom: 20px;
 	}
 }

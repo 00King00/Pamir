@@ -1,0 +1,398 @@
+.page.disable-scrolling
+	.fixed-overlay.fixed-overlay__modal.callback
+		.modal
+			.modal_container
+				span.icon.icon_remove-item
+				form
+					.modal__title Перезвоните мне
+					.wrap-input
+						span Представтесь
+						input
+					.wrap-input
+						span Номер телефона
+						input(type="tel" placeholder="+7 (___) ___ - __ - __ ")
+					input.btn.btn_callback(type="submit" value="Перезвоните мне")
+	.fixed-overlay.fixed-overlay__modal.sing-in
+		.modal
+			.modal_container
+				span.icon.icon_remove-item
+				form
+					.modal__title Войти
+					.wrap-input
+						span Логин
+						input
+					.wrap-input
+						span Пароль
+						input(type="password")
+					input.btn.btn_callback(type="submit" value="Войти")
+					a.forgot-password(href="#") Забыли пароль?
+	.fixed-overlay.fixed-overlay__modal.region-city
+		.modal
+			.modal_container.modal_container_region-city
+				span.icon.icon_remove-item.icon_remove-item_region-city
+				.region-city__side-bar
+					.region-city__title Россия
+					.region-city__sub-title Регион
+					ul
+						li.region-city__list Москва
+						li.region-city__list Московская область
+						li.region-city__list.active Санкт-Петербург
+						li.region-city__list Севастополь
+						li.region-city__list Байконур
+						li.region-city__list Алт
+							a(href="#") айский край
+						li.region-city__list Амурская область
+						li.region-city__list Архангельская область
+						li.region-city__list Астраханская область
+						li.region-city__list Белгородская область
+						li.region-city__list Брянская область
+						li.region-city__list Владимирская область
+						li.region-city__list Волгоградская область
+						li.region-city__list Байконур
+						li.region-city__list Алтайский край
+						li.region-city__list Амурская область
+						li.region-city__list Архангельская область
+						li.region-city__list Астраханская область
+						li.region-city__list Белгородская область
+						li.region-city__list Брянская область
+						li.region-city__list Владимирская область
+						li.region-city__list Волгоградская область
+				.region-city__content-bar
+					.region-city__sub-title Населенный пункт
+					.region-city__wrap-content-box
+						.region-city__content-box
+							ul
+								span А
+								li.region-city__list
+									a(href="#") Астрахань
+							ul
+								span Б
+								li.region-city__list
+									a(href="#") Байконур
+								li.region-city__list
+									a(href="#") Барнаул
+							ul
+								span В
+								li.region-city__list
+									a(href="#") Владивосток
+								li.region-city__list
+									a(href="#") Волгоград
+								li.region-city__list
+									a(href="#") Воронеж
+							ul
+								span E
+								li.region-city__list
+									a(href="#") Екатеринбург
+							ul
+								span И
+								li.region-city__list
+									a(href="#") Ижевск
+								li.region-city__list
+									a(href="#") Иркутск
+							ul
+								span К
+								li.region-city__list
+									a(href="#") Казань
+								li.region-city__list
+									a(href="#") Кемерово
+								li.region-city__list
+									a(href="#") Краснодар
+								li.region-city__list
+									a(href="#") Красноярск
+							ul
+								span М
+								li.region-city__list
+									a(href="#") Махачкала
+								li.region-city__list
+									a(href="#") Москва
+							ul
+								span Н
+								li.region-city__list
+									a(href="#") Набережные Челны
+								li.region-city__list
+									a(href="#") Нижний Новгород
+								li.region-city__list
+									a(href="#") Новокузнецк
+								li.region-city__list
+									a(href="#") Новосибирск
+							ul
+								span О
+								li.region-city__list
+									a(href="#") Омск
+								li.region-city__list
+									a(href="#") Оренбург
+							ul
+								span П
+								li.region-city__list
+									a(href="#") Пермь
+							ul
+								span Р
+								li.region-city__list
+									a(href="#") Ростов-на-Дону
+								li.region-city__list
+									a(href="#") Рязань
+							ul
+								span С
+								li.region-city__list
+									a(href="#") Самара
+								li.region-city__list
+									a(href="#") Санкт-Петербург
+								li.region-city__list
+									a(href="#") Саратов
+								li.region-city__list
+									a(href="#") Севастополь
+.wrapper
+	.main-menu-mobile
+		.close-btn
+			img(src="images/remove_item.png", alt="Спрятать фильтр")
+		.enter.enter_mobile
+			img(src="images/lock_mobile.png", alt="lock icon")
+			a(href="#")
+				span.dashed.sign-in Вход
+			span |
+			a(href="#")
+				span.underline Зарегистрироваться
+		.catalog
+			ul
+				li
+					span Акции
+					i.fa.fa-angle-right
+				li
+					span Питание
+					i.fa.fa-angle-right
+				li
+					span Косметика
+					i.fa.fa-angle-right
+				li
+					span Для дома
+					i.fa.fa-angle-right
+				li
+					span Бренды
+					i.fa.fa-angle-right
+				li
+					span Прочее
+					i.fa.fa-angle-right
+		.wholesalers
+			a(href="#") Оптовикам
+				img(src="images/opt.png", alt="pic")
+		.company-info.company-info_mobile
+			ul
+				li
+					a(href="#") О нас
+				li
+					a(href="#") Оплата
+				li
+					a(href="#") Доставка
+				li
+					a(href="#") Контакты
+				li
+					a(href="#") Вопрос-ответ
+				li
+					a(href="#") Поставщикам
+
+.header-top
+	.wrapper
+		.company-info.show-laptop-inline
+			ul
+				li
+					a(href="#") О нас
+				li
+					a(href="#") Оплата
+				li
+					a(href="#") Доставка
+				li
+					a(href="#") Контакты
+				li
+					a(href="#") Вопрос-ответ
+				li
+					a(href="#") Поставщикам
+		.enter
+			img(src="images/lock.png", alt="lock icon")
+			a(href="#")
+				span.dashed.sign-in Вход
+			span |
+			a(href="#")
+				span.underline Зарегистрироваться
+		.city.city_top-line
+			img(src="images/marker.png", alt="marker")
+			a(href="#") Москва
+		.telephone.telephone_top-line
+			a(href="tel:74996546789") +7 (499) 653-67-89
+.header-middle
+	.wrapper
+		.location
+			.city
+				img(src="images/marker.png", alt="marker")
+				a(href="#") Москва
+			.points
+				span 692 пункта
+				br
+				span выдачи заказов
+		.delivery
+			img(src="images/delivery.png", alt="marker")
+			.delivery-time
+				span Доставка в город
+				br
+				a(href='#')
+					span Красноярск за 2-14 дней
+		.telephone
+			a(href="tel:74996546789") +7 (499) 653-67-89
+			span по Москве
+		.telephone
+			a(href="tel:74996546789") +7 (499) 653-67-89
+			span бесплатно по России
+		.callback
+			a(href="#") Обратный звонок
+			span с 8:00 до 20:00 по мск
+.wrapper
+	.header-bottom
+		.search-form
+			form
+				input(type="search", placeholder="Поиск", name="search")
+				button(type="submit") Найти
+		.bars
+			.bar
+			.bar
+			.bar
+		.search-mobile
+			img(src="images/magnifying_glass.png", alt="search")
+		.logo
+			img(src="images/logo.png", alt="logo")
+			.text
+				span Продукты
+				br
+				span с пользой для здоровья
+		.search
+			form
+				input(type="search", placeholder="Поиск", name="search")
+				button(type="submit")
+					i.fa.fa-search
+		a(href="#").favorites
+			.favorites-icon
+				span.icon.icon_favorites
+				span.favorites-item-count 3
+			span Избранное
+		a(href="#").shoppingcart
+			span.icon.icon_cart
+			span.cart-item-count 3
+			a(href="#").shopping-sum
+				span
+					|2199
+				span
+					|q
+.main-menu
+	.wrapper
+		ul
+			li
+				a(href="#") Акции
+			li
+				a(href="#") Питание
+			li
+				a(href="#") Косметика
+				.submenu-block
+					.selection
+						ul
+							li Для лица
+							li Для волос
+							li.active Для тела
+							li Декокаривная косметика
+							li Для детей
+							li Для мужчин
+					.categories
+						.title Разделы
+						ul
+							li Очищение
+							li Снятие макияжа
+							li Тоники
+							li Скрабы и пилинги
+							li Сыворотки и флюиды
+							li Дневные кремы
+							li Ночной уход
+							li.active Маски для лица
+							li Уход за шеей
+							li Сыворотки и флюиды
+							li Дневные кремы
+							li Ночной уход
+							li Маски для лица
+							li Уход за шеей
+					.brands
+						.title Бренды
+						ul
+							li 100% Pure
+							li 4fresh
+							li Aasha
+							li Acorelle
+							li Andalou Naturals
+							li Annemarie Borlind
+							li Argital
+							li Arnebia Selection
+							li Aroma Jazz
+							li Attitude
+							li Annemarie Borlind
+							li Argital
+							li Arnebia Selection
+							li Aroma Jazz
+							li Attitude
+							li Annemarie Borlind
+							li Argital
+							li Arnebia Selection
+							li Aroma Jazz
+							li Attitude
+			li
+				a(href="#") Для дома
+			li
+				a(href="#") Бренды
+				.submenu-block
+					.selection
+						ul
+							li Для лица
+							li Для волос
+							li.active Для тела
+							li Декокаривная косметика
+							li Для детей
+							li Для мужчин
+					.categories
+						.title Разделы
+						ul
+							li Очищение
+							li Снятие макияжа
+							li Тоники
+							li Скрабы и пилинги
+							li Сыворотки и флюиды
+							li Дневные кремы
+							li Ночной уход
+							li.active Маски для лица
+							li Уход за шеей
+							li Сыворотки и флюиды
+							li Дневные кремы
+							li Ночной уход
+							li Маски для лица
+							li Уход за шеей
+					.brands
+						.title Бренды
+						ul
+							li 100% Pure
+							li 4fresh
+							li Aasha
+							li Acorelle
+							li Andalou Naturals
+							li Annemarie Borlind
+							li Argital
+							li Arnebia Selection
+							li Aroma Jazz
+							li Attitude
+							li Annemarie Borlind
+							li Argital
+							li Arnebia Selection
+							li Aroma Jazz
+							li Attitude
+							li Annemarie Borlind
+							li Argital
+							li Arnebia Selection
+							li Aroma Jazz
+							li Attitude
+			li
+				a(href="#") Прочее
+			li
+				a(href="#") Оптовикам
+					img(src="images/opt.png", alt="pic")
