@@ -160,9 +160,7 @@ $(function(){
 			}
 	}
 	$("#promoslider img").first().on('load', function(){
-
   		setTimeout(SameHeight, 1000);
-
  	});
 
 	$(window).resize(function(){
