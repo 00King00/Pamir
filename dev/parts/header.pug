@@ -1,17 +1,4 @@
 .page.disable-scrolling
-	.fixed-overlay.fixed-overlay__modal.callback
-		.modal
-			.modal_container
-				span.icon.icon_remove-item
-				form
-					.modal__title Перезвоните мне
-					.wrap-input
-						span Представтесь
-						input
-					.wrap-input
-						span Номер телефона
-						input(type="tel" placeholder="+7 (___) ___ - __ - __ ")
-					input.btn.btn_callback(type="submit" value="Перезвоните мне")
 	.fixed-overlay.fixed-overlay__modal.sing-in
 		.modal
 			.modal_container
@@ -244,6 +231,30 @@
 		.callback
 			a(href="#") Обратный звонок
 			span с 8:00 до 20:00 по мск
+			.callback__modal-window
+				.callback__pointer
+				.form__tabs
+					input#tab_1(type="radio" name="tabs_1" checked)
+					label.question(for="tab_1") Задать вопрос
+					input#tab_2(type="radio" name="tabs_1")
+					label.callbacktab(for="tab_2") Перезвонить мне
+				.form
+					section#content_1.active
+						form
+							input(type="text" placeholder="Ваше имя")
+							input(type="tel" placeholder="+7 (___) ___ - __ - __")
+							textarea
+
+							input#agred_1(type="checkbox")
+							label.agred(for="agred_1") Я соглашаюсь с правиласи пользования сервисом и даю согласие на хранение и обработку моих персональных данных
+							input(type="submit" value="Отправить")
+							.form__text Мы перезваниваем в рабочеев ремя  в течении 2 часов
+					section#content_2
+						form
+							input(type="text" placeholder="Ваше имя")
+							input(type="tel" placeholder="+7 (___) ___ - __ - __")
+							input(type="submit" value="Отправить")
+							.form__text Мы перезваниваем в рабочеев ремя  в течении 2 часов
 .wrapper
 	.header-bottom
 		.search-form

@@ -181,11 +181,53 @@ p{
 	}
 	.callback{
 		display: inline-block;
+		position: relative;
+		&__pointer{
+			position: absolute;
+			display: inline-block;
+			height: 20px;
+			width: 20px;
+			background-color: white;
+			transform: rotate(45deg);
+			top: -10px;
+			left: 46%;
+				
+			
+		}
+		&__modal-window{
+			display: none;
+			position: absolute;
+			width: 315px;
+			top: 150%;
+			left: -120px;
+			z-index: 100;
+			box-shadow: 0px 0px 34px 0px rgba(0, 0, 0, 0.2);
+			&.active{
+				display: block;
+			}
+			.form{
+				background-color: white;
+				section{
+					background-color: white;
+				}
+				
+			}
+			
+			.form__tabs{
+				font-size: 16px;
+				input:checked + label{
+					border-bottom: 1px solid #778d53;
+					background-color: white;
+				}
+				
+			}
+			
+		}
 		a{
 			display: block;
 			font-family: 'Roboto';
 			text-decoration: underline;
-			text-decoration-style:dotted; 
+			text-decoration-style:dotted;
 			color: #778d53;
 		}
 	}
@@ -352,6 +394,9 @@ p{
 		background: #e5191c;
 		color: white;
 		line-height: 16px;
+		@include breakpoint(mobileonly){
+			right: -15px;
+		}
 	}
 	.favorites-item-count{
 		background: #000;
@@ -852,7 +897,7 @@ p{
 	}
 	
 	&__tabs{
-		#tab1, #tab2 {
+		#tab1, #tab2, #tab_1, #tab_2  {
 			display: none;
 		}
 		
@@ -1546,7 +1591,7 @@ p{
 	}
 }
 .region-city{
-		::-webkit-scrollbar-track{
+	::-webkit-scrollbar-track{
 		background-color: #F5F5F5;
 	}
 
@@ -1798,22 +1843,33 @@ p{
 	}
 }
 .submenu-block {
-    display: none;
-    position: absolute;
-    top: 50px;
-    left: 0;
-    z-index: 7;
-    top: 100%;
-    width: 800px;
-    background: #fff;
-    z-index: 5;
-    color: #443c3d;
-    line-height: 18px;
-    height: 350px;
-    color: #778d53;
-    font-size: 14px;
-  	box-shadow: 0px 7px 18px -6px rgba(148,148,148,1);
-    font-family: "Roboto";
+	display: none;
+	position: absolute;
+	top: 50px;
+	left: 0;
+	top: 100%;
+	width: 800px;
+	background: #fff;
+	z-index: 7;
+	color: #443c3d;
+	line-height: 18px;
+	height: 350px;
+	color: #778d53;
+	font-size: 14px;
+	box-shadow: 0px 7px 18px -6px rgba(148,148,148,1);
+	font-family: "Roboto";
+	::-webkit-scrollbar-track{
+		background-color: #F5F5F5;
+	}
+
+	::-webkit-scrollbar{
+		width: 6px;
+		background-color: #F5F5F5;
+	}
+
+	::-webkit-scrollbar-thumb{
+		background-color: #92a475;
+	}
 	.selection{
 		height: 350px;
 		background: #f9f9f5;
