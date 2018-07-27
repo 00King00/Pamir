@@ -1372,6 +1372,7 @@ p{
 		width: 137px;
 		text-align: center;
 		padding: 10px 0;
+		margin-right: 8px;
 		color: #778d53;
 		border: 1px solid #778d53;
 		&:hover{
@@ -1745,7 +1746,7 @@ p{
 }
 .search-form{
 	display:none;
-	z-index: 10;
+	z-index: 4;
 	position: absolute;
 	top: 100%;
 	left: 0;
@@ -1781,7 +1782,7 @@ p{
 	display:block;
 	position: relative;
 	background: #f0f0f0;
-	z-index: 10;
+	z-index: 4;
 	width: 100%;
 	padding: 20px;
 	margin-bottom: 30px;
@@ -2539,5 +2540,33 @@ span{
 			bottom: 25px;
 		}	
 	}
-
+}
+.pay-method{
+	display: inline-block;
+	margin-right: 28px;
+	margin-bottom: 40px;
+	span{
+		margin-bottom: 10px;
+		display: block;
+		color: #39393a;
+		font-size: 14px;
+		font-weight: 500;
+	}
+	@include breakpoint(mobileonly){
+		display: none;
+	}
+}
+.delivery-method{
+	display: inline-block;
+	margin-bottom: 40px;
+	span{
+		margin-bottom: 10px;
+		display: block;
+		color: #39393a;
+		font-size: 14px;
+		font-weight: 500;
+	}
+	@include breakpoint(mobileonly){
+		display: none;
+	}
 }
