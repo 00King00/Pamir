@@ -1,0 +1,256 @@
+html
+	head
+		include ./parts/head.pug
+	body
+		include ./parts/header.pug
+		.wrapper
+			ul.breadcrumbs.show-laptop
+					li
+						a(href="index.html") Главная
+					li
+						a(href="#") Результат поиска
+			.block-title.block-title_results
+				span Результат поиска
+			.search-form-desktop
+				form
+					input(type="search", placeholder="Поиск", name="search")
+					button(type="submit") Найти
+			.clearfix
+				.col-tablet-1-4
+					include ./parts/filters.pug
+				.col-tablet-3-4.no-padding.no-padding_tablet
+					.sort-items
+						span
+							|Сортировать по:
+						a(href="#").sort-popular
+							span
+								|Популярность
+							i.fa.fa-angle-down
+						a(href="#").sort-price
+							span
+								|Цена
+							i.fa.fa-angle-up
+						a(href="#").sort-name
+							span
+								|Название
+							i.fa.fa-angle-down
+					.items-on-page
+						span
+							|Товаров на странице:
+						select.select-brand
+							option(selected) 15шт. 
+							option 35шт.
+							option 50шт.
+					.switch-items-display
+						.display-icon-list
+							include ./images/icon_list.svg
+						.display-list
+							include ./images/list.svg
+						.display-table.active
+							include ./images/table.svg
+					.result-item
+						.result-item__pic
+							img(src="images/product_04.png",alt="product")
+						.result-item__desctiption
+							.result-item__name
+								|Батончик с миндалем «Шелковица с Памира»
+							.result-item__categories
+								a(href="#")
+									span Косметика
+								a(href="#")
+									span Для тела
+								a(href="#")
+									span Уход за руками
+						.result-item__price
+							span 20
+							span.rouble q
+						.buttons
+							.btn.btn_oneclick
+								|Купить в 1 клик
+							.btn.btn_buy
+								|В корзину
+					.result-item
+						.result-item__pic
+							img(src="images/product_06.png",alt="product")
+						.result-item__desctiption
+							.result-item__name
+								|Батончик с миндалем «Шелковица с Памира»
+							.result-item__categories
+								a(href="#")
+									span Косметика
+								a(href="#")
+									span Для тела
+								a(href="#")
+									span Уход за руками
+						.result-item__price
+							span 20
+							span.rouble q
+						.buttons
+							.btn.btn_oneclick
+								|Купить в 1 клик
+							.btn.btn_buy
+								|В корзину
+					.result-item
+						.result-item__pic
+							img(src="images/product_03.png",alt="product")
+						.result-item__desctiption
+							.result-item__name
+								|Батончик с миндалем «Шелковица с Памира»
+							.result-item__categories
+								a(href="#")
+									span Косметика
+								a(href="#")
+									span Для тела
+								a(href="#")
+									span Уход за руками
+						.result-item__price
+							span 20
+							span.rouble q
+						.buttons
+							.btn.btn_oneclick
+								|Купить в 1 клик
+							.btn.btn_buy
+								|В корзину
+					.result-item
+						.result-item__pic
+							img(src="images/product_05.png",alt="product")
+						.result-item__desctiption
+							.result-item__name
+								|Батончик с миндалем «Шелковица с Памира»
+							.result-item__categories
+								a(href="#")
+									span Косметика
+								a(href="#")
+									span Для тела
+								a(href="#")
+									span Уход за руками
+						.result-item__price
+							span 20
+							span.rouble q
+						.buttons
+							.btn.btn_oneclick
+								|Купить в 1 клик
+							.btn.btn_buy
+								|В корзину
+					.result-item
+						.result-item__pic
+							img(src="images/product_08.png",alt="product")
+						.result-item__desctiption
+							.result-item__name
+								|Батончик с миндалем «Шелковица с Памира»
+							.result-item__categories
+								a(href="#")
+									span Косметика
+								a(href="#")
+									span Для тела
+								a(href="#")
+									span Уход за руками
+						.result-item__price
+							span 20
+							span.rouble q
+						.buttons
+							.btn.btn_oneclick
+								|Купить в 1 клик
+							.btn.btn_buy
+								|В корзину
+					.result-item
+						.result-item__pic
+							img(src="images/product_07.png",alt="product")
+						.result-item__desctiption
+							.result-item__name
+								|Батончик с миндалем «Шелковица с Памира»
+							.result-item__categories
+								a(href="#")
+									span Косметика
+								a(href="#")
+									span Для тела
+								a(href="#")
+									span Уход за руками
+						.result-item__price
+							span 20
+							span.rouble q
+						.buttons
+							.btn.btn_oneclick
+								|Купить в 1 клик
+							.btn.btn_buy
+								|В корзину
+					.result-item
+						.result-item__pic
+							img(src="images/product_05.png",alt="product")
+						.result-item__desctiption
+							.result-item__name
+								|Батончик с миндалем «Шелковица с Памира»
+							.result-item__categories
+								a(href="#")
+									span Косметика
+								a(href="#")
+									span Для тела
+								a(href="#")
+									span Уход за руками
+						.result-item__price
+							span 20
+							span.rouble q
+						.buttons
+							.btn.btn_oneclick
+								|Купить в 1 клик
+							.btn.btn_buy
+								|В корзину
+					.result-item
+						.result-item__pic
+							img(src="images/product_02.png",alt="product")
+						.result-item__desctiption
+							.result-item__name
+								|Батончик с миндалем «Шелковица с Памира»
+							.result-item__categories
+								a(href="#")
+									span Косметика
+								a(href="#")
+									span Для тела
+								a(href="#")
+									span Уход за руками
+						.result-item__price
+							span 20
+							span.rouble q
+						.buttons
+							.btn.btn_oneclick
+								|Купить в 1 клик
+							.btn.btn_buy
+								|В корзину
+					.result-item
+						.result-item__pic
+							img(src="images/product_01.png",alt="product")
+						.result-item__desctiption
+							.result-item__name
+								|Батончик с миндалем «Шелковица с Памира»
+							.result-item__categories
+								a(href="#")
+									span Косметика
+								a(href="#")
+									span Для тела
+								a(href="#")
+									span Уход за руками
+						.result-item__price
+							span 20
+							span.rouble q
+						.buttons
+							.btn.btn_oneclick
+								|Купить в 1 клик
+							.btn.btn_buy
+								|В корзину
+					.paginator
+						ul
+							a(href="#")
+								li 1
+							a(href="#")
+								li.active 2
+							a(href="#")
+								li 3
+							a(href="#").show-tablet-inline
+								li 4
+							a(href="#").show-tablet-inline
+								li 5
+							a(href="#")
+								li.next
+									include ./images/arrow_right.svg
+		include ./parts/subscribe-form.pug
+		include ./parts/footer.pug
