@@ -2,10 +2,10 @@
 	form
 		.section__title.hide-tablet
 			|Фильтр
-		.filters__close-btn.hide-laptop
+		.filters__close-btn.hide-tablet
 			img(src="images/remove_item.png", alt="Спрятать фильтр")
 		.filter__block.filter__block_top
-			.filter__block__name  Разделы:
+			.filter__block__name  Разделы
 			.filter__block__item
 				a(href="#")
 					|Сиропы
@@ -19,7 +19,7 @@
 				a(href="#")
 					|Порошки
 		.filter__block
-			.filter__block__name  Бренды:
+			.filter__block__name  Бренды
 			.filter__block__item
 				input(type="checkbox", name="s1", id="chkbox1")
 				label(for="chkbox1")
@@ -40,8 +40,53 @@
 				input(type="checkbox" name="s5", id="chkbox5")
 				label(for="chkbox5")
 					span Econutrena
-		.filter__block
-			.filter__block__name Цена, руб.
-			input(type="text" class="sliderValue" data-index="0" value="0")
-			input.sliderValue.sliderValue_right(type="text" data-index="1" value="30000")
+		.filter__block.filter__block_slider
+			.filter__block__name Цены
+			
+			.sliderValue
+				span от
+				input(type="text" class="sliderValue" data-index="0" value="0")
+			.sliderValue.sliderValue_right
+				span до
+				input(type="text" data-index="1" value="30000")
 			input(type="hidden" class="range-slider" value="5000" name="price")
+		.filter__block.filter__block_slider
+			.filter__block__name.filter__block__name_faq
+				|Что ищут чаще всего
+			.filter__block__item
+				a(href="#")
+					|Батончики с миндалем
+			.filter__block__item
+				a(href="#")
+					|Крем кокосовый
+			.filter__block__item
+				a(href="#")
+					|Шелковица
+			.filter__block__item
+				a(href="#")
+					|Гели для укладки волос
+			.filter__block__item
+				a(href="#")
+					|Батончики с миндалем
+			.filter__block__item
+				a(href="#")
+					|Шелковица
+			.filter__block__item
+				a(href="#")
+					|Батончики с миндалем
+			.filter__block__item
+				a(href="#")
+					|Гели для укладки волос
+			.filter__block__item
+				a(href="#")
+					|Батончики с миндалем
+			.filter__block__item
+				a(href="#")
+					|Шелковица
+			.filter__block__item
+				a(href="#")
+					|Батончики с миндалем
+			.filter__block__item
+				a(href="#")
+					|Гели для укладки волос
+
