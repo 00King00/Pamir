@@ -1,0 +1,42 @@
+html
+	head
+		include ./parts/head.pug
+	body
+		include ./parts/header.pug
+		.wrapper
+			form.register-form
+				.title Регистрация
+				.input-wrap.clearfix
+					span Адрес e-mail
+					input(type="email")
+				.input-wrap.clearfix
+					span Пароль
+					input(type="password")
+					
+				.input-wrap
+					span Подтверждение пароля
+					input.clearfix(type="password")
+					.tooltip Минимальная длина пароля - 6 символов.
+				.input-wrap.clearfix
+					span Обращение
+					input#registers_1(type="radio" name="registers")
+					Label( for="registers_1") Уважаемая
+					input#registers_2(type="radio" name="registers")
+					Label( for="registers_2") Уважаемый
+				.input-wrap.clearfix
+					span Фамилия
+					input
+				.input-wrap.clearfix
+					span Имя
+					input
+				.input-wrap
+					span Мобильный телефон
+					input(type="tel" placeholder="+7 (____)  ____ - ___ - ___")
+					input#agred(type="checkbox")
+					label.agred(for="agred") Я хочу получать информацию об акциях, скидках, новинках, а также бесплатные советы и рекомендации
+				.input-wrap.input-wrap_submit
+					input(type="submit" value="Зарегистрироваться")
+					.arrow
+						//include ./images/right-arrow-btn.svg
+		include ./parts/subscribe-form.pug
+		include ./parts/footer.pug

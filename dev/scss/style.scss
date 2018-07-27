@@ -2396,3 +2396,146 @@ span{
 	}
 	
 }
+.register-form{
+	border: 5px solid #e0e4da;
+	max-width: 850px;
+	margin: 0 auto;
+	text-align: center;
+	padding: 55px 125px 40px 85px;
+	margin-top: 90px;
+	margin-bottom: 100px;
+	@include breakpoint(mobileonly){
+		margin-top: 40px;
+		margin-bottom: 10px;
+		
+	}
+	#registers_1,#registers_2{
+		height: auto;
+		width: auto;
+	}
+	.title{
+		font-size: 36px;
+		display: inline-block;
+		padding: 0 50px;
+		margin-top: -27px;
+		z-index: 1;
+		position: relative;
+		background-color:#ffffff;
+		@include breakpoint(mobileonly){
+			font-size: 30px;
+			padding: 0 20px;
+			margin-top: -23px;
+		}
+	}
+	#agred {
+		color: #9d9e9f;
+		font-size: 11px;
+		background-color: transparent;
+		margin-top: -16px;
+		display: block;
+		padding-left: 30px;
+		margin-bottom: 13px;
+	}
+	label{
+		
+	}
+	.tooltip {
+		margin-top: 25px;
+		margin-left: 220px;
+	}
+	input{
+		width: 100%;
+		height: 45px;
+		border: 1px solid #c6c6c6;
+		padding: 0 20px;
+		max-width: 410px;
+		display: block;
+		@include breakpoint(tablet){
+			float: right;
+			display: inline-block;
+		}
+		&[type="radio"]{
+			float: none;
+		}
+		&[type="checkbox"]{
+			visibility: hidden;
+			& + label:before {
+				content: "";
+				display: inline-block;
+				width: 17px;
+				height: 17px;
+				position: absolute;
+				background-image: url(../images/checkbox_unchecked.png);
+				left: 0;
+				background-repeat: no-repeat;
+			}
+		}
+		&:invalid{
+			border: 1px solid #ea7d7d;
+		}
+		&[type="password"]:invalid ~ span{
+			display: inline-block;
+		}
+		&[type="submit"]{
+			border-radius:50px;
+			font-size: 18px;
+			margin-top: 10px;
+			border: 1px solid #48a0bc;
+			background-color: white;
+			height: 60px;
+			&:hover{
+				background: #48a0bc;
+				color: #fff;
+			}
+		}
+	}
+	.input-wrap{
+		margin: 0 0 20px 0;
+		text-align: left;
+		position: relative;
+		&_submit{
+			&:hover{
+				span{
+					svg{
+						.right-arrow-btn{
+							fill: #fff;
+						}
+					}
+				}
+			}
+		}
+		.arrow{
+				position: absolute;
+				right: 30px;
+				font-size: 20px;
+				display: inline-block;
+				color: #81bdd6;
+				top: 47%;
+		}
+		span{
+			display: inline-block;
+			font-weight: bold;
+			font-family: 'Open Sans bod', sans-serif;
+			&:first-child{
+				font-size: 14px;
+				color: #2a2a2a;
+				width: 220px;
+				margin-bottom: 10px;
+				&:after{
+					content: "*";
+					color: red;
+					padding-left: 5px;
+					
+				}
+			}
+			&:last-child{
+				color: #f52424;
+				font-size: 12px;
+				margin-top: 5px;
+				font-weight: normal;
+				display: none;
+				
+			}
+		}
+	}
+}
