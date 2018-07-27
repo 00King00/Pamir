@@ -46,6 +46,10 @@ p{
 	line-height: 1.5;
 	color: #9d9e9f;
 	margin-bottom: 30px;
+	padding: 0 10px;
+	@include breakpoint(laptop){
+		padding: 0;
+	}
 }
 
 .backdrop {
@@ -537,8 +541,11 @@ p{
 	}
 	li{
 		position: relative;
-		padding: 15px 29px;
+		padding: 15px 18px;
 		display: inline-block;
+		@include breakpoint(laptop){
+			padding: 15px 29px;
+		}
 		img{
 			margin-left: 10px;
 		}
@@ -577,6 +584,7 @@ p{
 		border: none;
 		margin: 0;
 		height: auto;
+		margin-bottom: 40px;
 	}
 	&_slider{
 		border: none;
@@ -593,18 +601,21 @@ p{
 	}
 	&__img{
 		margin-bottom: 20px;
-		height: 236px;
 		height: 110px;
 		justify-content: center;
 		display: flex;
 		align-items: center;
 		@include breakpoint(tablet){
 			margin-bottom: 40px;
+			height: 210px;
 		}
 		img{
 			height: 114px;
 			@include breakpoint(phablet){
 				height: 110px;
+			}
+			@include breakpoint(tablet){
+				height: auto;
 			}
 		}
 		&_sale{
@@ -1839,7 +1850,7 @@ p{
 	top: 100%;
 	width: 800px;
 	background: #fff;
-	z-index: 50;
+	z-index: 7;
 	color: #443c3d;
 	line-height: 18px;
 	height: 350px;
@@ -2128,7 +2139,7 @@ p{
     position: fixed;
     top: 0;
     right: -320px;
-    z-index: 11;
+    z-index: 4;
 	overflow-y: scroll;
     visibility: hidden;
     -webkit-overflow-scrolling: touch;
@@ -2146,7 +2157,7 @@ p{
 		height: auto;
 		overflow: visible;
 		right: 0;
-		z-index: 6;
+		z-index: 4;
 		visibility: visible;
 		position:relative;
 		padding: 0;
@@ -2181,6 +2192,11 @@ p{
 		font-size: 14px;
 		font-weight: 500;
 		margin-bottom: 20px;
+		&_faq{
+			font-size: 24px;
+			color: #010101;
+			margin-bottom: 30px;
+		}
 	}
 	&__item{
 		margin-bottom: 15px;
@@ -2190,23 +2206,33 @@ p{
 			margin-bottom: 0px;
 		}
 	}
+	&_slider{
+		border: none;
+		margin-bottom: 20px;
+	}
 	.range-slider{
 		margin-bottom: 15px;
 	}
 	.sliderValue{
-		width: 92px;
-		margin-bottom: 20px;
-		padding: 10px;
-		border-radius: 5px;
-		outline: none;
-		border: 1px solid #c8c8c8;
-		@include breakpoint(tablet){
-			width: 62px;
-			padding: 5px;
-		}
-		@media(min-width: 1130px){
-			width: 92px;
+		display: inline-block;
+		margin-bottom: 10px;
+		input{
+			width: 75px;
 			padding: 10px;
+			outline: none;
+			border: 1px solid #c8c8c8;
+			@include breakpoint(tablet){
+				width: 62px;
+				padding: 10px;
+			}
+			@media(min-width: 1130px){
+				width: 75px;
+				padding: 10px;
+			}
+		}
+		span{
+			font-size: 14px;
+			color: #6c6c6c;
 		}
 	}
 	.sliderValue_right{
@@ -2241,4 +2267,132 @@ span{
 			left: 24px;
 		}
 	}
+}
+.paginator{
+	margin: 0px auto;
+	@include breakpoint(tablet){
+		margin-bottom: 55px;
+	}
+	&_gallery{
+		margin-top:0;
+	}
+	ul{
+		text-align: center;
+		display: black;
+		margin-top: 15px;
+		list-style: none;
+		li{
+			vertical-align: middle;
+			color: #181818;
+			display: inline-block;
+			margin: 0px 5px;
+			line-height: 39px;
+			border: 1px solid #d3d3d3;
+			border-radius: 100%;
+			width: 40px;
+			height: 40px;
+		}
+		li:hover{
+			color: #778d53;
+			border: 1px solid #778d53;
+		}
+		li.active{
+			color: #778d53;
+			border: 1px solid #778d53;
+		}
+		li.prev, li.next{
+			padding-top: 10px;
+			background: transparent;
+			border: 1px solid transparent;
+			line-height: 42px;
+			svg{
+				height: 15px;
+			}
+		}
+	}
+}
+.sort-items{
+	padding: 0 10px;
+	margin: 0 20px 25px 0;
+	font-size:14px;
+	@include breakpoint(laptop){
+		display: inline-block;
+		padding: 0;
+	}
+	span{
+		color: #010101;
+		margin-right: 15px;
+	}
+	.sort-name,.sort-popular,.sort-price{
+		display: inline-block;
+		margin-right: 10px;
+		margin-bottom: 10px;
+		span{
+			margin-right: 6px;
+			color: #778d53;
+		}
+		&.active{
+			span{
+				color: #010101;
+			}
+			i{
+				color: #010101;
+			}
+		}
+	}
+	i{
+		color: #778d53;
+	}
+	a{
+		color: #000;
+		margin-right:6px;
+		@include breakpoint(tablet){
+			margin-right: 10px;
+		}
+	}
+	a.active{
+		span{
+
+			color: #fff;
+		}
+	}
+}
+.items-on-page{
+	padding: 0 10px;
+	display: inline-block;
+	span{
+		font-size:14px;
+		color: #010101;
+	}
+	@include breakpoint(desktop){
+		padding: 0;
+		margin-bottom: 50px;
+	}
+}
+.switch-items-display{
+	margin-bottom: 50px;
+	display: inline-block;
+	position: relative;
+    top: 6px;
+	@include breakpoint(desktop){
+		float: right;
+	}
+	.display-icon-list,.display-list,.display-table{
+		display: inline-block;
+		svg{
+			margin: 0 10px;
+			height: 20px;
+			.cls-1{
+				fill: #778d53;
+			}
+		}
+		&.active{
+			svg{
+				.cls-1{
+					fill: #010101;
+				}
+			}
+		}
+	}
+	
 }

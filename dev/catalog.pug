@@ -13,11 +13,40 @@ html
 				span Продукция из топинамбура
 			p.about-delivery Здесь Вы всегда можете приобрести качественные натуральные продукты, а наряду с этим и уверенность в правильности выбранного пути здорового образа жизни и его важной составляющей - натурального и полезного питания.Мы предлагаем эко-продукцию, которая производится в экологически чистых регионах разных стран и ориентированы на предоставление потребителю исключительного качества различных продуктов на рынке здорового питания. Наш выбор – 100% натуральные и полезные продукты питания, в составе которых нет вредных для здоровья пищевых добавок, красителей и консервантов, ГМО и т.п. химии. 
 			.clearfix
-				.col-tablet-1-5
+				.col-tablet-1-4
 					include ./parts/filters.pug
-				.col-tablet-4-5.no-padding.no-padding_tablet
+				.col-tablet-3-4.no-padding.no-padding_tablet
+					.sort-items
+						span
+							|Сортировать по:
+						a(href="#").sort-popular
+							span
+								|Популярность
+							i.fa.fa-angle-down
+						a(href="#").sort-price
+							span
+								|Цена
+							i.fa.fa-angle-up
+						a(href="#").sort-name
+							span
+								|Название
+							i.fa.fa-angle-down
+					.items-on-page
+						span
+							|Товаров на странице:
+						select.select-brand
+							option(selected) 15шт. 
+							option 35шт.
+							option 50шт.
+					.switch-items-display
+						.display-icon-list
+							include ./images/icon_list.svg
+						.display-list
+							include ./images/list.svg
+						.display-table.active
+							include ./images/table.svg
 					.clearfix
-						.col-mobileonly-1-2.col-phablet-1-3.col-tablet-1-3.no-padding
+						.col-mobileonly-1-2.col-phablet-1-3.no-padding
 							.product
 								.product__img
 									a(href="#")
@@ -31,7 +60,7 @@ html
 									span.rouble q
 									.product__volume
 										|20г.
-						.col-mobileonly-1-2.col-phablet-1-3.col-tablet-1-3.no-padding
+						.col-mobileonly-1-2.col-phablet-1-3.no-padding
 							.product
 								.product__img
 									a(href="#")
@@ -45,7 +74,7 @@ html
 									span.rouble q
 									.product__volume
 										|20г.
-						.col-mobileonly-1-2.col-phablet-1-3.col-tablet-1-3.no-padding
+						.col-mobileonly-1-2.col-phablet-1-3.no-padding
 							.product
 								.product__img
 									a(href="#")
@@ -59,7 +88,7 @@ html
 									span.rouble q
 									.product__volume
 										|20г.
-						.col-mobileonly-1-2.col-phablet-1-3.col-tablet-1-3.no-padding
+						.col-mobileonly-1-2.col-phablet-1-3.no-padding
 							.product
 								.product__img
 									a(href="#")
@@ -73,7 +102,7 @@ html
 									span.rouble q
 									.product__volume
 										|20г.
-						.col-mobileonly-1-2.col-phablet-1-3.col-tablet-1-3.no-padding
+						.col-mobileonly-1-2.col-phablet-1-3.no-padding
 							.product
 								.product__img
 									a(href="#")
@@ -87,7 +116,7 @@ html
 									span.rouble q
 									.product__volume
 										|20г.
-						.col-mobileonly-1-2.col-phablet-1-3.col-tablet-1-3.no-padding
+						.col-mobileonly-1-2.col-phablet-1-3.no-padding
 							.product
 								.product__img
 									a(href="#")
@@ -101,11 +130,11 @@ html
 									span.rouble q
 									.product__volume
 										|20г.
-						.col-mobileonly-1-2.col-phablet-1-3.col-tablet-1-3.no-padding
+						.col-mobileonly-1-2.col-phablet-1-3.no-padding
 							.product
 								.product__img
 									a(href="#")
-										img(src="images/product_02.png",alt="product")
+										img(src="images/product_08.png",alt="product")
 								a(href="#").product__name
 									|Батончик с миндалем «Шелковица с Памира»
 								.product__code
@@ -115,11 +144,11 @@ html
 									span.rouble q
 									.product__volume
 										|20г.
-						.col-mobileonly-1-2.col-phablet-1-3.col-tablet-1-3.no-padding
+						.col-mobileonly-1-2.col-phablet-1-3.no-padding
 							.product
 								.product__img
 									a(href="#")
-										img(src="images/product_06.png",alt="product")
+										img(src="images/product_05.png",alt="product")
 								a(href="#").product__name
 									|Батончик с миндалем «Шелковица с Памира»
 								.product__code
@@ -129,3 +158,34 @@ html
 									span.rouble q
 									.product__volume
 										|20г.
+						.col-mobileonly-1-2.col-phablet-1-3.no-padding
+							.product
+								.product__img
+									a(href="#")
+										img(src="images/product_03.png",alt="product")
+								a(href="#").product__name
+									|Батончик с миндалем «Шелковица с Памира»
+								.product__code
+									|ДарыПамира  /  LFG-934
+								.product__price
+									span 20
+									span.rouble q
+									.product__volume
+										|20г.
+					.paginator
+						ul
+							a(href="#")
+								li 1
+							a(href="#")
+								li.active 2
+							a(href="#")
+								li 3
+							a(href="#").show-tablet-inline
+								li 4
+							a(href="#").show-tablet-inline
+								li 5
+							a(href="#")
+								li.next
+									include ./images/arrow_right.svg
+		include ./parts/subscribe-form.pug
+		include ./parts/footer.pug

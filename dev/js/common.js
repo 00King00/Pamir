@@ -346,7 +346,49 @@ $(function(){
 		$(this).toggleClass('active');
 		$('.submenu-block').css("left", -moveleft)
 		})
-		
+
+	// sorting
+		$('a.sort-price').click(function(e){
+			e.preventDefault();
+			// $(this)siblings.removeClass('active')
+			$(this).addClass('active')
+			if($(this).children().hasClass('fa-angle-up')){
+				$(this).children('i.fa.fa-angle-up').removeClass("fa-angle-up").addClass("fa-angle-down");
+			}
+			else{
+				$(this).children('i.fa.fa-angle-down').removeClass("fa-angle-down").addClass("fa-angle-up");
+			}
+		});
+
+		$('a.sort-popular').click(function(e){
+			e.preventDefault();
+			// $(this)siblings.removeClass('active')
+			$(this).addClass('active')
+			if($(this).children().hasClass('fa-angle-up')){
+				$(this).children('i.fa.fa-angle-up').removeClass("fa-angle-up").addClass("fa-angle-down");
+			}
+			else{
+				$(this).children('i.fa.fa-angle-down').removeClass("fa-angle-down").addClass("fa-angle-up");
+			}
+		});
+
+		$('a.sort-name').click(function(e){
+			e.preventDefault();
+			// $(this)siblings.removeClass('active')
+			$(this).addClass('active')
+			if($(this).children().hasClass('fa-angle-up')){
+				$(this).children('i.fa.fa-angle-up').removeClass("fa-angle-up").addClass("fa-angle-down");
+			}
+			else{
+				$(this).children('i.fa.fa-angle-down').removeClass("fa-angle-down").addClass("fa-angle-up");
+			}
+		});
+
+	//
+	//select menu properties
+	$('.select-brand').selectmenu({
+  		width: 70 + 'px',
+	});
 	
 
 });
