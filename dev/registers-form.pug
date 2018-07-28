@@ -6,37 +6,69 @@ html
 		.wrapper
 			form.register-form
 				.title Регистрация
-				.input-wrap.clearfix
+				.input-wrap.clearfix.input-icon.input-icon_mail
 					span Адрес e-mail
 					input(type="email")
-				.input-wrap.clearfix
+				.input-wrap.clearfix.input-icon.input-icon_lock
 					span Пароль
 					input(type="password")
-					
-				.input-wrap
-					span Подтверждение пароля
+				.input-wrap.input-icon.input-icon_lock
+					span.confirm-password Подтверждение пароля
 					input.clearfix(type="password")
-					.tooltip Минимальная длина пароля - 6 символов.
+					.inner-wrap.inner-wrap_auto-width
+						.tooltip Минимальная длина пароля - 6 символов.
 				.input-wrap.clearfix
-					span Обращение
-					input#registers_1(type="radio" name="registers")
-					Label( for="registers_1") Уважаемая
-					input#registers_2(type="radio" name="registers")
-					Label( for="registers_2") Уважаемый
+					span.request Обращение
+					.inner-wrap
+						input#registers_1(type="radio" name="registers")
+						Label( for="registers_1") Уважаемая
+						input#registers_2(type="radio" name="registers")
+						Label( for="registers_2") Уважаемый
 				.input-wrap.clearfix
 					span Фамилия
 					input
 				.input-wrap.clearfix
 					span Имя
 					input
-				.input-wrap
+				.input-wrap.clearfix
 					span Мобильный телефон
-					input(type="tel" placeholder="+7 (____)  ____ - ___ - ___")
-					input#agred(type="checkbox")
-					label.agred(for="agred") Я хочу получать информацию об акциях, скидках, новинках, а также бесплатные советы и рекомендации
-				.input-wrap.input-wrap_submit
+					input(type="tel" placeholder="+7 (___) ___ - __ - __")
+				.input-wrap.clearfix.input-wrap_checkbox
+					.inner-wrap
+						input#agred(type="checkbox")
+						label.agred(for="agred") Я хочу получать информацию об акциях, скидках, новинках, а также бесплатные советы и рекомендации
+				.input-wrap.input-wrap_submit.clearfix
+					.inner-wrap.inner-wrap_auto-width.clearfix
+						.tooltip
+							| Нажимая на кнопку «Зарегистрироваться», 
+							a(href="#") вы соглашаетесь с Политикой в отношении обработки персональных данных.
+				.input-wrap.input-wrap_submit.clearfix
 					input(type="submit" value="Зарегистрироваться")
-					.arrow
-						//include ./images/right-arrow-btn.svg
+				.inner-wrap.inner-wrap_auto-width
+						.tooltip Поля, отмеченные знаком (*) обязательны для заполнения.
+				.input-wrap.social-icon.clearfix
+					.inner-wrap.block-laptop
+						.social-title или войдите через соц. сети
+						ul.social-img
+							li
+								a(href="#")
+									img(src="images/vk.png")
+							li
+								a(href="#")
+									img(src="images/yandex.png")
+							li
+								a(href="#")
+									img(src="images/fb.png")
+							li
+								a(href="#")
+									img(src="images/mailru.png")
+							li
+								a(href="#")
+									img(src="images/google.png")
+							li
+								a(href="#")
+									img(src="images/ok.png")
+					
+						
 		include ./parts/subscribe-form.pug
 		include ./parts/footer.pug

@@ -2396,6 +2396,22 @@ span{
 	}
 	
 }
+.social{
+	&-img{
+		text-align: center;
+		li{
+			display: inline-block;
+		}
+	}
+	&-title{
+		font-size: 24px;
+		margin-bottom: 17px;
+		text-align: center;
+		@include breakpoint(mobileonly){
+			font-size: 18px;
+		}
+	}
+}
 .register-form{
 	border: 5px solid #e0e4da;
 	max-width: 850px;
@@ -2403,62 +2419,160 @@ span{
 	text-align: center;
 	padding: 55px 125px 40px 85px;
 	margin-top: 90px;
-	margin-bottom: 100px;
+	margin-bottom: 90px;
 	@include breakpoint(mobileonly){
-		margin-top: 40px;
-		margin-bottom: 10px;
+		padding: 30px 20px 10px 20px;
+		margin-top: 50px;
+		margin-bottom: 0;
 		
 	}
 	#registers_1,#registers_2{
 		height: auto;
 		width: auto;
+		display: inline-block;
 	}
+	.inner-wrap{
+		&.inner-wrap_auto-width{
+			
+			@include breakpoint(laptop){
+				width: auto;
+			}
+		}
+		&.block-laptop{
+			@include breakpoint(laptop){
+				display: block;
+			}
+			
+		}
+		@include breakpoint(tablet){
+			width: 310px;
+			float: right;
+			
+		}
+		@include breakpoint(laptop){
+			display: inline-block;
+			float: none;
+			width: auto;
+			}
+		}
 	.title{
 		font-size: 36px;
 		display: inline-block;
 		padding: 0 50px;
-		margin-top: -27px;
+		margin-top: -79px;
+		margin-bottom: 45px;
 		z-index: 1;
 		position: relative;
 		background-color:#ffffff;
+		left: 35px;
 		@include breakpoint(mobileonly){
 			font-size: 30px;
 			padding: 0 20px;
-			margin-top: -23px;
+			margin-top: -55px;
+			left: auto;
+			margin-bottom: 0;
 		}
 	}
+	.input-icon{
+		position: relative;
+		&_mail{
+			&:after{
+				background-image: url(../images/mail_form.png);
+			}
+			
+		}
+		&_lock{
+			&:after{
+				background-image: url(../images/lock_form.png);
+			}
+		}
+		&:after{
+			content: "";
+			display: inline-block;
+			position: absolute;
+			right: 10px;
+			width: 25px;
+			height: 25px;
+			background-repeat: no-repeat;
+			top: 50px;
+			@include breakpoint(tablet){
+				top: 15px;
+			}
+			
+		}
+	}
+		
+	
 	#agred {
 		color: #9d9e9f;
 		font-size: 11px;
 		background-color: transparent;
 		margin-top: -16px;
-		display: block;
+		visibility: hidden;
 		padding-left: 30px;
 		margin-bottom: 13px;
+		display: none;
 	}
 	label{
+		font-size: 16px;
+		color: #8f8f8f;
+		margin-right: 25px;
+		@include breakpoint(mobileonly){
+			margin-right: 15px;
+
+		}
 		
 	}
 	.tooltip {
-		margin-top: 25px;
-		margin-left: 220px;
+		font-size: 12px;
+		color: #8f8f8f;
+		font-weight: 500;
+		text-align: left;
+		
+		a{
+			color: #778d53;
+			text-decoration: underline;
+			padding-left: 2px;
+		}
+		@include breakpoint(laptop){
+			margin-left: 220px;
+		}
+		
 	}
 	input{
 		width: 100%;
 		height: 45px;
 		border: 1px solid #c6c6c6;
 		padding: 0 20px;
-		max-width: 410px;
+		
 		display: block;
 		@include breakpoint(tablet){
 			float: right;
 			display: inline-block;
+			max-width: 410px;
+			width: 310px;
+		}
+		@include breakpoint(laptop){
+			width: 100%;
 		}
 		&[type="radio"]{
 			float: none;
 		}
 		&[type="checkbox"]{
-			visibility: hidden;
+			margin-bottom: 50px;
+			
+			& + label{
+				color: #8f8f8f;
+				font-size: 12px;
+				font-weight: 500;
+				font-style: normal;
+				margin-left: 25px;
+				display: inline-block;
+				margin-top: 15px;
+				margin-bottom: 25px;
+				margin-right: 0;
+				
+			}
 			& + label:before {
 				content: "";
 				display: inline-block;
@@ -2466,8 +2580,11 @@ span{
 				height: 17px;
 				position: absolute;
 				background-image: url(../images/checkbox_unchecked.png);
-				left: 0;
+				margin-left: -25px;
 				background-repeat: no-repeat;
+			}
+			&:checked + label:before{
+				background-image: url(../images/checkbox_checked.png);
 			}
 		}
 		&:invalid{
@@ -2477,50 +2594,81 @@ span{
 			display: inline-block;
 		}
 		&[type="submit"]{
-			border-radius:50px;
-			font-size: 18px;
-			margin-top: 10px;
-			border: 1px solid #48a0bc;
-			background-color: white;
-			height: 60px;
-			&:hover{
-				background: #48a0bc;
-				color: #fff;
+			height: 40px;
+			font-size: 19px;
+			font-family: 'Circe';
+			background-color: #778d53;
+			color: white;
+			margin: 30px 0 20px 0;
+			@include breakpoint(tablet){
+				margin: 0;
 			}
+			&:hover{
+				background-color: #4d622a;
+			}
+			& + .inner-wrap.inner-wrap_auto-width .tooltip{
+				color: #b9b9b9;
+			}
+						
 		}
 	}
 	.input-wrap{
-		margin: 0 0 20px 0;
 		text-align: left;
 		position: relative;
-		&_submit{
-			&:hover{
-				span{
-					svg{
-						.right-arrow-btn{
-							fill: #fff;
-						}
-					}
-				}
+		@include breakpoint(tablet){
+			margin: 0 0 20px 0;
+		}
+		
+		&.input-wrap_checkbox{
+			@include breakpoint(tablet){
+			margin-bottom: 0;
+			width: auto;
+		}
+			@include breakpoint(laptop){
+				margin-left: 220px;
+				display: block;
+				margin-bottom: 0;
 			}
 		}
-		.arrow{
-				position: absolute;
-				right: 30px;
-				font-size: 20px;
-				display: inline-block;
-				color: #81bdd6;
-				top: 47%;
+		&.social-icon{
+			margin-top: 20px;
+			@include breakpoint(tablet){
+				margin-top: 70px;
+			}
+			@include breakpoint(laptop){
+				margin-left: 220px;
+				margin-top: 40px;
+			}
+			
 		}
 		span{
 			display: inline-block;
-			font-weight: bold;
-			font-family: 'Open Sans bod', sans-serif;
+			color: #6e665e;
+			font-weight: 500;
+			
 			&:first-child{
 				font-size: 14px;
 				color: #2a2a2a;
 				width: 220px;
-				margin-bottom: 10px;
+				margin-top: 15px;
+				margin-bottom: 5px;
+				&.confirm-password{
+					@include breakpoint(tablet){
+						margin-bottom: 25;
+					}
+					
+				}
+				&.request{
+					@include breakpoint(tablet){
+						margin-top:  0;
+					}
+					
+				}
+				@include breakpoint(tablet){
+					width: 220px;
+					margin-bottom: 10px;
+				}
+				
 				&:after{
 					content: "*";
 					color: red;
@@ -2528,6 +2676,7 @@ span{
 					
 				}
 			}
+			
 			&:last-child{
 				color: #f52424;
 				font-size: 12px;
