@@ -348,10 +348,10 @@ $(function(){
 		})
 
 	// sorting
-		$('a.sort-price').click(function(e){
+		$('.sort-items a').click(function(e){
 			e.preventDefault();
-			// $(this)siblings.removeClass('active')
-			$(this).addClass('active')
+			$('.sort-items a').removeClass('active');
+			$(this).addClass('active');
 			if($(this).children().hasClass('fa-angle-up')){
 				$(this).children('i.fa.fa-angle-up').removeClass("fa-angle-up").addClass("fa-angle-down");
 			}
@@ -359,36 +359,33 @@ $(function(){
 				$(this).children('i.fa.fa-angle-down').removeClass("fa-angle-down").addClass("fa-angle-up");
 			}
 		});
-
-		$('a.sort-popular').click(function(e){
+	// display items
+		$('.switch-items-display a').click(function(e){
 			e.preventDefault();
-			// $(this)siblings.removeClass('active')
-			$(this).addClass('active')
-			if($(this).children().hasClass('fa-angle-up')){
-				$(this).children('i.fa.fa-angle-up').removeClass("fa-angle-up").addClass("fa-angle-down");
-			}
-			else{
-				$(this).children('i.fa.fa-angle-down').removeClass("fa-angle-down").addClass("fa-angle-up");
-			}
+			$('.switch-items-display a').removeClass('active');
+			$(this).addClass('active');
 		});
 
-		$('a.sort-name').click(function(e){
-			e.preventDefault();
-			// $(this)siblings.removeClass('active')
-			$(this).addClass('active')
-			if($(this).children().hasClass('fa-angle-up')){
-				$(this).children('i.fa.fa-angle-up').removeClass("fa-angle-up").addClass("fa-angle-down");
-			}
-			else{
-				$(this).children('i.fa.fa-angle-down').removeClass("fa-angle-down").addClass("fa-angle-up");
-			}
-		});
-
-	//
 	//select menu properties
 	$('.select-brand').selectmenu({
   		width: 70 + 'px',
 	});
 	
+	// counter
+	$('.icon_amount-minus').click(function () {
+		var $input = $(this).parent().find('input');
+		var count = parseInt($input.val()) - 1;
+		count = count < 1 ? 1 : count;
+		$input.val(count);
+		$input.change();
+		return false;
+	});
+	$('.icon_amount-plus').click(function () {
+		var $input = $(this).parent().find('input');
+		$input.val(parseInt($input.val()) + 1);
+		$input.change();
+		return false;
+	});
+	// end part for counter
 
 });
