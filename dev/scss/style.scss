@@ -671,7 +671,10 @@ p{
 			@include breakpoint(tablet){
 				display: inline-block;
 				margin-bottom: 30px;
-			}	
+			}
+		}
+		&_cart{
+			margin-bottom: 10px;
 		}
 	}
 	&__code{
@@ -684,6 +687,9 @@ p{
 			font-size:13px;
 			margin-bottom: 20px;
 		}
+		&_cart{
+			margin-bottom: 0;
+		}
 	}
 	&__price{
 		display: inline-block;
@@ -692,7 +698,7 @@ p{
 		margin-left: -35px;
 		span:first-child{
 			font-family: 'roboto';
-			font-weight: bold;		
+			font-weight: bold;
 		}
 		&_sale{
 			margin: 0;
@@ -701,6 +707,28 @@ p{
 			@include breakpoint(tablet){
 				left: 0px;
 			}
+		}
+		&_cart{
+			margin: 0;
+		}
+		&_special{
+			font-size: 24px;
+			text-align: right;
+			display: block;
+			color: #010101;
+			margin: 0;
+		}
+		&_special-mobile{
+			font-size: 24px;
+			color: #010101;
+			margin: 0;
+		}
+		&_old{
+			color: #7d7e81;
+			font-size: 19px;
+			margin: 0;
+			text-align: right;
+			text-decoration: line-through;
 		}
 	}
 	&__old-price{
@@ -766,15 +794,38 @@ p{
 .block-title{
 	margin-bottom: 25px;
 	text-align: center;
+	padding: 0 10px;
 	@include breakpoint(tablet){
 		text-align: left;
 		margin-bottom: 35px;
 	}
+	@include breakpoint(laptop){
+		padding: 0;
+	}
+	&_results{
+		margin-top: 20px;
+		margin-bottom:20px;
+		@include breakpoint(tablet){
+		margin-top: 0;
+		}
+	}
 	&_delivery{
+		margin-top: 20px;
 		margin-bottom: 30px;
+		@include breakpoint(tablet){
+		margin-top: 0;
+		}
 	}
 	&_slider{
 		font-size: 24px;
+	}
+	&_special-offer{
+		font-size: 24px;
+		margin:20px 0;
+		padding: 0 10px;
+		@include breakpoint(tablet){
+			margin: 0;
+		}
 	}
 	span{
 		font-family: 'Roboto';
@@ -888,6 +939,7 @@ p{
 }
 .rouble{
 	font-family: 'rouble';
+	font-weight: normal;
 }
 .form{
 	padding: 60px 30px 20px 30px;
@@ -1364,6 +1416,47 @@ p{
 }
 .btn{
 	display: inline-block;
+	&_oneclick{
+		width: 137px;
+		text-align: center;
+		padding: 10px 0;
+		margin-right: 8px;
+		color: #778d53;
+		border: 1px solid #778d53;
+		&:hover{
+			border: 1px solid #4d622a;
+			color: #4d622a; 
+		}
+	}
+	&_buy{
+		width: 137px;
+		text-align: center;
+		padding: 10px 0;
+		color: #fff;
+		background: #778d53;
+		border: 1px solid #778d53;
+		&:hover{
+			background:#4d622a;
+			color: #fff; 
+		}
+	}
+	&_buy-mobile{
+		position: relative;
+		top: 10px;
+		width: 105px;
+		text-align: center;
+		padding: 10px 0;
+		color: #fff;
+		background: #778d53;
+		border: 1px solid #778d53;
+		@include breakpoint(phablet){
+			width: 137px;	
+		}
+		&:hover{
+			background:#4d622a;
+			color: #fff; 
+		}
+	}
 	&_about-delivery{
 		padding: 7px 25px;
 		font-size: 15px;
@@ -1718,7 +1811,7 @@ p{
 }
 .search-form{
 	display:none;
-	z-index: 10;
+	z-index: 4;
 	position: absolute;
 	top: 100%;
 	left: 0;
@@ -1729,7 +1822,7 @@ p{
 		input{
 			-webkit-appearance: textfield;
 			outline: none;
-			font-size: 18px;
+			font-size: 16px;
 			width: 100%;
 			padding: 15px;
 			padding-right: 90px;
@@ -1743,7 +1836,42 @@ p{
 			background: #778d53;
 			padding: 15px;
 			color: #fff;
-			font-size: 18px;
+			font-size: 16px;
+			&:hover{
+				background: #4d622a;
+			}
+		}
+	}
+}
+.search-form-desktop{
+	display:block;
+	position: relative;
+	background: #f0f0f0;
+	z-index: 4;
+	width: 100%;
+	padding: 20px;
+	margin-bottom: 30px;
+	form{
+		input{
+			-webkit-appearance: textfield;
+			outline: none;
+			font-size: 16px;
+			width: 100%;
+			height: 40px;
+			padding: 0 15px;
+			padding-right: 90px;
+		}
+		button{
+			font-family: 'roboto';
+			outline: none;
+			height: 40px;
+			position: absolute;
+			top: 20px;
+			right: 20px;
+			background: #778d53;
+			padding: 0 15px;
+			color: #fff;
+			font-size: 16px;
 			&:hover{
 				background: #4d622a;
 			}
@@ -2269,12 +2397,13 @@ span{
 	}
 }
 .paginator{
-	margin: 0px auto;
+	margin: 30px auto;
 	@include breakpoint(tablet){
+		margin: 0px auto;
 		margin-bottom: 55px;
 	}
-	&_gallery{
-		margin-top:0;
+	&_search{
+		margin-top:36px;
 	}
 	ul{
 		text-align: center;
@@ -2349,11 +2478,13 @@ span{
 		@include breakpoint(tablet){
 			margin-right: 10px;
 		}
-	}
-	a.active{
-		span{
-
-			color: #fff;
+		&.active{
+			span{
+				color: #010101;
+			}
+			i{
+				color: #010101;
+			}
 		}
 	}
 }
@@ -2686,5 +2817,262 @@ span{
 				
 			}
 		}
+	}
+
+}
+.result-item{
+	padding: 20px 0 25px 10px;
+	position: relative;
+	padding-bottom: 85px;
+	padding-left: 120px;
+	border-top: 1px solid #e0e0e6;
+	border-bottom: 1px solid #e0e0e6;
+	margin-bottom: -1px;
+	@include breakpoint(laptop){
+		padding-left: 130px;
+		padding-bottom: 0;
+	}
+	&__pic{
+		display: block;
+		width: 90px;
+		position: absolute;
+		top: 50%;
+		margin-top: -75px;
+		left: 10px;
+		height: 90px;
+		text-align: center;
+		img{
+			max-width: 90px;
+			max-height: 90px;
+		}
+		@include breakpoint(laptop){
+			left: 20px;
+			margin-top: -45px;
+		}
+	}
+	&__name{
+		color: #778d53;
+		font-family: 'Circe';
+		font-size: 18px;
+		max-width: 250px;
+		margin-bottom: 5px;
+		@include breakpoint(laptop){
+			margin-bottom: 20px;
+		}
+	}
+	&__categories{
+		// display: none;
+		font-size: 10px;
+		margin-bottom: 5px;
+		span{
+			margin-right: 9px;
+			color: #39393a;
+		}
+		@include breakpoint(laptop){
+			font-size: 12px;
+			display: block;
+			margin-bottom: 20px;
+			span{
+				margin-right: 25px;
+				color: #39393a;
+			}
+		}
+	}
+	&__price{
+		font-weight: 700;
+		font-size: 24px;
+		color: #010101;
+		@include breakpoint(phablet){
+			position:absolute;
+			right:12px;
+			top: 12px;
+		}
+	}
+	.buttons{
+		position: absolute;
+		left: 10px;
+		bottom: 25px;
+		// margin-left: -138px;
+		@include breakpoint(laptop){
+			position: absolute;
+			margin: 0;
+			left: auto;
+			right: 0px;
+			bottom: 25px;
+		}
+	}
+}
+.pay-method,.delivery-method{
+	display: inline-block;
+	margin-bottom: 40px;
+	span{
+		margin-bottom: 10px;
+		display: block;
+		color: #39393a;
+		font-size: 14px;
+		font-weight: 500;
+	}
+	@include breakpoint(mobileonly){
+		display: none;
+	}
+}
+.pay-method{
+	margin-right: 28px;
+}
+table.order{
+	margin-bottom: 55px;
+	width: 100%;
+	border-spacing: 0;
+	th{
+		text-align: left;
+		// background: #f2f3f4;
+		border-bottom: 1px solid #e1e1e1;
+		padding: 10px;
+		color: #39393a;
+		font-size: 12px;
+
+	}
+	td.picture{
+		text-align: center;
+		padding-top: 20px;
+		img{
+			max-height: 70px;
+			max-width: 70px;
+		}
+	}
+	td{
+		position: relative;
+		vertical-align: top;
+		padding: 20px 10px 27px 10px;
+		text-align: left;
+		border-bottom: 1px solid #e1e1e1;
+		.product-item__number{
+			position: absolute;
+			top: -15px;
+			left: 2px;
+		}
+	}
+	.middle{
+		vertical-align: middle;
+	}
+	.fix-width{
+		width: 15%;
+	}
+	.remove-item{
+		width: 5%;
+	}
+	.special-price{
+		padding-right: 35px;
+		text-align: right;
+	}
+	.special-offer{
+		margin-bottom: 80px;
+	}
+}
+.icon{
+	display: inline-block;
+	&_remove-item{
+		background:url(../images/remove_item.png);
+		height: 12px;
+		width: 13px;
+		&:hover{
+			background:url(../images/remove_item_hover.png);
+		}
+	}
+	&_amount-plus{
+		user-select:none;
+		background:url(../images/amount_plus.png);
+		height: 26px;
+		width: 26px;
+		// &:hover{
+		// 	background:url(../images/amount_plus_hover.png);
+		// }
+	}
+	&_amount-minus{
+		user-select:none;
+		background:url(../images/amount_minus.png);
+		height: 26px;
+		width: 26px;
+		// &:hover{
+		// 	background:url(../images/amount_minus_hover.png);
+		// }
+	}
+}
+.amount{
+	user-select: none;
+	position: relative;
+	margin-right: 3px;
+	border: none;
+	top: -6px;
+	width: 25px;
+	text-align:center;
+	font-size: 19px;
+	font-weight:bold;
+}
+.show-laptop-table{
+	display: none;
+	@include breakpoint(laptop){
+		display: table;
+	}
+}
+
+.product-item{
+	margin-top: -1px;
+	position: relative;
+	padding: 15px 0;
+	border-top: 1px solid #e1e1e1;
+	border-bottom: 1px solid #e1e1e1;
+	&__remove{
+		position: absolute;
+		right: 10px;
+		top: 10px;
+	}
+	&__description{
+		padding: 10px 0;
+		padding-bottom: 20px;
+		margin-bottom:10px;
+		padding-left: 83px;
+		border-bottom: 1px dashed #e1e1e1;
+	}
+	&__image{
+		position: absolute;
+		top: 25px;
+		left: 0;
+		width: 80px;
+		text-align: center;
+		img{
+			max-height: 60px;
+		}
+	}
+	&__name{
+		position: relative;
+		font-family: 'robotobold',sans-serif;
+		font-size: 16px;
+		&_filters{
+			margin-bottom: 15px;
+		}
+	}
+	&__number{
+		position: absolute;
+		top: -15px;
+		left: 3px;
+		font-family: 'arial';
+		font-size: 11px;
+		margin-bottom: 10px;
+		color: #5a5a5a;
+	}
+	&__field-name{
+		color: #919292;
+		font-size: 14px;
+		margin: 5px 0;
+	}
+	&__price{
+		font-size: 19px;
+	}
+	&__sum{
+		font-size: 19px;
+	}
+	&__amount{
+		font-size: 19px;
 	}
 }

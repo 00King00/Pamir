@@ -1,0 +1,370 @@
+html
+	head
+		include ./parts/head.pug
+	body
+		include ./parts/header.pug
+		.wrapper
+			ul.breadcrumbs.show-laptop
+					li
+						a(href="index.html") Главная
+					li
+						a(href="#") Корзина
+			.block-title.block-title_delivery
+				span Корзина
+			.clearfix
+				.col-tablet-3-4
+					.product-item.hide-laptop
+						.product-item__remove
+							a(href="#")
+								span.icon.icon_remove-item
+						.product-item__description.clearfix
+							.product-item__image
+								img(src="images/product_04.png",alt="product")
+							a(href="#").product__name.product__name_cart
+								|Батончик с миндалем «Шелковица с Памира»
+								.product__code.product__code_cart
+									|ДарыПамира  /  LFG-934
+						.clearfix
+							.col-mobileonly-1-3.col-mobileonly-1-3_padding-none.col-phablet-1-3
+								.product-item__price
+									.product-item__field-name
+										|Цена
+									.product__price.product__price_cart
+										span 20
+										span.rouble q
+										.product__volume
+											|20г.
+							.col-mobileonly-1-3.col-mobileonly-1-3_padding-none.col-phablet-1-3
+								.product-item__amount
+									.product-item__field-name
+										|Количество
+									span.icon.icon_amount-minus
+									input(type="text" value="1" class="amount")
+									span.icon.icon_amount-plus
+							.col-mobileonly-1-3.col-mobileonly-1-3_padding-none.col-phablet-1-3
+								.product-item__sum
+									.product-item__field-name
+										|Сумма
+									.product__price.product__price_cart
+										span 20
+										span.rouble q
+					.product-item.hide-laptop
+						.product-item__remove
+							a(href="#")
+								span.icon.icon_remove-item
+						.product-item__description.clearfix
+							.product-item__image
+								img(src="images/product_02.png",alt="product")
+							a(href="#").product__name.product__name_cart
+								|Батончик с миндалем «Шелковица с Памира»
+								.product__code.product__code_cart
+									|ДарыПамира  /  LFG-934
+						.clearfix
+							.col-mobileonly-1-3.col-mobileonly-1-3_padding-none.col-phablet-1-3
+								.product-item__price
+									.product-item__field-name
+										|Цена
+									.product__price.product__price_cart
+										span 20
+										span.rouble q
+										.product__volume
+											|20г.
+							.col-mobileonly-1-3.col-mobileonly-1-3_padding-none.col-phablet-1-3
+								.product-item__amount
+									.product-item__field-name
+										|Количество
+									span.icon.icon_amount-minus
+									input(type="text" value="1" class="amount")
+									span.icon.icon_amount-plus
+							.col-mobileonly-1-3.col-mobileonly-1-3_padding-none.col-phablet-1-3
+								.product-item__sum
+									.product-item__field-name
+										|Сумма
+									.product__price.product__price_cart
+										span 20
+										span.rouble q
+					.product-item.hide-laptop
+						.product-item__remove
+							a(href="#")
+								span.icon.icon_remove-item
+						.product-item__description.clearfix
+							.product-item__image
+								img(src="images/product_06.png",alt="product")
+							a(href="#").product__name.product__name_cart
+								|Батончик с миндалем «Шелковица с Памира»
+								.product__code.product__code_cart
+									|ДарыПамира  /  LFG-934
+						.clearfix
+							.col-mobileonly-1-3.col-mobileonly-1-3_padding-none.col-phablet-1-3
+								.product-item__price
+									.product-item__field-name
+										|Цена
+									.product__price.product__price_cart
+										span 20
+										span.rouble q
+										.product__volume
+											|20г.
+							.col-mobileonly-1-3.col-mobileonly-1-3_padding-none.col-phablet-1-3
+								.product-item__amount
+									.product-item__field-name
+										|Количество
+									span.icon.icon_amount-minus
+									input(type="text" value="1" class="amount")
+									span.icon.icon_amount-plus
+							.col-mobileonly-1-3.col-mobileonly-1-3_padding-none.col-phablet-1-3
+								.product-item__sum
+									.product-item__field-name
+										|Сумма
+									.product__price.product__price_cart
+										span 20
+										span.rouble q
+					.product-item.hide-laptop
+						.product-item__remove
+							a(href="#")
+								span.icon.icon_remove-item
+						.product-item__description.clearfix
+							.product-item__image
+								img(src="images/product_03.png",alt="product")
+							a(href="#").product__name.product__name_cart
+								|Батончик с миндалем «Шелковица с Памира»
+								.product__code.product__code_cart
+									|ДарыПамира  /  LFG-934
+						.clearfix
+							.col-mobileonly-1-3.col-mobileonly-1-3_padding-none.col-phablet-1-3
+								.product-item__price
+									.product-item__field-name
+										|Цена
+									.product__price.product__price_cart
+										span 20
+										span.rouble q
+										.product__volume
+											|20г.
+							.col-mobileonly-1-3.col-mobileonly-1-3_padding-none.col-phablet-1-3
+								.product-item__amount
+									.product-item__field-name
+										|Количество
+									span.icon.icon_amount-minus
+									input(type="text" value="1" class="amount")
+									span.icon.icon_amount-plus
+							.col-mobileonly-1-3.col-mobileonly-1-3_padding-none.col-phablet-1-3
+								.product-item__sum
+									.product-item__field-name
+										|Сумма
+									.product__price.product__price_cart
+										span 20
+										span.rouble q
+					table(class="order").show-laptop-table
+						tr
+							th(colspan="2") Наименование
+							th.fix-width Цена
+							th.fix-width Количество
+							th.fix-width Стоимость
+							th.remove-item
+						tr
+							td.picture
+								img(src="images/product_02.png",alt="product")
+							td 
+								a(href="#").product__name.product__name_cart
+									|Батончик с миндалем «Шелковица с Памира»
+								.product__code.product__code_cart
+									|ДарыПамира  /  LFG-934
+							td 
+								.product__price.product__price_cart
+									span 20
+									span.rouble q
+									.product__volume
+										|20г.
+							td
+								.product-item__amount
+									span.icon.icon_amount-minus
+									input(type="text" value="1" class="amount")
+									span.icon.icon_amount-plus
+							td 
+								.product__price.product__price_cart
+									span 20
+									span.rouble q
+							td
+								a(href="#")
+									span.icon.icon_remove-item
+						tr
+							td.picture
+								img(src="images/product_07.png",alt="product")
+							td 
+								a(href="#").product__name.product__name_cart
+									|Батончик с миндалем «Шелковица с Памира»
+								.product__code.product__code_cart
+									|ДарыПамира  /  LFG-934
+							td 
+								.product__price.product__price_cart
+									span 20
+									span.rouble q
+									.product__volume
+										|20г.
+							td
+								.product-item__amount
+									span.icon.icon_amount-minus
+									input(type="text" value="1" class="amount")
+									span.icon.icon_amount-plus
+							td 
+								.product__price.product__price_cart
+									span 20
+									span.rouble q
+							td
+								a(href="#")
+									span.icon.icon_remove-item
+						tr
+							td.picture
+								img(src="images/product_04.png",alt="product")
+							td 
+								a(href="#").product__name.product__name_cart
+									|Батончик с миндалем «Шелковица с Памира»
+								.product__code.product__code_cart
+									|ДарыПамира  /  LFG-934
+							td 
+								.product__price.product__price_cart
+									span 20
+									span.rouble q
+									.product__volume
+										|20г.
+							td
+								.product-item__amount
+									span.icon.icon_amount-minus
+									input(type="text" value="1" class="amount")
+									span.icon.icon_amount-plus
+							td 
+								.product__price.product__price_cart
+									span 20
+									span.rouble q
+							td
+								a(href="#")
+									span.icon.icon_remove-item
+						tr
+							td.picture
+								img(src="images/product_05.png",alt="product")
+							td 
+								a(href="#").product__name.product__name_cart
+									|Батончик с миндалем «Шелковица с Памира»
+								.product__code.product__code_cart
+									|ДарыПамира  /  LFG-934
+							td 
+								.product__price.product__price_cart
+									span 20
+									span.rouble q
+									.product__volume
+										|20г.
+							td
+								.product-item__amount
+									span.icon.icon_amount-minus
+									input(type="text" value="1" class="amount")
+									span.icon.icon_amount-plus
+							td 
+								.product__price.product__price_cart
+									span 20
+									span.rouble q
+							td
+								a(href="#")
+									span.icon.icon_remove-item
+					.block-title.block-title_special-offer
+						|Особая цена
+					.product-item.hide-laptop
+						.product-item__remove
+							a(href="#")
+								span.icon.icon_remove-item
+						.product-item__description.clearfix
+							.product-item__image
+								img(src="images/product_03.png",alt="product")
+							a(href="#").product__name.product__name_cart
+								|Батончик с миндалем «Шелковица с Памира»
+								.product__code.product__code_cart
+									|ДарыПамира  /  LFG-934
+						.clearfix
+							.col-mobileonly-1-3.col-mobileonly-1-3_padding-none.col-phablet-1-3
+								.product-item__amount
+									.product-item__field-name
+										|Количество
+									span.icon.icon_amount-minus
+									input(type="text" value="1" class="amount")
+									span.icon.icon_amount-plus
+							.col-mobileonly-1-3.col-mobileonly-1-3_padding-none.col-phablet-1-3
+								.product-item__price
+									.product-item__field-name
+										|Цена
+									.product__price.product__price_old
+										span 20
+										span.rouble q
+									.product__price.product__price_special-mobile
+										span 150
+										span.rouble q
+							.col-mobileonly-1-3.col-mobileonly-1-3_padding-none.col-phablet-1-3
+								.btn.btn_buy-mobile
+									|В корзину
+					.product-item.hide-laptop
+						.product-item__remove
+							a(href="#")
+								span.icon.icon_remove-item
+						.product-item__description.clearfix
+							.product-item__image
+								img(src="images/product_04.png",alt="product")
+							a(href="#").product__name.product__name_cart
+								|Батончик с миндалем «Шелковица с Памира»
+								.product__code.product__code_cart
+									|ДарыПамира  /  LFG-934
+						.clearfix
+							.col-mobileonly-1-3.col-mobileonly-1-3_padding-none.col-phablet-1-3
+								.product-item__amount
+									.product-item__field-name
+										|Количество
+									span.icon.icon_amount-minus
+									input(type="text" value="1" class="amount")
+									span.icon.icon_amount-plus
+							.col-mobileonly-1-3.col-mobileonly-1-3_padding-none.col-phablet-1-3
+								.product-item__price
+									.product-item__field-name
+										|Цена
+									.product__price.product__price_old
+										span 20
+										span.rouble q
+									.product__price.product__price_special-mobile
+										span 150
+										span.rouble q
+							.col-mobileonly-1-3.col-mobileonly-1-3_padding-none.col-phablet-1-3
+								.btn.btn_buy-mobile
+									|В корзину
+					table(class="order").special-offer.show-laptop-table
+						tr
+							th(colspan="2")
+							th.fix-width
+							th.fix-width
+							th.fix-width
+							th.remove-item
+						tr
+							td.picture
+								img(src="images/product_02.png",alt="product")
+							td 
+								a(href="#").product__name.product__name_cart
+									|Батончик с миндалем «Шелковица с Памира»
+								.product__code.product__code_cart
+									|ДарыПамира  /  LFG-934
+							td.middle
+								.product-item__amount
+									span.icon.icon_amount-minus
+									input(type="text" value="1" class="amount")
+									span.icon.icon_amount-plus
+								
+							td.middle.special-price
+								.product__price.product__price_old
+									span 20
+									span.rouble q
+								br
+								.product__price.product__price_special
+									span 150
+									span.rouble q
+							td.middle
+								.btn.btn_buy
+									|В корзину
+							td.middle
+								a(href="#")
+									span.icon.icon_remove-item
+				.col-tablet-1-4
+		include ./parts/subscribe-form.pug
+		include ./parts/footer.pug
