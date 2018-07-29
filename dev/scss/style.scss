@@ -823,7 +823,7 @@ p{
 		font-size: 24px;
 		margin:20px 0;
 		padding: 0 10px;
-		@include breakpoint(tablet){
+		@include breakpoint(laptop){
 			margin: 0;
 		}
 	}
@@ -1442,16 +1442,17 @@ p{
 	}
 	&_buy-mobile{
 		position: relative;
-		top: 10px;
-		//width: 105px;
+		top: 19px;
+		width: 100px;
+		font-size: 10px;
 		text-align: center;
 		padding: 10px 0;
 		color: #fff;
 		background: #778d53;
 		border: 1px solid #778d53;
-		width: 100%;
 		@include breakpoint(phablet){
 			width: 137px;
+			font-size: 15px;
 		}
 		&:hover{
 			background:#4d622a;
@@ -3077,10 +3078,11 @@ table.order{
 		font-size: 19px;
 	}
 }
-.oder-label{
+.order-label{
 	background-color: #f8f5f0;
 	text-align: center;
 	padding: 40px 15px;
+	border-image: url(../images/border.png) 20 repeat;
 	@include breakpoint(laptop){
 		padding: 40px 30px 40px 45px;
 	}
