@@ -3082,7 +3082,7 @@ table.order{
 	background-color: #f8f5f0;
 	text-align: center;
 	padding: 40px 15px;
-	border-image: url(../images/border.png) 20 repeat;
+	border-image: url(../images/border.png) 40 repeat;
 	@include breakpoint(laptop){
 		padding: 40px 30px 40px 45px;
 	}
