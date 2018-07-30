@@ -977,7 +977,6 @@ p{
 			&.callbacktab{
 				padding: 20px 0;
 				text-align: center;
-				
 			}
 			&:hover {
 				cursor: pointer;
@@ -986,6 +985,11 @@ p{
 		input:checked + label {
 			color: black;
 			background-color: #f6f6f6;
+			span{
+				border-bottom: 3px solid #778d53;
+				padding-bottom: 3px;
+
+			}
 		}
 
 	}
@@ -1401,18 +1405,18 @@ p{
 			span{
 				color: #778d53;
 				display: inline;
-				background-image: url(../images/dots.png);
-				background-repeat: repeat-x;
-				background-position: bottom;
+				padding-bottom: 3px;
+				border-bottom: 3px solid #778d53;
+//				background-image: url(../images/dots.png);
+//				background-repeat: repeat-x;
+//				background-position: bottom;
 				@include breakpoint(tablet){
 					font-size:29px;
 				}
-			}	
+			}
 		}
 	}
-	// 	text-decoration: underline;
-	// 	text-decoration-style: dashed;
-	// 	text-decoration-color: #898989;
+	
 }
 .btn{
 	display: inline-block;
@@ -2677,7 +2681,6 @@ span{
 		height: 45px;
 		border: 1px solid #c6c6c6;
 		padding: 0 20px;
-		
 		display: block;
 		@include breakpoint(tablet){
 			float: right;
@@ -2690,6 +2693,20 @@ span{
 		}
 		&[type="radio"]{
 			float: none;
+			visibility: hidden;
+			& + label:before {
+				content: "";
+				display: inline-block;
+				width: 18px;
+				height: 18px;
+				position: absolute;
+				background-image: url(../images/radio_unchecked.png);
+				margin-left: -25px;
+				background-repeat: no-repeat;
+			}
+			&:checked + label:before{
+				background-image: url(../images/radio_checked.png);
+			}
 		}
 		&[type="checkbox"]{
 			margin-bottom: 50px;
@@ -3082,7 +3099,8 @@ table.order{
 	background-color: #f8f5f0;
 	text-align: center;
 	padding: 40px 15px;
-	border-image: url(../images/border.png) 40 repeat;
+	border-bottom: 8px solid #f8f5f0;
+	border-image: url(../images/border.png) 10 repeat;
 	@include breakpoint(laptop){
 		padding: 40px 30px 40px 45px;
 	}
