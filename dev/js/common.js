@@ -369,6 +369,9 @@ $(function(){
 	$('.select-brand').selectmenu({
   		width: 70 + 'px',
 	});
+	$('.select-delivery').selectmenu({
+  		width: 100 + '%',
+	});
 	
 	// counter
 	$('.icon_amount-minus').click(function () {

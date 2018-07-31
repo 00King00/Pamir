@@ -9,7 +9,7 @@ html
 						a(href="index.html") Главная
 					li
 						a(href="#") Оформление заказа
-			.authorized-order__title Оформление заказа 
+			.authorized-order__title.authorized-order__title_topform Оформление заказа 
 					span  (Без авторизации)
 			.enter-form
 				.enter-form__title
@@ -64,7 +64,7 @@ html
 							.authorized-order__info-row
 								.authorized-order__sub-title Служба доставки
 								.wrap-inner
-									select
+									select.select-delivery
 										option Постаматы PickPoint
 										option Постаматы PickPoint
 									.authorized-order__info-row.up
@@ -88,5 +88,52 @@ html
 							
 					.authorized-order__products
 						.authorized-order__sub-title Ваши товары
+						table(class="order")
+							tbody
+								tr
+									td.picture
+										img(src="images/product_02.png",alt="product")
+									td.middle
+										a(href="#").product__name.product__name_cart
+											|Батончик с миндалем «Шелковица с Памира»
+									td.middle.off-right-padding
+										.product__price.product__price_cart
+											span 20
+											span.rouble q
+											span.multiply x1
+								tr
+									td.picture
+										img(src="images/product_02.png",alt="product")
+									td.middle
+										a(href="#").product__name.product__name_cart
+											|Батончик с миндалем «Шелковица с Памира»
+									td.middle.off-right-padding
+										.product__price.product__price_cart
+											span 20
+											span.rouble q
+											span.multiply x1
+								tr
+									td.picture
+										img(src="images/product_02.png",alt="product")
+									td.middle
+										a(href="#").product__name.product__name_cart
+											|Батончик с миндалем «Шелковица с Памира»
+									td.middle.off-right-padding
+										.product__price.product__price_cart
+											span 20
+											span.rouble q
+						.authorized-order__info-row
+							.authorized-order__total Итого:
+							.product__price
+								span 20
+								span.rouble q
+						.authorized-order__info-row
+							.authorized-order__delivery-cost Стоимость доставки:
+							.product__price
+								span 20
+								span.rouble q
+						.authorized-order__buy
+							input(type="submit" value="Купить")
+
 		include ./parts/subscribe-form.pug
 		include ./parts/footer.pug

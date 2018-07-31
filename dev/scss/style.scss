@@ -941,6 +941,11 @@ p{
 	font-family: 'rouble';
 	font-weight: normal;
 }
+.multiply{
+	font-size: 18px;
+	display: block;
+	text-align: right;
+}
 .form{
 	padding: 60px 30px 20px 30px;
 	background-color: #f6f6f6;
@@ -3019,6 +3024,9 @@ table.order{
 			top: -15px;
 			left: 2px;
 		}
+		&.off-right-padding{
+			padding-right: 0;
+		}
 	}
 	.middle{
 		vertical-align: middle;
@@ -3247,11 +3255,22 @@ table.order{
 	}
 }
 .authorized-order{
+	padding: 20px;
+	@include breakpoint(desktop){
+		padding: 0;
+	}
 	&__title{
 		font-size: 29px;
 		margin-bottom: 25px;
+		@include breakpoint(mobileonly){
+			font-size: 20px;
+			text-align: center;
+		}
 		span{
 			font-weight: 300;
+		}
+		&_topform{
+			padding: 0 20px;
 		}
 		
 	}
@@ -3260,17 +3279,46 @@ table.order{
 		font-size: 18px;
 		font-weight: 500;
 		margin-bottom: 15px;
+		@include breakpoint(mobileonly){
+			//width: 100%;
+		}
+			
 	}
 	&__form{
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
+		@include breakpoint(tablet){
+			//justify-content: center;
+		}
+		@include breakpoint(laptop){
+			flex-wrap: nowrap;
+			justify-content: space-between;
+		}
+		
 	}
 	&__data{
-		max-width: 570px;
+		width: 100%;
+		@include breakpoint(tablet){
+			max-width: 570px;
+			flex-shrink: 1;
+		}
 	}
 	&__products{
-		max-width: 450px;
+		width: 100%;
+		
+		@include breakpoint(tablet){
+			width: 570px;
+			
+			flex-shrink: 5;
+			
+		}
+		@include breakpoint(laptop){
+			max-width: 450px;
+			padding-left: 10px;
+			
+		}
+		
 	}
 	&__contacts{
 		input{
@@ -3284,13 +3332,35 @@ table.order{
 		text-decoration: underline;
 		
 	}
+	&__total{
+		font-size: 24px;
+		color: #010101;
+		@include breakpoint(mobileonly){
+			font-size: 20px;
+		}
+		
+	}
+	&__delivery-cost{
+		font-size: 24px;
+		color: #010101;
+		@include breakpoint(mobileonly){
+			font-size: 20px;
+		}
+	}
 	&__info{
 		&-row{
 			display: flex;
 			justify-content: space-between;
 			align-items: baseline;
+			flex-wrap: wrap;
 			&.up{
 				margin-top: -10px;
+			}
+			.product__price{
+				font-size: 24px;
+				@include breakpoint(mobileonly){
+					font-size: 20px;
+				}
 			}
 		}
 		input{
@@ -3300,6 +3370,9 @@ table.order{
 			width: 380px;
 			display: inline-block;
 			font-size: 0;
+			@include breakpoint(mobileonly){
+				width: 100%;
+			}
 			
 		}
 		input:checked + label{
@@ -3310,14 +3383,36 @@ table.order{
 			width: 50%;
 			display: inline-block;
 			height: 40px;
-			
 			background-color: transparent;
 			color: #616161;
 			text-align: center;
 			font-size: 15px;
 			font-weight: 500;
 			line-height: 40px;
+			@include breakpoint(mobileonly){
+				margin-bottom: 20px;
+			}
+			
 		}
+		
+	}
+	&__buy{
+		text-align: right;
+		margin-top: 45px;
+		input[type="submit"]{
+			display: inline-block;
+			width: 250px;
+			height: 55px;
+			color: white;
+			background-color: #778d53;
+			font-size: 24px;
+			font-weight: 500;
+			border: none;
+			&:hover{
+				background-color: #4d622a;
+			}
+		}
+			
 		
 	}
 	#delivery, #pickup{
@@ -3331,9 +3426,17 @@ table.order{
 		input{
 			width: 150px;
 			margin-right: 7px;
+			@include breakpoint(mobileonly){
+				width: 100%;
+				margin-right: 0;
+			}
+			
 			&:last-child{
 				width: 85px;
 				margin-right: 0;
+				@include breakpoint(mobileonly){
+					width: 100%;
+				}
 			}
 		}
 	}
@@ -3348,12 +3451,17 @@ table.order{
 		color: #7f7f7f;
 		padding: 0 15px;
 	}
+	.order{
+		border-top: 1px solid #e1e1e1;
+		margin-bottom: 10px;
+	}
 }
 .enter-form{
 	padding: 20px;
 	background: #f8f5f0;
-	@include breakpoint(tablet){
+	@include breakpoint(laptop){
 		padding: 30px 25px 50px 40px;
+		margin-bottom: 30px;
 	}
 	p{
 		
@@ -3424,8 +3532,12 @@ table.order{
 			display: inline-block;
 			font-size: 24px;
 			color: #010101;
-			margin-right: 50px;
+			margin-right: 20px;
 			vertical-align: middle;
+			@include breakpoint(desktop){
+				margin-right: 50px;
+			}
+
 		}
 		&_withot-registration{
 			span{
