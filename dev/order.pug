@@ -9,6 +9,39 @@ html
 						a(href="index.html") Главная
 					li
 						a(href="#") Оформление заказа
+			.authorized-order__title.authorized-order__title_topform Оформление заказа 
+					span  (Без авторизации)
+			.enter-form
+				.enter-form__title
+					|Войти на сайт
+				p Что бы получать и копить бонусы, а также отлеживать доставку товаров, необходимо войти в свой личный кабинет.
+				.clearfix
+					.enter-form__login
+						input(placeholder="E-mail или телефон")
+						input(placeholder="Пароль")
+						input(name="save", id="save", type="checkbox")
+						label(for="save") 
+							span Запомнить меня
+						.btn.btn_enter Войти
+					.enter-form-col
+						.enter-form__block
+							span
+								|Войти с помощью соцсетей
+							.icons
+								a(href="#")
+									img(src="images/vk_order.png")
+								a(href="#")
+									img(src="images/fb_order.png")
+								a(href="#")
+									img(src="images/ok_order.png")
+								a(href="#")
+									img(src="images/insta_order.png")
+						.enter-form__block.enter-form__block_withot-registration
+							span
+								|Нет учетной записи?
+							p Вы можете создать ее после оформления заказа и получить все возможности авторизированного клиента
+						.btn.btn_register-later
+							|Продолжить без авторизации
 			.authorized-order
 				.authorized-order__title Оформление заказа 
 					span  (Авторизированный пользователь)
@@ -31,7 +64,7 @@ html
 							.authorized-order__info-row
 								.authorized-order__sub-title Служба доставки
 								.wrap-inner
-									select
+									select.select-delivery
 										option Постаматы PickPoint
 										option Постаматы PickPoint
 									.authorized-order__info-row.up
