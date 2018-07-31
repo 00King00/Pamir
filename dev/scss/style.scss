@@ -1488,6 +1488,17 @@ p{
 			bottom: 35px;
 		}
 	}
+	&_payment-method{
+		margin: 20px 0;
+		padding: 7px 25px;
+		font-size: 15px;
+		color: #778d53;
+		border: 1px solid #778d53;
+		&:hover{
+			background:#4d622a;
+			color: #fff; 
+		}
+	}
 	&_products{
 		float: right;
 		position: relative;
@@ -2144,6 +2155,10 @@ p{
 	&_form{
 		margin-top: 10px;
 	}
+	&_last-item-payment{
+
+		margin-bottom:75px;
+	}
 	@include breakpoint(phablet){
 		padding: 25px 0px;
 		padding-left: 230px;
@@ -2168,9 +2183,11 @@ p{
 		}
 	}
 	&__logo{
+		text-align: center;
 		margin-bottom: 20px;
 		@include breakpoint(phablet){
 			margin-right: 30px;
+			text-align: center;
 			margin: 0;
 			position: absolute;
 			top: 30px;
@@ -2186,6 +2203,9 @@ p{
 				left: 0;
 				top: 50px;
 			}
+		}
+		&_payment{
+			left: 30px;
 		}
 	}
 	&__sum{
@@ -3174,6 +3194,26 @@ table.order{
 		&:after{
 			top: -50%;
 			transform: rotate(35deg);
+		}
+	}
+}
+.payment-methods{
+	text-align: center;
+	margin-bottom: 50px;
+	.method{
+		vertical-align: top;
+		display: inline-block;
+		margin: 0 50px;
+		@include breakpoint(laptop){
+			margin: 0 100px;
+		}
+		&__pic{
+			margin-bottom: 25px;
+		}
+		&__name{
+			max-width: 175px;
+			color: #616161;
+			font-size: 24px;
 		}
 	}
 }
