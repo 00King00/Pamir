@@ -1432,8 +1432,37 @@ p{
 			color: #4d622a; 
 		}
 	}
+	&_register-later{
+		text-align: center;
+		padding: 10px;
+		color: #fff;
+		background: #778d53;
+		border: 1px solid #778d53;
+		&:hover{
+			background:#4d622a;
+			color: #fff; 
+		}
+		@include breakpoint(phablet){
+			position: absolute;
+			bottom: 30px;
+			right: 0px;
+		}
+	}
 	&_buy{
 		width: 137px;
+		text-align: center;
+		padding: 10px 0;
+		color: #fff;
+		background: #778d53;
+		border: 1px solid #778d53;
+		&:hover{
+			background:#4d622a;
+			color: #fff; 
+		}
+	}
+	&_enter{
+		float: right;
+		width: 127px;
 		text-align: center;
 		padding: 10px 0;
 		color: #fff;
@@ -3319,6 +3348,105 @@ table.order{
 		color: #7f7f7f;
 		padding: 0 15px;
 	}
-	
-	
+}
+.enter-form{
+	padding: 20px;
+	background: #f8f5f0;
+	@include breakpoint(tablet){
+		padding: 30px 25px 50px 40px;
+	}
+	p{
+		
+	}
+	&__title{
+		color: #010101;
+		font-size: 21px;
+		font-weight: 900;
+		margin-bottom: 15px;
+	}
+	&-col{	
+		position: relative;
+		@include breakpoint(laptop){
+			float: left;
+		}
+	}
+	&__login{
+		margin-bottom: 40px;
+		@include breakpoint(laptop){
+			float: left;
+			width: 38%;
+			margin-right: 30px;
+			margin-bottom: 0px;
+		}
+		input{
+			height: 40px;
+			padding: 0 10px;
+			width: 100%;
+			margin-bottom: 12px;
+			&[type="checkbox"]{
+				display: none;
+				&:checked + label{
+					&:before{
+						background-image: url(../images/checkbox_checked.png);
+					}
+				}
+				&+ label{
+					position: relative;
+					top: 10px;
+					display: inline-block;
+					span{
+						position: relative;
+						left: 25px;
+					}
+					&:before{
+						content: "";
+						display: inline-block;
+						width: 17px;
+						height: 17px;
+						position: absolute;
+						background-image: url(../images/checkbox_unchecked.png);
+						left: 0;
+						background-repeat: no-repeat;
+					}
+				}
+				
+			}
+		}
+	}
+	&__block{
+		margin-bottom: 20px;
+		p{
+			line-height: 1.2;
+			padding: 0;
+			max-width: 315px;
+		}
+		span{
+			display: inline-block;
+			font-size: 24px;
+			color: #010101;
+			margin-right: 50px;
+			vertical-align: middle;
+		}
+		&_withot-registration{
+			span{
+				display: inline-block;
+				font-size: 24px;
+				color: #010101;
+				margin-right: 50px;
+				vertical-align: middle;
+				margin-bottom: 20px;
+			}
+		}
+		.icons{
+			margin: 20px 0;
+			display: inline-block;
+			@include breakpoint(laptop){
+				margin: 0;
+			}
+		}
+		img{
+			margin: 0 5px;
+			vertical-align: middle;
+		}
+	}
 }
