@@ -799,7 +799,7 @@ p{
 		text-align: left;
 		margin-bottom: 35px;
 	}
-	@include breakpoint(laptop){
+	@include breakpoint(desktop){
 		padding: 0;
 	}
 	&_results{
@@ -2154,6 +2154,10 @@ p{
 	margin-bottom: 15px;
 	color: #6c6c6c;
 	display: inline-block;
+	padding: 0 20px;
+	@include breakpoint(desktop){
+		padding: 0;
+	}
 	li{
 		display: inline-block;
 		margin-right: 10px;
@@ -3255,7 +3259,7 @@ table.order{
 	}
 }
 .authorized-order{
-	padding: 20px;
+	padding: 10px;
 	@include breakpoint(desktop){
 		padding: 0;
 	}
@@ -3271,6 +3275,9 @@ table.order{
 		}
 		&_topform{
 			padding: 0 20px;
+			@include breakpoint(desktop){
+				padding: 0;
+			}
 		}
 		
 	}
@@ -3457,7 +3464,7 @@ table.order{
 	}
 }
 .enter-form{
-	padding: 20px;
+	padding: 10px;
 	background: #f8f5f0;
 	@include breakpoint(laptop){
 		padding: 30px 25px 50px 40px;
