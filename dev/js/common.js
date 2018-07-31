@@ -389,5 +389,20 @@ $(function(){
 		return false;
 	});
 	// end part for counter
+	
+	//order page for delivery-service show/hide
+	$(".authorized-order__data label").click(function(){
+		setTimeout(function(){
+			var elem = $("#pickup").prop( "checked");
+			if (elem){
+				$(".authorized-order__info-row_delivery-service").addClass("active")
+			}else{
+				$(".authorized-order__info-row_delivery-service").removeClass("active")
+			}
+			console.log(elem);
+		},100)
+		
+	});
+	//end order page for delivery-service show/hide
 
 });
