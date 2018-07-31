@@ -55,5 +55,52 @@ html
 							
 					.authorized-order__products
 						.authorized-order__sub-title Ваши товары
+						table(class="order")
+							tbody
+								tr
+									td.picture
+										img(src="images/product_02.png",alt="product")
+									td.middle
+										a(href="#").product__name.product__name_cart
+											|Батончик с миндалем «Шелковица с Памира»
+									td.middle.off-right-padding
+										.product__price.product__price_cart
+											span 20
+											span.rouble q
+											span.multiply x1
+								tr
+									td.picture
+										img(src="images/product_02.png",alt="product")
+									td.middle
+										a(href="#").product__name.product__name_cart
+											|Батончик с миндалем «Шелковица с Памира»
+									td.middle.off-right-padding
+										.product__price.product__price_cart
+											span 20
+											span.rouble q
+											span.multiply x1
+								tr
+									td.picture
+										img(src="images/product_02.png",alt="product")
+									td.middle
+										a(href="#").product__name.product__name_cart
+											|Батончик с миндалем «Шелковица с Памира»
+									td.middle.off-right-padding
+										.product__price.product__price_cart
+											span 20
+											span.rouble q
+						.authorized-order__info-row
+							.authorized-order__total Итого:
+							.product__price
+								span 20
+								span.rouble q
+						.authorized-order__info-row
+							.authorized-order__delivery-cost Стоимость доставки:
+							.product__price
+								span 20
+								span.rouble q
+						.authorized-order__buy
+							input(type="submit" value="Купить")
+
 		include ./parts/subscribe-form.pug
 		include ./parts/footer.pug
