@@ -1,0 +1,62 @@
+html
+	head
+		include ./parts/head.pug
+	body
+		include ./parts/header.pug
+		.wrapper
+			ul.breadcrumbs.show-laptop
+					li
+						a(href="index.html") Главная
+					li
+						a(href="#") Оплата
+			.block-title.block-title_delivery
+				span Оплата
+			p.about-delivery Компания «Дары Памира» - это сплоченная команда увлеченных идеей здорового питания людей. Мы специализируемся на производстве и дистрибуции продуктов здорового питания. Основная идея нашего проекта - распространение и популяризация философии потребления вкусных и полезных для здоровья продуктов питания. Стратегические планы компании ориентированы на развитии собственных и партнерских производств, работе с перспективными производителями готовой продукции и сырья, исследовательской и научной деятельности по разработке новых интересных продуктов совместно исследовательскими пищевыми учреждениями (ФГБНУ ВНИИТЕК и др.), а также инвестиционных проектах – поддержке и финансировании фермерских хозяйств, производителей, поставщиков сырья. Важный актив компании – выстроенная сбытовая сеть партнерских торговых точек и дистрибуторов России и ближнего зарубежья, которая активно растет. Мы очень благодарны нашим партнерам за доверие и причастность к нашему общему делу.
+			.block-title.block-title_delivery
+				span Способы оплаты
+			.payment-methods
+				a(href="#").method
+					.method__pic
+						img(src="images/payment-icon_01.png", alt="icon")
+					.method__name
+						|Наличными
+				a(href="#").method
+					.method__pic
+						img(src="images/payment-icon_02.png", alt="icon")
+					.method__name
+						|Электронными деньгами
+				a(href="#").method
+					.method__pic
+						img(src="images/payment-icon_03.png", alt="icon")
+					.method__name
+						|Картой
+
+			.delivery-service
+					.delivery-service__logo.delivery-service__logo_payment
+						img(src="images/holder.png", alt="post")
+					.delivery-service__name
+						|Наличными
+					.delivery-service__description
+						|Здесь Вы всегда можете приобрести качественные натуральные продукты, а наряду с этим и уверенность в правильности выбранного пути здорового образа жизни и его важной составляющей - натурального и полезного питания.
+					a(href="#").btn.btn_payment-method
+						|Подробнее
+			.delivery-service
+					.delivery-service__logo.delivery-service__logo_payment
+						img(src="images/holder.png", alt="post")
+					.delivery-service__name
+						|Наличными
+					.delivery-service__description
+						|Здесь Вы всегда можете приобрести качественные натуральные продукты, а наряду с этим и уверенность в правильности выбранного пути здорового образа жизни и его важной составляющей - натурального и полезного питания.
+					a(href="#").btn.btn_payment-method
+						|Подробнее
+			.delivery-service.delivery-service_last-item-payment
+					.delivery-service__logo.delivery-service__logo_payment
+						img(src="images/holder.png", alt="post")
+					.delivery-service__name
+						|Наличными
+					.delivery-service__description
+						|Здесь Вы всегда можете приобрести качественные натуральные продукты, а наряду с этим и уверенность в правильности выбранного пути здорового образа жизни и его важной составляющей - натурального и полезного питания.
+					a(href="#").btn.btn_payment-method
+						|Подробнее
+		include ./parts/subscribe-form.pug
+		include ./parts/footer.pug
