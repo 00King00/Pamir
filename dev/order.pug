@@ -55,13 +55,13 @@ html
 							input(placeholder="Населенный пункт*" requared)
 						.authorized-order__info
 							.authorized-order__info-row
-								.authorized-order__sub-title Служба доставки
+								.authorized-order__sub-title Способ доставки
 								.wrap-inner
 									input#delivery(type="radio" name="delivery" checked)
 									label(for="delivery") Доставка
 									input#pickup(type="radio" name="delivery")
 									label(for="pickup") Самовывоз
-							.authorized-order__info-row
+							.authorized-order__info-row.authorized-order__info-row_delivery-service
 								.authorized-order__sub-title Служба доставки
 								.wrap-inner
 									select.select-delivery
