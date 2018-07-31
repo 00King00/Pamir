@@ -3492,7 +3492,9 @@ table.order{
 			float: left;
 			width: 38%;
 			margin-right: 30px;
-			margin-bottom: 0px;
+		}
+		@include breakpoint(desktop){
+			margin-bottom: 0;
 		}
 		input{
 			height: 40px;
