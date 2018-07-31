@@ -1,0 +1,59 @@
+html
+	head
+		include ./parts/head.pug
+	body
+		include ./parts/header.pug
+		.wrapper
+			ul.breadcrumbs.show-laptop
+					li
+						a(href="index.html") Главная
+					li
+						a(href="#") Оформление заказа
+			.authorized-order
+				.authorized-order__title Оформление заказа 
+					span  (Авторизированный пользователь)
+				form.authorized-order__form
+					.authorized-order__data
+						.authorized-order__sub-title Контактные данные
+						.authorized-order__contacts
+							input(placeholder="Контактное лицо* (ФИО)")
+							input(type="tel" placeholder="Контактный телефон*" requared)
+							input(type="email" placeholder="E-mail")
+							input(placeholder="Населенный пункт*" requared)
+						.authorized-order__info
+							.authorized-order__info-row
+								.authorized-order__sub-title Служба доставки
+								.wrap-inner
+									input#delivery(type="radio" name="delivery" checked)
+									label(for="delivery") Доставка
+									input#pickup(type="radio" name="delivery")
+									label(for="pickup") Самовывоз
+							.authorized-order__info-row
+								.authorized-order__sub-title Служба доставки
+								.wrap-inner
+									select
+										option Постаматы PickPoint
+										option Постаматы PickPoint
+									.authorized-order__info-row.up
+										.authorized-order__sub-title + 350 руб.
+										a.authorized-order__delivery-place(href="#") Выберите пункт выдачи
+							.authorized-order__info-row
+								.authorized-order__sub-title Бонусная карта
+								.wrap-inner
+									input(placeholder="2345-678-323-567")
+							.authorized-order__info-row
+								.authorized-order__sub-title Код скидки
+								.wrap-inner
+									input(placeholder="H4322DF23-12")
+						.authorized-order__adress
+							.authorized-order__sub-title Адрес доставки
+							input.street(placeholder="Улица")
+							input(placeholder="Дом")
+							input(placeholder="Квартира")
+							input(placeholder="Подъезд")
+							input(placeholder="Этаж")
+							
+					.authorized-order__products
+						.authorized-order__sub-title Ваши товары
+		include ./parts/subscribe-form.pug
+		include ./parts/footer.pug

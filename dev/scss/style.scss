@@ -3217,3 +3217,108 @@ table.order{
 		}
 	}
 }
+.authorized-order{
+	&__title{
+		font-size: 29px;
+		margin-bottom: 25px;
+		span{
+			font-weight: 300;
+		}
+		
+	}
+	&__sub-title{
+		color: #010101;
+		font-size: 18px;
+		font-weight: 500;
+		margin-bottom: 15px;
+	}
+	&__form{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	&__data{
+		max-width: 570px;
+	}
+	&__products{
+		max-width: 450px;
+	}
+	&__contacts{
+		input{
+			width: 100%;
+		}
+	}
+	&__delivery-place{
+		color: #8a8a8a;
+		font-size: 14px;
+		font-weight: 500;
+		text-decoration: underline;
+		
+	}
+	&__info{
+		&-row{
+			display: flex;
+			justify-content: space-between;
+			align-items: baseline;
+			&.up{
+				margin-top: -10px;
+			}
+		}
+		input{
+			width: 100%;
+		}
+		.wrap-inner{
+			width: 380px;
+			display: inline-block;
+			font-size: 0;
+			
+		}
+		input:checked + label{
+			background-color: #778d53;
+			color: white;
+		}
+		label{
+			width: 50%;
+			display: inline-block;
+			height: 40px;
+			
+			background-color: transparent;
+			color: #616161;
+			text-align: center;
+			font-size: 15px;
+			font-weight: 500;
+			line-height: 40px;
+		}
+		
+	}
+	#delivery, #pickup{
+		display: none;
+	}
+	&__adress{
+		input.street{
+			width: 100%;
+			margin-right: 0;
+		}
+		input{
+			width: 150px;
+			margin-right: 7px;
+			&:last-child{
+				width: 85px;
+				margin-right: 0;
+			}
+		}
+	}
+	select{
+		width: 100%;
+		margin-top: 20px;
+		outline: none;
+	}
+	input, select{
+		height: 40px;
+		margin-bottom: 20px;
+		color: #7f7f7f;
+		padding: 0 15px;
+	}
+	
+	
+}

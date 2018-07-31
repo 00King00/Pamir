@@ -342,7 +342,6 @@ $(function(){
 		$('.main-menu>.wrapper>ul>li').mouseover(function(event){
 		var moveleft=$(this).offset().left - $('.main-menu li:first-child').offset().left
 		event.preventDefault();
-		console.log(moveleft)
 		$(this).toggleClass('active');
 		$('.submenu-block').css("left", -moveleft)
 		})
