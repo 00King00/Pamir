@@ -3030,6 +3030,7 @@ table.order{
 		}
 		&.off-right-padding{
 			padding-right: 0;
+			text-align: right;
 		}
 	}
 	.middle{
@@ -3260,6 +3261,9 @@ table.order{
 }
 .authorized-order{
 	padding: 10px;
+	@include breakpoint(tablet){
+		padding-bottom: 55px;
+	}
 	@include breakpoint(desktop){
 		padding: 0;
 	}
@@ -3307,7 +3311,7 @@ table.order{
 	}
 	&__data{
 		width: 100%;
-		@include breakpoint(tablet){
+		@include breakpoint(phablet){
 			max-width: 570px;
 			flex-shrink: 1;
 		}
@@ -3315,7 +3319,7 @@ table.order{
 	&__products{
 		width: 100%;
 		
-		@include breakpoint(tablet){
+		@include breakpoint(phablet){
 			width: 570px;
 			
 			flex-shrink: 5;
@@ -3338,6 +3342,7 @@ table.order{
 		font-size: 14px;
 		font-weight: 500;
 		text-decoration: underline;
+		margin-bottom: 20px;
 		
 	}
 	&__total{
@@ -3355,6 +3360,7 @@ table.order{
 			font-size: 20px;
 		}
 	}
+	
 	&__info{
 		&-row{
 			display: flex;
@@ -3362,7 +3368,13 @@ table.order{
 			align-items: baseline;
 			flex-wrap: wrap;
 			&.up{
-				margin-top: -10px;
+				margin-top: 10px;
+			}
+			&_delivery-service{
+				display: none;
+				&.active{
+					display: flex;
+				}
 			}
 			.product__price{
 				font-size: 24px;
@@ -3397,6 +3409,7 @@ table.order{
 			font-size: 15px;
 			font-weight: 500;
 			line-height: 40px;
+			margin-bottom: 20px;
 			@include breakpoint(mobileonly){
 				margin-bottom: 20px;
 			}
