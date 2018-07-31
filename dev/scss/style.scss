@@ -3274,6 +3274,7 @@ table.order{
 			font-weight: 300;
 		}
 		&_topform{
+			margin-top: 20px;
 			padding: 0 20px;
 			@include breakpoint(desktop){
 				padding: 0;
@@ -3471,7 +3472,7 @@ table.order{
 		margin-bottom: 30px;
 	}
 	p{
-		
+		padding: 0;
 	}
 	&__title{
 		color: #010101;
