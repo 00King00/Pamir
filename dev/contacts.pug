@@ -1,0 +1,69 @@
+html
+	head
+		include ./parts/head.pug
+	body
+		include ./parts/header.pug
+		.wrapper
+			ul.breadcrumbs.show-laptop
+					li
+						a(href="index.html") Главная
+					li
+						a(href="#") Контакты
+			.clearfix
+				.col-laptop-3-4
+					.block-title.block-title_delivery
+						span Контакты
+					.contacts
+						.contact-block.contact-block_first
+							.phone
+								a(href="tel:74996546789") +7 (499) 653-67-89
+							.sub-text
+								|Работаем с 09:00 до 21:00 без обеда и выходных
+						.contact-block
+							.phone
+								a(href="tel:88003505889") 8 (800) 350-58-89
+							.sub-text
+								|Бесплатный по РФ
+						.contact-block.contact-block_last
+							.mail
+								a(href="mailto:info@dary-pamira.ru") info@dary-pamira.ru
+					.socials 
+						span Мы в социальных сетях -
+						.icons
+							a(href="#")
+								img(src="images/vk_order.png")
+							a(href="#")
+								img(src="images/fb_order.png")
+							a(href="#")
+								img(src="images/ok_order.png")
+							a(href="#")
+								img(src="images/insta_order.png")
+					.block-title.block-title_requisites
+						span Реквизиты
+					.requisites
+						p ООО «Дивайн Лайт» 
+							br
+							|Юр. адрес: 143085, М/О, Одинцовский р-н, пос. Заречье, ул. Торговая, стр. 2, 3й этаж, офис 348
+							br
+							|Факт. адрес: 121357, г. Москва, ул. Кременчугская, д. 6, стр.2.
+						p ИНН 7731660132/ КПП 503201001
+							br
+							|ОГРН 1107746913823
+							br
+							|ОКПО 68925241
+							br
+							|ОКАТО 46241557000
+							br
+							|ОКВЭД 51.43
+						p р/с 40702810600150000699
+				.col-laptop-1-4
+					.feedback
+						.feedback_container
+							form
+								.feedback__title Обратная связь
+								input(type="text" placeholder="Представтесь")
+								input(type="tel" placeholder="+7 (___) ___ - __ - __")
+								textarea(placeholder="Сообщение")
+								input.btn.btn_callback(type="submit" value="Отправить")
+		include ./parts/subscribe-form.pug
+		include ./parts/footer.pug
