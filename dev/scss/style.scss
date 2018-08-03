@@ -958,7 +958,9 @@ p{
 	@include breakpoint(mobileonly){
 		padding: 60px 20px 20px 20px;
 	}
-	
+	p{
+		margin-bottom: 15px;
+	}
 	&__tabs{
 		#tab1, #tab2, #tab_1, #tab_2  {
 			display: none;
@@ -1443,6 +1445,30 @@ p{
 			color: #4d622a; 
 		}
 	}
+	&_oneclick-productcard{
+		height: 45px;
+		text-align: center;
+		padding: 10px 5px;
+		vertical-align: top;
+		color: #778d53;
+		border: 1px solid #778d53;
+		&:hover{
+			border: 1px solid #4d622a;
+			color: #4d622a; 
+		}
+	}
+	&_add-comment{
+		width: 310px;
+		text-align: center;
+		padding: 15px;
+		color: #fff;
+		background: #778d53;
+		border: 1px solid #778d53;
+		&:hover{
+			background:#4d622a;
+			color: #fff; 
+		}
+	}
 	&_register-later{
 		text-align: center;
 		padding: 10px;
@@ -1457,6 +1483,32 @@ p{
 			position: absolute;
 			bottom: 30px;
 			right: 0px;
+		}
+	}
+	&_buy-product{
+		text-align: center;
+		color: #fff;
+		height: 45px;
+		vertical-align: top;
+		padding: 10px 8px;
+		background: #778d53;
+		border: 1px solid #778d53;
+		@include breakpoint(desktop){
+			padding: 10px 26px;
+		}
+		img{
+			display: none;
+		}
+		&:hover{
+			background:#4d622a;
+			color: #fff; 
+		}
+		@include breakpoint(phablet){
+			padding: 10px 20px;
+			img{
+				display: inline-block;
+				margin-right: 10px;
+			}	
 		}
 	}
 	&_buy{
@@ -1575,6 +1627,26 @@ p{
 		display: inline-block;
 		position: relative;
 		background: #f6f6f6;
+		color: #9d9e9f;
+		padding: 7px 45px 6px 20px;
+		margin-bottom: 40px;
+		border-radius: 30px;
+		font-family: 'Circe';
+		font-size: 13px;
+		img{
+			position: absolute;
+			right: 3px;
+			top: 3px;
+		}
+		&:hover{
+			background: #778d53;
+			color: #fff;
+		}
+	}
+	&_productdetails{
+		display: inline-block;
+		position: relative;
+		background: #fff;
 		color: #9d9e9f;
 		padding: 7px 45px 6px 20px;
 		margin-bottom: 40px;
@@ -2473,6 +2545,10 @@ span{
 	}
 	&_search{
 		margin-top:36px;
+	}
+	&_comments{
+		margin-bottom: 45px;
+		margin-top: 35px;
 	}
 	ul{
 		text-align: center;
@@ -3601,7 +3677,7 @@ table.order{
     padding: 10px;
 }
 .feedback{
-	display: inline-block;
+	// display: inline-block;
 	vertical-align: middle;
 	opacity: 1;
 	overflow: hidden;
@@ -3616,7 +3692,7 @@ table.order{
 		text-align: center;
 		white-space: normal;
 		background-color: #f8f5f0;
-		max-width: 410px;
+		// max-width: 410px;
 		position: relative;
 	}
 	input{
@@ -3665,8 +3741,7 @@ table.order{
 	flex-wrap: wrap;
 	.contact-block{
 		display: inline-block;
-    	padding: 0 10px;
-    	margin-right: 25px;
+    	padding: 0 20px;
     	margin-bottom: 30px;
     	@include breakpoint(tablet){
 			border-right: 1px solid #c5c5c6;
@@ -3715,4 +3790,242 @@ table.order{
 		}
 		margin-bottom: 40px;
 	}
+}
+.add-review{
+	border: 3px solid #778d53;
+	padding: 30px 0;
+	text-align: center;
+	margin-bottom: 30px;
+	.question{
+		display: block;
+		margin: 0 auto;
+		margin-bottom: 10px;
+		font-size: 36px;
+		color: #010101;
+	}
+	.authorize{
+		margin-top: 10px;
+		font-size: 14px;
+		a{
+			color:#778d53; 
+		}
+		span{
+			color: #919191;
+
+		}
+	}
+}
+.comment{
+	position: relative;
+	padding: 30px 40px 30px 120px;
+	background: #f2f2f3;
+	margin-bottom: 15px;
+	&__rating{
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		color: #f8cc2f;
+	}
+	&__pic{
+		position: absolute;
+		top: 30px;
+		left: 20px;
+	}
+	&__author{
+		color: #010101;
+		font-size: 18px;
+	}
+	&__date{
+		font-size: 12px;
+		color: #919191;
+		margin-bottom: 20px;
+	}
+	&__title{
+		font-size: 14px;
+		color: #010101;
+		margin-bottom: 20px;
+	}
+	&__text{
+		color: #919191;
+		font-size:14px;
+		line-height: 1.4;
+		margin-bottom: 20px;
+	}
+	a{
+		color: #778d53;
+		font-size: 14px;
+	}
+}
+.product-card{
+	&__info{
+		border-bottom: 1px solid #cbcad1;
+		padding-bottom: 25px;
+	}
+	&__number{
+		display: inline-block;
+		margin-right: 5px;
+		font-size: 14px;
+		color: #616161;
+	}
+	&__rating{
+		display: inline-block;
+		color: #f8cc2f;
+		margin-right: 5px;
+	}
+	&__rewievs{
+		display: inline-block;
+		a{
+			color: #5e62d5;
+			text-decoration: underline;
+			font-size: 14px;
+		}
+	}
+	&__maker{
+		padding: 12px 0;
+		border-bottom: 1px solid #cbcad1;
+		.logo{
+			vertical-align: middle;
+			display: inline-block;
+			margin-right: 20px;
+			img{
+				max-height: 45px
+			}
+		}
+		.maker-info{
+			vertical-align: middle;
+			display: inline-block;
+			.country{
+				font-size: 14px;
+				color: #a7a7a7;
+				font-weight: 500;
+			}
+			.name{
+				color: #616161;
+				font-size: 16px;
+				font-weight: 500;
+			}
+		}	
+	}
+	&__add-to-fav{
+		padding: 25px 0;
+		span{
+			vertical-align: middle;
+			margin-right: 5px;
+			font-size: 14px;
+			color: #919191; 
+		}
+	}
+	&__price{
+		color: #010101;
+		font-size: 42px;
+		font-weight: 800;
+		margin-bottom: 20px;
+		.old-price{
+			text-decoration: line-through;
+			display: inline-block;
+			vertical-align: top;
+			font-size:24px;
+			color: #a2a4ab;
+		}
+	}
+	&__availability{
+		color: #010101;
+		font-size: 12px;
+		margin-bottom: 30px;
+		.count{
+			margin-left: 25px;
+			color: #a2a4ab;
+			position: relative;
+			&:before{
+				content: '';
+				background: #b6cf00;
+				position: absolute;
+				left: -15px;
+				top: 0px;
+				width: 12px;
+				height: 12px;
+				border-radius: 100%;
+			}
+		}
+	}
+	&__buttons{
+		margin-bottom: 20px;
+		.product-amount{
+			display: inline-block;
+			position: relative;
+			margin-right: 28px;
+			.items-amount{
+				height: 44px;
+				width: 60px;
+				padding: 10px 10px;
+				color: #010101;
+				font-size: 18px;
+				font-weight: bold;
+				@include breakpoint(phablet){
+					width: 70px;
+					padding: 10px 17px;
+				}
+			}
+			.val{
+				position: absolute;
+				top: 13px;
+				right: 3px;
+				color: #919191;
+				@include breakpoint(phablet){
+					right: 5px;
+				}
+			}
+			.icon{
+				position: absolute;
+				display: inline-block;
+				&_amount-plus{
+					user-select:none;
+					background:url(../images/amount_plus-minus.png);
+					background-position: -3px 0px;
+					height: 23px;
+					width: 28px;
+					right: -28px;
+					top: 0;
+				}
+				&_amount-minus{
+					user-select:none;
+					bottom: 0;
+					right: -28px;
+					background:url(../images/amount_plus-minus.png);
+					background-position: -3px 24px;
+   					height: 22px;
+   					width: 28px;
+				}
+			}
+		}
+	}
+	&__byu-in-bulk{
+		margin-bottom: 5px;
+		a{
+			span{
+				vertical-align: middle;
+				color: #616161;
+			}	
+		}
+		img{
+			vertical-align: middle;
+			margin-right: 10px;
+		}
+	}
+	&__delivery{
+		color: #919191;
+		font-size: 14px;
+		margin-bottom: 30px;
+	}
+	&__form{
+		margin-bottom: 70px;
+	}
+}
+.productcard-name{
+	font-size: 29px;
+	color: #010101;
+	margin-bottom: 50px;
+}
+#Product-card-slider{
+	text-align: center;
 }
