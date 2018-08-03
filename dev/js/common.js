@@ -185,6 +185,27 @@ $(function(){
 		pause: 10000,
 	});
 
+	//product card slider
+	var ProductcardSlider=$('#Product-card-slider').lightSlider({
+		gallery:true,
+		item:1,
+		// vertical:true,
+		// ThumbWidth:50,
+		// ThumbHeight:50,
+		mode: "slide",
+		useCSS: true,
+		cssEasing: 'ease', //'cubic-bezier(0.25, 0, 0.25, 1)',//
+		easing: 'linear', //'for jquery animation',////
+		thumbItem:6,
+		thumbMargin:4,
+		galleryMargin: 30,
+		slideMargin:50,
+		adaptiveHeight:true,
+		controls: false,
+	});
+
+	
+
 	function SameHeight() {
 		
 		var browserMinWidth = $(window).width()
@@ -371,6 +392,10 @@ $(function(){
 	});
 	$('.select-delivery').selectmenu({
   		width: 100 + '%',
+	});
+	$('.sort-comments').selectmenu({
+  		width: 160 + 'px',
+  		color: '6c6c6c'
 	});
 	
 	// counter

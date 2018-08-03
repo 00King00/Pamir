@@ -140,6 +140,7 @@
     list-style: none outside none;
     padding-left: 0;
     margin: 0 auto;
+    text-align: center;
     overflow: hidden;
     transform: translate3d(0px, 0px, 0px);
     -moz-transform: translate3d(0px, 0px, 0px);
@@ -157,16 +158,23 @@
 }
 .lSSlideOuter .lSPager.lSGallery li {
     overflow: hidden;
-    -webkit-transition: border-radius 0.12s linear 0s 0.35s linear 0s;
-    transition: border-radius 0.12s linear 0s 0.35s linear 0s;
+    padding: 10px;
+    height: auto;
+    width: 100px;
+    // height: 90px;
+    // -webkit-transition: border-radius 0.12s linear 0s 0.35s linear 0s;
+    // transition: border-radius 0.12s linear 0s 0.35s linear 0s;
 }
 .lSSlideOuter .lSPager.lSGallery li.active, .lSSlideOuter .lSPager.lSGallery li:hover {
-    border-radius: 5px;
+    // border-radius: 5px;
+    border: 2px solid #f0f0f0;
+
 }
 .lSSlideOuter .lSPager.lSGallery img {
-    display: block;
+    display: inline-block;
     height: auto;
-    max-width: 100%;
+    max-width: 50px;
+    max-height: 50px;
 }
 .lSSlideOuter .lSPager.lSGallery:before, .lSSlideOuter .lSPager.lSGallery:after {
     content: " ";
