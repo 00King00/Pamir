@@ -14,12 +14,24 @@ html
 			.clearfix
 				.col-laptop-3-5
 					ul#Product-card-slider
-								li(data-thumb="images/product_card.png")
-									img(src="images/product_card.png")
-								li(data-thumb="images/product_card.png")
-									img(src="images/product_card.png")
-								li(data-thumb="images/product_card.png")
-									img(src="images/product_card.png")
+						li(data-thumb="images/product_card.png")
+							img(src="images/product_card.png")
+						li(data-thumb="images/product_card.png")
+							img(src="images/product_card.png")
+						li(data-thumb="images/product_card.png")
+							img(src="images/product_card.png")
+					.share
+						span
+							|Войти с помощью соцсетей
+						.icons
+							a(href="#")
+								img(src="images/vk_order.png")
+							a(href="#")
+								img(src="images/fb_order.png")
+							a(href="#")
+								img(src="images/ok_order.png")
+							a(href="#")
+								img(src="images/insta_order.png")
 				.col-laptop-2-5
 					.product-card__info
 						.product-card__number
@@ -36,9 +48,9 @@ html
 						.logo
 							img(src="images/logo.png", alt="logo")
 						.maker-info
-							.country
+							a(href="#").country
 								|Россия
-							.name
+							a(href="#").name
 								|Дары Памира
 					.product-card__add-to-fav
 						a(href="#")
@@ -182,7 +194,7 @@ html
 				.authorize
 					a(href="#") Авторизуйтесь
 					span , чтобы оставить отзыв
-			.items-on-page
+			.comments-sorter
 				span
 					|Сначала
 				select.sort-comments

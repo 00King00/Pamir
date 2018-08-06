@@ -189,19 +189,21 @@ $(function(){
 	var ProductcardSlider=$('#Product-card-slider').lightSlider({
 		gallery:true,
 		item:1,
-		// vertical:true,
+		// pager: false,
 		// ThumbWidth:50,
 		// ThumbHeight:50,
 		mode: "slide",
+		vertical:false,
 		useCSS: true,
 		cssEasing: 'ease', //'cubic-bezier(0.25, 0, 0.25, 1)',//
 		easing: 'linear', //'for jquery animation',////
 		thumbItem:6,
-		thumbMargin:4,
+		thumbMargin:10,
 		galleryMargin: 30,
-		slideMargin:50,
-		adaptiveHeight:true,
+		slideMargin:10,
+		// adaptiveHeight:true,
 		controls: false,
+
 	});
 
 	
@@ -388,7 +390,7 @@ $(function(){
 
 	//select menu properties
 	$('.select-brand').selectmenu({
-  		width: 70 + 'px',
+  		width: 80 + 'px',
 	});
 	$('.select-delivery').selectmenu({
   		width: 100 + '%',
@@ -429,5 +431,18 @@ $(function(){
 		
 	});
 	//end order page for delivery-service show/hide
+
+	//show-hide filters
+		$('#show-filter-mobile').click(function(){
+			$(".filters").addClass('filters_active');
+			$('.backdrop').toggleClass('on');
+			$('body').toggleClass('no-scroll');
+		})
+		$('.filters__close-btn').click(function(){
+			$(".filters").removeClass('filters_active');
+			$('.backdrop').toggleClass('on');
+			$('body').toggleClass('no-scroll');
+		})
+	// end show-hide filters
 
 });

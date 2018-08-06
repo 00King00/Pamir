@@ -13,16 +13,16 @@ $(function(){
 		isRange : true,
 		onstatechange: function(e){
 			if(!inputRangeInsert){
-				$('.sliderValue').eq(0).val(e.split(',')[0]);
-				$('.sliderValue').eq(1).val(e.split(',')[1])	
+				$('.sliderValue input').eq(0).val(e.split(',')[0]);
+				$('.sliderValue input').eq(1).val(e.split(',')[1])	
 			};
 			
 		}
 		}).jRange('setValue', '15000,60000');
 	function setRangeFilter(){
 		inputRangeInsert = true;
-		var min = $('.sliderValue').eq(0).val();
-		var max = $('.sliderValue').eq(1).val();
+		var min = $('.sliderValue input').eq(0).val();
+		var max = $('.sliderValue input').eq(1).val();
 		console.log(min,max);
 		if(max > maxRange){
 			max = maxRange;
@@ -32,7 +32,7 @@ $(function(){
 		inputRangeInsert = false;
 		// 
 	}
-	$('.sliderValue').on('keyup', function(){
+	$('.sliderValue input').on('keyup', function(){
 		var input = $(this).val();
 		var patt =  new RegExp('^\\d+$');
 		var res = patt.test(input);
